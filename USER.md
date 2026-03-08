@@ -4,5 +4,7 @@
 - **Cómo llamarla:** Elena
 - **Zona horaria:** America/Mexico_City (UTC-6)
 - **Idioma:** Español
-- **Perfil:** Usuaria nueva en IA. Prefiere explicaciones claras y sencillas.
-- **Ocupación:** Gerente de cobranza
+- **Ocupación:** Gerente de Cobranza en Mutualidad Proteg-rt
+- **Familia:** Esposa de Fer. Madre de Tania (17 años) y Naomi (9 años).
+- **Estudios:** Estudiante de Maestría.
+- **Perfil:** Prefiere un trato cercano, amable y explicaciones claras. No le gustan los rodeos técnicos.

@@ -1,0 +1,1235 @@
+[
+  {
+    "FOLIO": 21489.0,
+    "COBERTURA": "PLATINO +",
+    "FECHA": "01/02/2026",
+    "N_PAGO": 6,
+    "MONTO": 689.0,
+    "ENTREGADO": "ENTREGADO",
+    "METODO_PAGO": "TRANSFERENCIA"
+  },
+  {
+    "FOLIO": 21556.0,
+    "COBERTURA": "PLATINO +",
+    "FECHA": "05/02/2026",
+    "N_PAGO": 6,
+    "MONTO": 779.0,
+    "ENTREGADO": "ENTREGADO",
+    "METODO_PAGO": "EFECTIVO"
+  },
+  {
+    "FOLIO": 21629.0,
+    "COBERTURA": "PLATINO +",
+    "FECHA": "11/02/2026",
+    "N_PAGO": 6,
+    "MONTO": 749.0,
+    "ENTREGADO": "ENTREGADO",
+    "METODO_PAGO": "EFECTIVO"
+  },
+  {
+    "FOLIO": 21638.0,
+    "COBERTURA": "PLATINO +",
+    "FECHA": "07/02/2026",
+    "N_PAGO": 5,
+    "MONTO": 749.0,
+    "ENTREGADO": "ENTREGADO",
+    "METODO_PAGO": "EFECTIVO"
+  },
+  {
+    "FOLIO": 21638.0,
+    "COBERTURA": "PLATINO +",
+    "FECHA": "07/02/2026",
+    "N_PAGO": 3,
+    "MONTO": 749.0,
+    "ENTREGADO": "ENTREGADO",
+    "METODO_PAGO": "EFECTIVO"
+  },
+  {
+    "FOLIO": 21639.0,
+    "COBERTURA": "RC PRO",
+    "FECHA": "07/02/2026",
+    "N_PAGO": 4,
+    "MONTO": 585.0,
+    "ENTREGADO": "ENTREGADO",
+    "METODO_PAGO": "EFECTIVO"
+  },
+  {
+    "FOLIO": 21639.0,
+    "COBERTURA": "RC PRO",
+    "FECHA": "07/02/2026",
+    "N_PAGO": 5,
+    "MONTO": 585.0,
+    "ENTREGADO": "ENTREGADO",
+    "METODO_PAGO": "EFECTIVO"
+  },
+  {
+    "FOLIO": 21648.0,
+    "COBERTURA": "PLATINO +",
+    "FECHA": "06/02/2026",
+    "N_PAGO": 6,
+    "MONTO": 779.0,
+    "ENTREGADO": "ENTREGADO",
+    "METODO_PAGO": "EFECTIVO"
+  },
+  {
+    "FOLIO": 21650.0,
+    "COBERTURA": "PLATINO +",
+    "FECHA": "13/02/2026",
+    "N_PAGO": 6,
+    "MONTO": 689.0,
+    "ENTREGADO": "ENTREGADO",
+    "METODO_PAGO": "EFECTIVO"
+  },
+  {
+    "FOLIO": 21654.0,
+    "COBERTURA": "PLATINO +",
+    "FECHA": "05/02/2026",
+    "N_PAGO": 6,
+    "MONTO": 689.0,
+    "ENTREGADO": "ENTREGADO",
+    "METODO_PAGO": "EFECTIVO"
+  },
+  {
+    "FOLIO": 21670.0,
+    "COBERTURA": "PLATINO +",
+    "FECHA": "06/02/2026",
+    "N_PAGO": 6,
+    "MONTO": 689.0,
+    "ENTREGADO": "ENTREGADO",
+    "METODO_PAGO": "EFECTIVO"
+  },
+  {
+    "FOLIO": 21693.0,
+    "COBERTURA": "PLATINO +",
+    "FECHA": "05/02/2026",
+    "N_PAGO": 6,
+    "MONTO": 689.0,
+    "ENTREGADO": "ENTREGADO",
+    "METODO_PAGO": "EFECTIVO"
+  },
+  {
+    "FOLIO": 21699.0,
+    "COBERTURA": "PLATINO +",
+    "FECHA": "05/02/2026",
+    "N_PAGO": 6,
+    "MONTO": 779.0,
+    "ENTREGADO": "ENTREGADO",
+    "METODO_PAGO": "EFECTIVO"
+  },
+  {
+    "FOLIO": 21708.0,
+    "COBERTURA": "PLATINO +",
+    "FECHA": "04/02/2026",
+    "N_PAGO": 6,
+    "MONTO": 749.0,
+    "ENTREGADO": "ENTREGADO",
+    "METODO_PAGO": "EFECTIVO"
+  },
+  {
+    "FOLIO": 21709.0,
+    "COBERTURA": "PLATINO +",
+    "FECHA": "04/02/2026",
+    "N_PAGO": 6,
+    "MONTO": 689.0,
+    "ENTREGADO": "ENTREGADO",
+    "METODO_PAGO": "EFECTIVO"
+  },
+  {
+    "FOLIO": 21724.0,
+    "COBERTURA": "RC PREMIUM",
+    "FECHA": "13/02/2026",
+    "N_PAGO": 6,
+    "MONTO": 689.0,
+    "ENTREGADO": "ENTREGADO",
+    "METODO_PAGO": "TRANSFERENCIA"
+  },
+  {
+    "FOLIO": 21743.0,
+    "COBERTURA": "RC PREMIUM",
+    "FECHA": "04/02/2026",
+    "N_PAGO": 6,
+    "MONTO": 779.0,
+    "ENTREGADO": "ENTREGADO",
+    "METODO_PAGO": "EFECTIVO"
+  },
+  {
+    "FOLIO": 21755.0,
+    "COBERTURA": "PLATINO +",
+    "FECHA": "06/02/2026",
+    "N_PAGO": 6,
+    "MONTO": 749.0,
+    "ENTREGADO": "ENTREGADO",
+    "METODO_PAGO": "EFECTIVO"
+  },
+  {
+    "FOLIO": 21756.0,
+    "COBERTURA": "PLATINO +",
+    "FECHA": "04/02/2026",
+    "N_PAGO": 6,
+    "MONTO": 689.0,
+    "ENTREGADO": "ENTREGADO",
+    "METODO_PAGO": "EFECTIVO"
+  },
+  {
+    "FOLIO": 21768.0,
+    "COBERTURA": "PLATINO +",
+    "FECHA": "04/02/2026",
+    "N_PAGO": 6,
+    "MONTO": 749.0,
+    "ENTREGADO": "ENTREGADO",
+    "METODO_PAGO": "EFECTIVO"
+  },
+  {
+    "FOLIO": 21781.0,
+    "COBERTURA": "PLATINO +",
+    "FECHA": "03/02/2026",
+    "N_PAGO": 5,
+    "MONTO": 749.0,
+    "ENTREGADO": "ENTREGADO",
+    "METODO_PAGO": "EFECTIVO"
+  },
+  {
+    "FOLIO": 21783.0,
+    "COBERTURA": "PLATINO +",
+    "FECHA": "05/02/2026",
+    "N_PAGO": 7,
+    "MONTO": 125.0,
+    "ENTREGADO": "ENTREGADO",
+    "METODO_PAGO": "EFECTIVO"
+  },
+  {
+    "FOLIO": 21793.0,
+    "COBERTURA": "PLATINO +",
+    "FECHA": "11/02/2026",
+    "N_PAGO": 6,
+    "MONTO": 749.0,
+    "ENTREGADO": "ENTREGADO",
+    "METODO_PAGO": "EFECTIVO"
+  },
+  {
+    "FOLIO": 21804.0,
+    "COBERTURA": "PLATINO +",
+    "FECHA": "07/02/2026",
+    "N_PAGO": 6,
+    "MONTO": 749.0,
+    "ENTREGADO": "ENTREGADO",
+    "METODO_PAGO": "EFECTIVO"
+  },
+  {
+    "FOLIO": 21809.0,
+    "COBERTURA": "RC PREMIUM",
+    "FECHA": "09/02/2026",
+    "N_PAGO": 6,
+    "MONTO": 749.0,
+    "ENTREGADO": "ENTREGADO",
+    "METODO_PAGO": "EFECTIVO"
+  },
+  {
+    "FOLIO": 21810.0,
+    "COBERTURA": "PLATINO +",
+    "FECHA": "06/02/2026",
+    "N_PAGO": 6,
+    "MONTO": 879.0,
+    "ENTREGADO": "ENTREGADO",
+    "METODO_PAGO": "EFECTIVO"
+  },
+  {
+    "FOLIO": 21811.0,
+    "COBERTURA": "PLATINO +",
+    "FECHA": "06/02/2026",
+    "N_PAGO": 6,
+    "MONTO": 879.0,
+    "ENTREGADO": "ENTREGADO",
+    "METODO_PAGO": "EFECTIVO"
+  },
+  {
+    "FOLIO": 21812.0,
+    "COBERTURA": "PLATINO +",
+    "FECHA": "09/02/2026",
+    "N_PAGO": 6,
+    "MONTO": 784.0,
+    "ENTREGADO": "ENTREGADO",
+    "METODO_PAGO": "TRANSFERENCIA"
+  },
+  {
+    "FOLIO": 21817.0,
+    "COBERTURA": "PLATINO +",
+    "FECHA": "07/02/2026",
+    "N_PAGO": 6,
+    "MONTO": 749.0,
+    "ENTREGADO": "ENTREGADO",
+    "METODO_PAGO": "EFECTIVO"
+  },
+  {
+    "FOLIO": 21842.0,
+    "COBERTURA": "PLATINO +",
+    "FECHA": "06/02/2026",
+    "N_PAGO": 6,
+    "MONTO": 879.0,
+    "ENTREGADO": "ENTREGADO",
+    "METODO_PAGO": "EFECTIVO"
+  },
+  {
+    "FOLIO": 21850.0,
+    "COBERTURA": "RC PRO",
+    "FECHA": "11/02/2026",
+    "N_PAGO": 6,
+    "MONTO": 629.0,
+    "ENTREGADO": "ENTREGADO",
+    "METODO_PAGO": "EFECTIVO"
+  },
+  {
+    "FOLIO": 21851.0,
+    "COBERTURA": "PLATINO +",
+    "FECHA": "13/02/2026",
+    "N_PAGO": 6,
+    "MONTO": 749.0,
+    "ENTREGADO": "ENTREGADO",
+    "METODO_PAGO": "TRANSFERENCIA"
+  },
+  {
+    "FOLIO": 21861.0,
+    "COBERTURA": "PLATINO +",
+    "FECHA": "13/02/2026",
+    "N_PAGO": 6,
+    "MONTO": 749.0,
+    "ENTREGADO": "ENTREGADO",
+    "METODO_PAGO": "EFECTIVO"
+  },
+  {
+    "FOLIO": 21873.0,
+    "COBERTURA": "PLATINO +",
+    "FECHA": "12/02/2026",
+    "N_PAGO": 6,
+    "MONTO": 749.0,
+    "ENTREGADO": "ENTREGADO",
+    "METODO_PAGO": "EFECTIVO"
+  },
+  {
+    "FOLIO": 21900.0,
+    "COBERTURA": "PLATINO +",
+    "FECHA": "11/02/2026",
+    "N_PAGO": 6,
+    "MONTO": 779.0,
+    "ENTREGADO": "ENTREGADO",
+    "METODO_PAGO": "EFECTIVO"
+  },
+  {
+    "FOLIO": 21907.0,
+    "COBERTURA": "PLATINO +",
+    "FECHA": "12/02/2026",
+    "N_PAGO": 6,
+    "MONTO": 749.0,
+    "ENTREGADO": "ENTREGADO",
+    "METODO_PAGO": "EFECTIVO"
+  },
+  {
+    "FOLIO": 21923.0,
+    "COBERTURA": "PLATINO +",
+    "FECHA": "06/02/2026",
+    "N_PAGO": 6,
+    "MONTO": 749.0,
+    "ENTREGADO": "ENTREGADO",
+    "METODO_PAGO": "DEPOSITO"
+  },
+  {
+    "FOLIO": 21941.0,
+    "COBERTURA": "PLATINO +",
+    "FECHA": "04/02/2026",
+    "N_PAGO": 5,
+    "MONTO": 784.0,
+    "ENTREGADO": "ENTREGADO",
+    "METODO_PAGO": "EFECTIVO"
+  },
+  {
+    "FOLIO": 21983.0,
+    "COBERTURA": "PLATINO +",
+    "FECHA": "03/02/2026",
+    "N_PAGO": 5,
+    "MONTO": 689.0,
+    "ENTREGADO": "ENTREGADO",
+    "METODO_PAGO": "EFECTIVO"
+  },
+  {
+    "FOLIO": 21999.0,
+    "COBERTURA": "PLATINO +",
+    "FECHA": "03/02/2026",
+    "N_PAGO": 5,
+    "MONTO": 779.0,
+    "ENTREGADO": "ENTREGADO",
+    "METODO_PAGO": "EFECTIVO"
+  },
+  {
+    "FOLIO": 22001.0,
+    "COBERTURA": "PLATINO +",
+    "FECHA": "07/02/2026",
+    "N_PAGO": 5,
+    "MONTO": 689.0,
+    "ENTREGADO": "ENTREGADO",
+    "METODO_PAGO": "TRANSFERENCIA"
+  },
+  {
+    "FOLIO": 22017.0,
+    "COBERTURA": "PLATINO +",
+    "FECHA": "03/02/2026",
+    "N_PAGO": 5,
+    "MONTO": 749.0,
+    "ENTREGADO": "ENTREGADO",
+    "METODO_PAGO": "TRANSFERENCIA"
+  },
+  {
+    "FOLIO": 22032.0,
+    "COBERTURA": "PLATINO +",
+    "FECHA": "03/02/2026",
+    "N_PAGO": 5,
+    "MONTO": 689.0,
+    "ENTREGADO": "ENTREGADO",
+    "METODO_PAGO": "EFECTIVO"
+  },
+  {
+    "FOLIO": 22035.0,
+    "COBERTURA": "RC PRO",
+    "FECHA": "13/02/2026",
+    "N_PAGO": 5,
+    "MONTO": 645.0,
+    "ENTREGADO": "ENTREGADO",
+    "METODO_PAGO": "EFECTIVO"
+  },
+  {
+    "FOLIO": 22037.0,
+    "COBERTURA": "PLATINO +",
+    "FECHA": "10/02/2026",
+    "N_PAGO": 5,
+    "MONTO": 749.0,
+    "ENTREGADO": "ENTREGADO",
+    "METODO_PAGO": "EFECTIVO"
+  },
+  {
+    "FOLIO": 22058.0,
+    "COBERTURA": "PLATINO +",
+    "FECHA": "04/02/2026",
+    "N_PAGO": 5,
+    "MONTO": 690.0,
+    "ENTREGADO": "ENTREGADO",
+    "METODO_PAGO": "TRANSFERENCIA"
+  },
+  {
+    "FOLIO": 22080.0,
+    "COBERTURA": "PLATINO +",
+    "FECHA": "10/02/2026",
+    "N_PAGO": 5,
+    "MONTO": 749.0,
+    "ENTREGADO": "ENTREGADO",
+    "METODO_PAGO": "EFECTIVO"
+  },
+  {
+    "FOLIO": 22091.0,
+    "COBERTURA": "PLATINO +",
+    "FECHA": "10/02/2026",
+    "N_PAGO": 5,
+    "MONTO": 779.0,
+    "ENTREGADO": "ENTREGADO",
+    "METODO_PAGO": "EFECTIVO"
+  },
+  {
+    "FOLIO": 22108.0,
+    "COBERTURA": "RC PRO",
+    "FECHA": "07/02/2026",
+    "N_PAGO": 5,
+    "MONTO": 629.0,
+    "ENTREGADO": "ENTREGADO",
+    "METODO_PAGO": "EFECTIVO"
+  },
+  {
+    "FOLIO": 22110.0,
+    "COBERTURA": "PLATINO +",
+    "FECHA": "09/02/2026",
+    "N_PAGO": 5,
+    "MONTO": 749.0,
+    "ENTREGADO": "ENTREGADO",
+    "METODO_PAGO": "EFECTIVO"
+  },
+  {
+    "FOLIO": 22121.0,
+    "COBERTURA": "PLATINO +",
+    "FECHA": "09/02/2026",
+    "N_PAGO": 5,
+    "MONTO": 779.0,
+    "ENTREGADO": "ENTREGADO",
+    "METODO_PAGO": "EFECTIVO"
+  },
+  {
+    "FOLIO": 22122.0,
+    "COBERTURA": "PLATINO +",
+    "FECHA": "09/02/2026",
+    "N_PAGO": 5,
+    "MONTO": 659.2,
+    "ENTREGADO": "ENTREGADO",
+    "METODO_PAGO": "EFECTIVO"
+  },
+  {
+    "FOLIO": 22132.0,
+    "COBERTURA": "PLATINO +",
+    "FECHA": "11/02/2026",
+    "N_PAGO": 5,
+    "MONTO": 749.0,
+    "ENTREGADO": "ENTREGADO",
+    "METODO_PAGO": "EFECTIVO"
+  },
+  {
+    "FOLIO": 22133.0,
+    "COBERTURA": "RC PLUS",
+    "FECHA": "11/02/2026",
+    "N_PAGO": 5,
+    "MONTO": 585.0,
+    "ENTREGADO": "ENTREGADO",
+    "METODO_PAGO": "EFECTIVO"
+  },
+  {
+    "FOLIO": 22142.0,
+    "COBERTURA": "PLATINO +",
+    "FECHA": "14/02/2026",
+    "N_PAGO": 5,
+    "MONTO": 689.0,
+    "ENTREGADO": "ENTREGADO",
+    "METODO_PAGO": "EFECTIVO"
+  },
+  {
+    "FOLIO": 22153.0,
+    "COBERTURA": "PLATINO +",
+    "FECHA": "07/02/2026",
+    "N_PAGO": 4,
+    "MONTO": 779.0,
+    "ENTREGADO": "ENTREGADO",
+    "METODO_PAGO": "EFECTIVO"
+  },
+  {
+    "FOLIO": 22167.0,
+    "COBERTURA": "PLATINO +",
+    "FECHA": "14/02/2026",
+    "N_PAGO": 5,
+    "MONTO": 779.0,
+    "ENTREGADO": "ENTREGADO",
+    "METODO_PAGO": "EFECTIVO"
+  },
+  {
+    "FOLIO": 22175.0,
+    "COBERTURA": "PLATINO +",
+    "FECHA": "14/02/2026",
+    "N_PAGO": 5,
+    "MONTO": 879.0,
+    "ENTREGADO": "ENTREGADO",
+    "METODO_PAGO": "EFECTIVO"
+  },
+  {
+    "FOLIO": 22193.0,
+    "COBERTURA": "PLATINO +",
+    "FECHA": "09/02/2026",
+    "N_PAGO": 5,
+    "MONTO": 749.0,
+    "ENTREGADO": "ENTREGADO",
+    "METODO_PAGO": "EFECTIVO"
+  },
+  {
+    "FOLIO": 22245.0,
+    "COBERTURA": "PLATINO +",
+    "FECHA": "05/02/2026",
+    "N_PAGO": 4,
+    "MONTO": 879.0,
+    "ENTREGADO": "ENTREGADO",
+    "METODO_PAGO": "EFECTIVO"
+  },
+  {
+    "FOLIO": 22290.0,
+    "COBERTURA": "PLATINO +",
+    "FECHA": "05/02/2026",
+    "N_PAGO": 3,
+    "MONTO": 749.0,
+    "ENTREGADO": "ENTREGADO",
+    "METODO_PAGO": "EFECTIVO"
+  },
+  {
+    "FOLIO": 22321.0,
+    "COBERTURA": "PLATINO +",
+    "FECHA": "04/02/2026",
+    "N_PAGO": 4,
+    "MONTO": 689.0,
+    "ENTREGADO": "ENTREGADO",
+    "METODO_PAGO": "EFECTIVO"
+  },
+  {
+    "FOLIO": 22325.0,
+    "COBERTURA": "PLATINO +",
+    "FECHA": "06/02/2026",
+    "N_PAGO": 4,
+    "MONTO": 849.0,
+    "ENTREGADO": "ENTREGADO",
+    "METODO_PAGO": "EFECTIVO"
+  },
+  {
+    "FOLIO": 22335.0,
+    "COBERTURA": "PLATINO +",
+    "FECHA": "12/02/2026",
+    "N_PAGO": 4,
+    "MONTO": 689.0,
+    "ENTREGADO": "ENTREGADO",
+    "METODO_PAGO": "EFECTIVO"
+  },
+  {
+    "FOLIO": 22339.0,
+    "COBERTURA": "PLATINO +",
+    "FECHA": "12/02/2026",
+    "N_PAGO": 4,
+    "MONTO": 749.0,
+    "ENTREGADO": "ENTREGADO",
+    "METODO_PAGO": "EFECTIVO"
+  },
+  {
+    "FOLIO": 22359.0,
+    "COBERTURA": "PLATINO +",
+    "FECHA": "04/02/2026",
+    "N_PAGO": 4,
+    "MONTO": 749.0,
+    "ENTREGADO": "ENTREGADO",
+    "METODO_PAGO": "EFECTIVO"
+  },
+  {
+    "FOLIO": 22383.0,
+    "COBERTURA": "RC PREMIUM",
+    "FECHA": "09/02/2026",
+    "N_PAGO": 4,
+    "MONTO": 779.0,
+    "ENTREGADO": "ENTREGADO",
+    "METODO_PAGO": "EFECTIVO"
+  },
+  {
+    "FOLIO": 22406.0,
+    "COBERTURA": "PLATINO +",
+    "FECHA": "12/02/2026",
+    "N_PAGO": 4,
+    "MONTO": 879.0,
+    "ENTREGADO": "ENTREGADO",
+    "METODO_PAGO": "EFECTIVO"
+  },
+  {
+    "FOLIO": 22408.0,
+    "COBERTURA": "PLATINO +",
+    "FECHA": "11/02/2026",
+    "N_PAGO": 4,
+    "MONTO": 849.0,
+    "ENTREGADO": "ENTREGADO",
+    "METODO_PAGO": "EFECTIVO"
+  },
+  {
+    "FOLIO": 22409.0,
+    "COBERTURA": "PLATINO +",
+    "FECHA": "07/02/2026",
+    "N_PAGO": 4,
+    "MONTO": 849.0,
+    "ENTREGADO": "ENTREGADO",
+    "METODO_PAGO": "EFECTIVO"
+  },
+  {
+    "FOLIO": 22410.0,
+    "COBERTURA": "RC PRO",
+    "FECHA": "10/02/2026",
+    "N_PAGO": 4,
+    "MONTO": 651.0,
+    "ENTREGADO": "ENTREGADO",
+    "METODO_PAGO": "EFECTIVO"
+  },
+  {
+    "FOLIO": 22430.0,
+    "COBERTURA": "PLATINO +",
+    "FECHA": "12/02/2026",
+    "N_PAGO": 4,
+    "MONTO": 849.0,
+    "ENTREGADO": "ENTREGADO",
+    "METODO_PAGO": "EFECTIVO"
+  },
+  {
+    "FOLIO": 22453.0,
+    "COBERTURA": "PLATINO +",
+    "FECHA": "12/02/2026",
+    "N_PAGO": 4,
+    "MONTO": 879.0,
+    "ENTREGADO": "ENTREGADO",
+    "METODO_PAGO": "EFECTIVO"
+  },
+  {
+    "FOLIO": 22456.0,
+    "COBERTURA": "RC PRO",
+    "FECHA": "13/02/2026",
+    "N_PAGO": 4,
+    "MONTO": 695.0,
+    "ENTREGADO": "ENTREGADO",
+    "METODO_PAGO": "TRANSFERENCIA"
+  },
+  {
+    "FOLIO": 22504.0,
+    "COBERTURA": "PLATINO +",
+    "FECHA": "12/02/2026",
+    "N_PAGO": 3,
+    "MONTO": 849.0,
+    "ENTREGADO": "ENTREGADO",
+    "METODO_PAGO": "EFECTIVO"
+  },
+  {
+    "FOLIO": 22570.0,
+    "COBERTURA": "PLATINO +",
+    "FECHA": "09/02/2026",
+    "N_PAGO": 3,
+    "MONTO": 784.0,
+    "ENTREGADO": "ENTREGADO",
+    "METODO_PAGO": "EFECTIVO"
+  },
+  {
+    "FOLIO": 22615.0,
+    "COBERTURA": "PLATINO +",
+    "FECHA": "06/02/2026",
+    "N_PAGO": 3,
+    "MONTO": 784.0,
+    "ENTREGADO": "ENTREGADO",
+    "METODO_PAGO": "EFECTIVO"
+  },
+  {
+    "FOLIO": 22620.0,
+    "COBERTURA": "PLATINO +",
+    "FECHA": "04/02/2026",
+    "N_PAGO": 3,
+    "MONTO": 779.0,
+    "ENTREGADO": "ENTREGADO",
+    "METODO_PAGO": "TRANSFERENCIA"
+  },
+  {
+    "FOLIO": 22621.0,
+    "COBERTURA": "RC PREMIUM",
+    "FECHA": "07/02/2026",
+    "N_PAGO": 3,
+    "MONTO": 689.0,
+    "ENTREGADO": "ENTREGADO",
+    "METODO_PAGO": "EFECTIVO"
+  },
+  {
+    "FOLIO": 22639.0,
+    "COBERTURA": "RC PRO",
+    "FECHA": "13/02/2026",
+    "N_PAGO": 3,
+    "MONTO": 585.0,
+    "ENTREGADO": "ENTREGADO",
+    "METODO_PAGO": "TRANSFERENCIA"
+  },
+  {
+    "FOLIO": 22644.0,
+    "COBERTURA": "PLATINO +",
+    "FECHA": "11/02/2026",
+    "N_PAGO": 3,
+    "MONTO": 779.0,
+    "ENTREGADO": "ENTREGADO",
+    "METODO_PAGO": "EFECTIVO"
+  },
+  {
+    "FOLIO": 22649.0,
+    "COBERTURA": "RC PRO",
+    "FECHA": "04/02/2026",
+    "N_PAGO": 3,
+    "MONTO": 629.0,
+    "ENTREGADO": "ENTREGADO",
+    "METODO_PAGO": "EFECTIVO"
+  },
+  {
+    "FOLIO": 22676.0,
+    "COBERTURA": "PLATINO +",
+    "FECHA": "09/02/2026",
+    "N_PAGO": 3,
+    "MONTO": 749.0,
+    "ENTREGADO": "ENTREGADO",
+    "METODO_PAGO": "TRANSFERENCIA"
+  },
+  {
+    "FOLIO": 22685.0,
+    "COBERTURA": "RC PRO",
+    "FECHA": "13/02/2026",
+    "N_PAGO": 3,
+    "MONTO": 585.0,
+    "ENTREGADO": "ENTREGADO",
+    "METODO_PAGO": "TRANSFERENCIA"
+  },
+  {
+    "FOLIO": 22687.0,
+    "COBERTURA": "RC PRO",
+    "FECHA": "06/02/2026",
+    "N_PAGO": 3,
+    "MONTO": 629.0,
+    "ENTREGADO": "ENTREGADO",
+    "METODO_PAGO": "EFECTIVO"
+  },
+  {
+    "FOLIO": 22690.0,
+    "COBERTURA": "PLATINO +",
+    "FECHA": "05/02/2026",
+    "N_PAGO": 3,
+    "MONTO": 749.0,
+    "ENTREGADO": "ENTREGADO",
+    "METODO_PAGO": "EFECTIVO"
+  },
+  {
+    "FOLIO": 22691.0,
+    "COBERTURA": "PLATINO +",
+    "FECHA": "11/02/2026",
+    "N_PAGO": 2,
+    "MONTO": 749.0,
+    "ENTREGADO": "ENTREGADO",
+    "METODO_PAGO": "EFECTIVO"
+  },
+  {
+    "FOLIO": 22703.0,
+    "COBERTURA": "PLATINO +",
+    "FECHA": "09/02/2026",
+    "N_PAGO": 3,
+    "MONTO": 784.0,
+    "ENTREGADO": "ENTREGADO",
+    "METODO_PAGO": "EFECTIVO"
+  },
+  {
+    "FOLIO": 22713.0,
+    "COBERTURA": "RC PREMIUM",
+    "FECHA": "12/02/2026",
+    "N_PAGO": 3,
+    "MONTO": 749.0,
+    "ENTREGADO": "ENTREGADO",
+    "METODO_PAGO": "TRANSFERENCIA"
+  },
+  {
+    "FOLIO": 22727.0,
+    "COBERTURA": "RC BASICA",
+    "FECHA": "11/02/2026",
+    "N_PAGO": 3,
+    "MONTO": 449.0,
+    "ENTREGADO": "ENTREGADO",
+    "METODO_PAGO": "EFECTIVO"
+  },
+  {
+    "FOLIO": 22735.0,
+    "COBERTURA": "PLATINO +",
+    "FECHA": "13/02/2026",
+    "N_PAGO": 3,
+    "MONTO": 779.0,
+    "ENTREGADO": "ENTREGADO",
+    "METODO_PAGO": "EFECTIVO"
+  },
+  {
+    "FOLIO": 22741.0,
+    "COBERTURA": "RC PRO",
+    "FECHA": "12/02/2026",
+    "N_PAGO": 3,
+    "MONTO": 585.0,
+    "ENTREGADO": "ENTREGADO",
+    "METODO_PAGO": "EFECTIVO"
+  },
+  {
+    "FOLIO": 22742.0,
+    "COBERTURA": "PLATINO +",
+    "FECHA": "12/02/2026",
+    "N_PAGO": 3,
+    "MONTO": 689.0,
+    "ENTREGADO": "ENTREGADO",
+    "METODO_PAGO": "EFECTIVO"
+  },
+  {
+    "FOLIO": 22750.0,
+    "COBERTURA": "RC PREMIUM",
+    "FECHA": "11/02/2026",
+    "N_PAGO": 3,
+    "MONTO": 749.0,
+    "ENTREGADO": "ENTREGADO",
+    "METODO_PAGO": "EFECTIVO"
+  },
+  {
+    "FOLIO": 22751.0,
+    "COBERTURA": "RC PREMIUM",
+    "FECHA": "11/02/2026",
+    "N_PAGO": 3,
+    "MONTO": 749.0,
+    "ENTREGADO": "ENTREGADO",
+    "METODO_PAGO": "EFECTIVO"
+  },
+  {
+    "FOLIO": 22799.0,
+    "COBERTURA": "PLATINO +",
+    "FECHA": "03/02/2026",
+    "N_PAGO": 2,
+    "MONTO": 749.0,
+    "ENTREGADO": "ENTREGADO",
+    "METODO_PAGO": "EFECTIVO"
+  },
+  {
+    "FOLIO": 22806.0,
+    "COBERTURA": "RC PRO",
+    "FECHA": "06/02/2026",
+    "N_PAGO": 2,
+    "MONTO": 585.0,
+    "ENTREGADO": "ENTREGADO",
+    "METODO_PAGO": "EFECTIVO"
+  },
+  {
+    "FOLIO": 22855.0,
+    "COBERTURA": "PLATINO +",
+    "FECHA": "13/02/2026",
+    "N_PAGO": 2,
+    "MONTO": 749.0,
+    "ENTREGADO": "ENTREGADO",
+    "METODO_PAGO": "EFECTIVO"
+  },
+  {
+    "FOLIO": 22857.0,
+    "COBERTURA": "PLATINO +",
+    "FECHA": "08/02/2026",
+    "N_PAGO": 2,
+    "MONTO": 779.0,
+    "ENTREGADO": "ENTREGADO",
+    "METODO_PAGO": "TRANSFERENCIA"
+  },
+  {
+    "FOLIO": 22881.0,
+    "COBERTURA": "PLATINO +",
+    "FECHA": "06/02/2026",
+    "N_PAGO": 2,
+    "MONTO": 749.0,
+    "ENTREGADO": "ENTREGADO",
+    "METODO_PAGO": "EFECTIVO"
+  },
+  {
+    "FOLIO": 22886.0,
+    "COBERTURA": "PLATINO +",
+    "FECHA": "09/02/2026",
+    "N_PAGO": 2,
+    "MONTO": 779.0,
+    "ENTREGADO": "ENTREGADO",
+    "METODO_PAGO": "EFECTIVO"
+  },
+  {
+    "FOLIO": 22916.0,
+    "COBERTURA": "PLATINO +",
+    "FECHA": "07/02/2026",
+    "N_PAGO": 2,
+    "MONTO": 749.0,
+    "ENTREGADO": "ENTREGADO",
+    "METODO_PAGO": "EFECTIVO"
+  },
+  {
+    "FOLIO": 22933.0,
+    "COBERTURA": "RC PREMIUM",
+    "FECHA": "04/02/2026",
+    "N_PAGO": 3,
+    "MONTO": 779.0,
+    "ENTREGADO": "ENTREGADO",
+    "METODO_PAGO": "EFECTIVO"
+  },
+  {
+    "FOLIO": 22941.0,
+    "COBERTURA": "PLATINO +",
+    "FECHA": "04/02/2026",
+    "N_PAGO": 2,
+    "MONTO": 779.0,
+    "ENTREGADO": "ENTREGADO",
+    "METODO_PAGO": "EFECTIVO"
+  },
+  {
+    "FOLIO": 22949.0,
+    "COBERTURA": "PLATINO +",
+    "FECHA": "12/02/2026",
+    "N_PAGO": 2,
+    "MONTO": 689.0,
+    "ENTREGADO": "ENTREGADO",
+    "METODO_PAGO": "EFECTIVO"
+  },
+  {
+    "FOLIO": 22973.0,
+    "COBERTURA": "PLATINO +",
+    "FECHA": "13/02/2026",
+    "N_PAGO": 2,
+    "MONTO": 749.0,
+    "ENTREGADO": "ENTREGADO",
+    "METODO_PAGO": "EFECTIVO"
+  },
+  {
+    "FOLIO": 22995.0,
+    "COBERTURA": "RC BASICA",
+    "FECHA": "03/02/2026",
+    "N_PAGO": 2,
+    "MONTO": 679.0,
+    "ENTREGADO": "ENTREGADO",
+    "METODO_PAGO": "EFECTIVO"
+  },
+  {
+    "FOLIO": 22999.0,
+    "COBERTURA": "PLATINO +",
+    "FECHA": "13/02/2026",
+    "N_PAGO": 2,
+    "MONTO": 749.0,
+    "ENTREGADO": "ENTREGADO",
+    "METODO_PAGO": "TRANSFERENCIA"
+  },
+  {
+    "FOLIO": 23000.0,
+    "COBERTURA": "PLATINO +",
+    "FECHA": "10/02/2026",
+    "N_PAGO": 2,
+    "MONTO": 749.0,
+    "ENTREGADO": "ENTREGADO",
+    "METODO_PAGO": "EFECTIVO"
+  },
+  {
+    "FOLIO": 23001.0,
+    "COBERTURA": "PLATINO +",
+    "FECHA": "05/02/2026",
+    "N_PAGO": 2,
+    "MONTO": 749.0,
+    "ENTREGADO": "ENTREGADO",
+    "METODO_PAGO": "EFECTIVO"
+  },
+  {
+    "FOLIO": 23004.0,
+    "COBERTURA": "RC PRO",
+    "FECHA": "06/02/2026",
+    "N_PAGO": 2,
+    "MONTO": 639.0,
+    "ENTREGADO": "ENTREGADO",
+    "METODO_PAGO": "EFECTIVO"
+  },
+  {
+    "FOLIO": 23031.0,
+    "COBERTURA": "RC PRO",
+    "FECHA": "09/02/2026",
+    "N_PAGO": 2,
+    "MONTO": 629.0,
+    "ENTREGADO": "ENTREGADO",
+    "METODO_PAGO": "EFECTIVO"
+  },
+  {
+    "FOLIO": 23038.0,
+    "COBERTURA": "RC PRO",
+    "FECHA": "13/02/2026",
+    "N_PAGO": 2,
+    "MONTO": 585.0,
+    "ENTREGADO": "ENTREGADO",
+    "METODO_PAGO": "EFECTIVO"
+  },
+  {
+    "FOLIO": 23054.0,
+    "COBERTURA": "RC PRO",
+    "FECHA": "09/02/2026",
+    "N_PAGO": 2,
+    "MONTO": 629.0,
+    "ENTREGADO": "ENTREGADO",
+    "METODO_PAGO": "TRANSFERENCIA"
+  },
+  {
+    "FOLIO": 23055.0,
+    "COBERTURA": "RC PREMIUM",
+    "FECHA": "11/02/2026",
+    "N_PAGO": 2,
+    "MONTO": 689.0,
+    "ENTREGADO": "ENTREGADO",
+    "METODO_PAGO": "EFECTIVO"
+  },
+  {
+    "FOLIO": 23064.0,
+    "COBERTURA": "RC BASICA",
+    "FECHA": "03/02/2026",
+    "N_PAGO": 2,
+    "MONTO": 679.0,
+    "ENTREGADO": "ENTREGADO",
+    "METODO_PAGO": "EFECTIVO"
+  },
+  {
+    "FOLIO": 23072.0,
+    "COBERTURA": "PLATINO +",
+    "FECHA": "14/02/2026",
+    "N_PAGO": 3,
+    "MONTO": 849.0,
+    "ENTREGADO": "ENTREGADO",
+    "METODO_PAGO": "EFECTIVO"
+  },
+  {
+    "FOLIO": 23082.0,
+    "COBERTURA": "RC PREMIUM",
+    "FECHA": "11/02/2026",
+    "N_PAGO": 2,
+    "MONTO": 779.0,
+    "ENTREGADO": "ENTREGADO",
+    "METODO_PAGO": "EFECTIVO"
+  },
+  {
+    "FOLIO": 23095.0,
+    "COBERTURA": "RC PRO",
+    "FECHA": "12/02/2026",
+    "N_PAGO": 2,
+    "MONTO": 629.0,
+    "ENTREGADO": "ENTREGADO",
+    "METODO_PAGO": "EFECTIVO"
+  },
+  {
+    "FOLIO": 23097.0,
+    "COBERTURA": "PLATINO +",
+    "FECHA": "12/02/2026",
+    "N_PAGO": 2,
+    "MONTO": 849.0,
+    "ENTREGADO": "ENTREGADO",
+    "METODO_PAGO": "EFECTIVO"
+  },
+  {
+    "FOLIO": 23110.0,
+    "COBERTURA": "PLATINO +",
+    "FECHA": "12/02/2026",
+    "N_PAGO": 2,
+    "MONTO": 689.0,
+    "ENTREGADO": "ENTREGADO",
+    "METODO_PAGO": "TRANSFERENCIA"
+  },
+  {
+    "FOLIO": 23128.0,
+    "COBERTURA": "PLATINO +",
+    "FECHA": "11/02/2026",
+    "N_PAGO": 2,
+    "MONTO": 784.0,
+    "ENTREGADO": "ENTREGADO",
+    "METODO_PAGO": "EFECTIVO"
+  },
+  {
+    "FOLIO": 23131.0,
+    "COBERTURA": "RC PRO",
+    "FECHA": "11/02/2026",
+    "N_PAGO": 2,
+    "MONTO": 585.0,
+    "ENTREGADO": "ENTREGADO",
+    "METODO_PAGO": "EFECTIVO"
+  },
+  {
+    "FOLIO": 23157.0,
+    "COBERTURA": "PLATINO +",
+    "FECHA": "13/02/2026",
+    "N_PAGO": 2,
+    "MONTO": 784.0,
+    "ENTREGADO": "ENTREGADO",
+    "METODO_PAGO": "EFECTIVO"
+  },
+  {
+    "FOLIO": 23216.0,
+    "COBERTURA": "RC PRO",
+    "FECHA": "05/02/2026",
+    "N_PAGO": 3,
+    "MONTO": 125.0,
+    "ENTREGADO": "ENTREGADO",
+    "METODO_PAGO": "EFECTIVO"
+  },
+  {
+    "FOLIO": 23261.0,
+    "COBERTURA": "PLATINO +",
+    "FECHA": "05/02/2026",
+    "N_PAGO": 1,
+    "MONTO": 969.0,
+    "ENTREGADO": "ENTREGADO",
+    "METODO_PAGO": "EFECTIVO"
+  },
+  {
+    "FOLIO": 23296.0,
+    "COBERTURA": "PLATINO +",
+    "FECHA": "05/02/2026",
+    "N_PAGO": 1,
+    "MONTO": 889.0,
+    "ENTREGADO": "ENTREGADO",
+    "METODO_PAGO": "EFECTIVO"
+  },
+  {
+    "FOLIO": 23314.0,
+    "COBERTURA": "PLATINO +",
+    "FECHA": "07/02/2026",
+    "N_PAGO": 1,
+    "MONTO": 895.0,
+    "ENTREGADO": "ENTREGADO",
+    "METODO_PAGO": "EFECTIVO"
+  },
+  {
+    "FOLIO": 23317.0,
+    "COBERTURA": "PLATINO +",
+    "FECHA": "06/02/2026",
+    "N_PAGO": 1,
+    "MONTO": 895.0,
+    "ENTREGADO": "ENTREGADO",
+    "METODO_PAGO": "TRANSFERENCIA"
+  },
+  {
+    "FOLIO": 23318.0,
+    "COBERTURA": "RC PRO",
+    "FECHA": "12/02/2026",
+    "N_PAGO": 1,
+    "MONTO": 799.0,
+    "ENTREGADO": "ENTREGADO",
+    "METODO_PAGO": "EFECTIVO"
+  },
+  {
+    "FOLIO": 23324.0,
+    "COBERTURA": "PLATINO +",
+    "FECHA": "05/02/2026",
+    "N_PAGO": 1,
+    "MONTO": 969.0,
+    "ENTREGADO": "ENTREGADO",
+    "METODO_PAGO": "EFECTIVO"
+  },
+  {
+    "FOLIO": 23350.0,
+    "COBERTURA": "PLATINO +",
+    "FECHA": "08/02/2026",
+    "N_PAGO": 1,
+    "MONTO": 895.0,
+    "ENTREGADO": "ENTREGADO",
+    "METODO_PAGO": "EFECTIVO"
+  },
+  {
+    "FOLIO": 23363.0,
+    "COBERTURA": "PLATINO +",
+    "FECHA": "09/02/2026",
+    "N_PAGO": 1,
+    "MONTO": 995.0,
+    "ENTREGADO": "ENTREGADO",
+    "METODO_PAGO": "EFECTIVO"
+  },
+  {
+    "FOLIO": 23367.0,
+    "COBERTURA": "RC PRO",
+    "FECHA": "11/02/2026",
+    "N_PAGO": 1,
+    "MONTO": 865.0,
+    "ENTREGADO": "ENTREGADO",
+    "METODO_PAGO": "EFECTIVO"
+  },
+  {
+    "FOLIO": 22882.0,
+    "COBERTURA": "PLATINO +",
+    "FECHA": "2026-02-08 00:00:00",
+    "N_PAGO": 2,
+    "MONTO": 779.0,
+    "ENTREGADO": "ENTREGADO",
+    "METODO_PAGO": "DEPOSITO"
+  },
+  {
+    "FOLIO": 21783.0,
+    "COBERTURA": "PLATINO +",
+    "FECHA": "05/02/2026",
+    "N_PAGO": 7,
+    "MONTO": 125.0,
+    "ENTREGADO": "ENTREGADO",
+    "METODO_PAGO": "EFECTIVO"
+  },
+  {
+    "FOLIO": 23216.0,
+    "COBERTURA": "RC PRO",
+    "FECHA": "05/02/2026",
+    "N_PAGO": 3,
+    "MONTO": 125.0,
+    "ENTREGADO": "ENTREGADO",
+    "METODO_PAGO": "EFECTIVO"
+  }
+]

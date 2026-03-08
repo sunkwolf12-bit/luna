@@ -1,0 +1,3 @@
+está bien pero de una vez también si puedes haz un git push para que subas
+todo al git todo lo tu backup a git hub y una vez que hayas hecho eso ya
+este ya puedes continuar
