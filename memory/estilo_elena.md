@@ -33,6 +33,12 @@
 - Que parezca generado por IA (por eso ajusta el estilo)
 - Contenido genérico sin conexión con su realidad
 
+### Herramientas disponibles para tareas
+- **Brave Search API** — Puedo buscar en internet para obtener información actualizada y fuentes adicionales
+- **Web Fetch** — Puedo extraer contenido de páginas web específicas
+- **PDF** — Puedo analizar documentos PDF que me compartas
+- *Nota: Cuando Elena me pida tareas, puedo investigar en internet además de usar los documentos que me proporcione*
+
 ---
 
 *Última actualización: 12 de marzo de 2026*

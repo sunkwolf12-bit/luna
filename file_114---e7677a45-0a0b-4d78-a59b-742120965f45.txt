@@ -1,0 +1,4 @@
+Quiero que agreguese en tu memory MD, que tienes una herramienta para buscar.
+Tienes la API de Brave para poder buscar en internet.
+Así que cuando te pidas tareas, también puedes buscar en internet.
+De hecho, quiero que busques en internet.
