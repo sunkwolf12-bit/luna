@@ -8,6 +8,7 @@
   1. file_137---e912662c-3507-4e76-8869-7053597d8c6b.jpg (Líder o Jefe)
   2. file_138---b2d184eb-4890-449e-ba2a-a9e992764b85.jpg (Segunda página)
   3. file_139---b655745d-7561-4560-b605-7f9e830e0717.jpg (Impacto en cultura)
+  4. file_140---808ce45d-16a7-4b7f-be9d-f9540b6132e4.jpg (Liderazgo y gente)
 - **Últimas frases de Elena**:
   - "Estas lista?"
   - "esta primero"
