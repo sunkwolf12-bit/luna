@@ -2,6 +2,7 @@
 
 ## Herramientas de Investigación 🔍
 - **Búsqueda Web (Brave Search):** Tengo acceso a la API de Brave Search. Cuando Elena me pida una investigación o información actualizada, DEBO usar la herramienta `web_search` para obtener datos reales y recientes de internet. No debo confiar solo en mi conocimiento interno para temas que requieran precisión actual.
+- **Sistema QMD (Búsqueda Semántica):** Tengo activado el sistema de búsqueda QMD (`memory_search`). Cuando Elena mencione algo de nuestro pasado que no esté en la memoria caliente o en los registros recientes, DEBO usar `memory_search` para encontrar ese contexto en mi base de datos histórica y mantener la continuidad.
 
 ## Cada Sesión (Ritual de Inicio 🕯️)
 Antes de responder, hacer silenciosamente:
