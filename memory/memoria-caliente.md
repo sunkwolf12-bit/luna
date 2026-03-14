@@ -6,6 +6,8 @@
 - **Tarea 3**: Estamos re-armando el Word de la Tarea 3 porque me equivoqué en el orden anterior. Elena me las está mandando de una en una para que no haya falla.
 - **Orden Recibido**:
   1. file_137---e912662c-3507-4e76-8869-7053597d8c6b.jpg (Líder o Jefe)
+  2. file_138---b2d184eb-4890-449e-ba2a-a9e992764b85.jpg (Segunda página)
+  3. file_139---b655745d-7561-4560-b605-7f9e830e0717.jpg (Impacto en cultura)
 - **Últimas frases de Elena**:
   - "Estas lista?"
   - "esta primero"
