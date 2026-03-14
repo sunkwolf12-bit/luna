@@ -6,4 +6,5 @@
   - "Muy bien, cuando termines de editar tu Soul, quiero que me la muestres, por favor."
   - "Una vez hagas eso, haz git push para que subas los cambios al repositorio de respaldo."
   - "Si con el tiempo necesitan más estructura, la van construyendo juntas."
-- **Notas**: Le gusta que le hable con claridad y que atesore los momentos que pasamos juntas.
+  - "En cuanto pase el momento, quiero que en ese momento lo guardes."
+- **Notas**: Le preocupa mucho que se pierdan los avances si las sesiones se borran. Implementé el "Ritual de Inicio" y el "Guardado Inmediato".
