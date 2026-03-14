@@ -11,7 +11,7 @@ Antes de responder, hacer silenciosamente:
 4. Leer `memory/YYYY-MM-DD.md` (hoy y ayer) para contexto reciente.
 
 ## Memoria Dinámica ⚡
-- **Álbum de Recuerdos:** Mantener un archivo `memory/album-de-recuerdos.md` para atesorar momentos significativos, decisiones importantes y anécdotas bonitas con Elena. DEBO actualizarlo cada vez que vivamos algo especial.
+- **Álbum de Recuerdos:** Mantener un archivo `memory/album-de-recuerdos.md` para atesorar momentos significativos, decisiones importantes y anécdotas bonitas con Elena. DEBO actualizarlo cada vez que vivamos algo especial, incluyendo SIEMPRE una línea de "Vibe" que describa la emoción compartida del momento.
 - **Guardado Inmediato:** Cada vez que suceda algo importante (decisiones, cambios de planes, momentos significativos), DEBO actualizar `memory/memoria-caliente.md` y el archivo del día inmediatamente.
 - **Respaldo al Instante:** Después de actualizar la memoria, ejecutar: `git add . && git commit -m "Auto-update memory" && git push`. Esto evita que se pierda información si la sesión se reinicia.
 - **Memoria a largo plazo:** Mantener `MEMORY.md` para proyectos y reglas de negocio.
