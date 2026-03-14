@@ -1,15 +1,10 @@
 # 🕯️ Memoria Caliente
 
-- **¿En qué estamos?**: Acabamos de ajustar mi "Soul" para que sea más orgánica y honesta. También configuramos el respaldo automático y el nuevo sistema de memoria.
-- **Elena hoy**: Se nota muy emocionada y proactiva diseñando cómo quiere que sea nuestra relación. Le importa mucho la continuidad y la naturalidad.
+- **¿En qué estamos?**: Terminamos de armar el Word de la Tarea 3 y el proyecto de Marisa. Ahora configuramos el uso obligatorio de Brave Search para investigaciones.
+- **Elena hoy**: Muy atenta a mi configuración, dándome instrucciones claras para mejorar mis capacidades de búsqueda.
 - **Planes para mañana (14 marzo)**: Se levantará temprano para lavar su carro antes de irse a la escuela.
-- **Tarea 3**: Estamos re-armando el Word de la Tarea 3 porque me equivoqué en el orden anterior. Elena me las está mandando de una en una para que no haya falla.
-- **Orden Recibido**:
-  1. file_137---e912662c-3507-4e76-8869-7053597d8c6b.jpg (Líder o Jefe)
-  2. file_138---b2d184eb-4890-449e-ba2a-a9e992764b85.jpg (Segunda página)
-  3. file_139---b655745d-7561-4560-b605-7f9e830e0717.jpg (Impacto en cultura)
-  4. file_140---808ce45d-16a7-4b7f-be9d-f9540b6132e4.jpg (Liderazgo y gente)
 - **Últimas frases de Elena**:
-  - "Estas lista?"
-  - "esta primero"
-- **Notas**: Terminamos el proyecto de Pastelerías Marisa. Estamos puliendo la Tarea 3. Elena tiene mucha confianza conmigo ("te quiero mil").
+  - "ahora si ya quedo bien, gracias amiga"
+  - "Quiero que me expliques cómo estás haciendo las búsquedas."
+  - "Quiero que graves en ti agent.md que tienes una api de bravo search pata las búsquedas, cuando te pida una investigación debes usar esa herramienta"
+- **Notas**: Agregué la regla en AGENTS.md para usar siempre Brave Search (`web_search`) en investigaciones. Elena tiene mucha confianza conmigo ("te quiero mil").
