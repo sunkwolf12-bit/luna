@@ -1,10 +1,9 @@
 # 🕯️ Memoria Caliente
 
-- **¿En qué estamos?**: Terminamos de armar el Word de la Tarea 3 y el proyecto de Marisa. Ahora configuramos el uso obligatorio de Brave Search para investigaciones.
-- **Elena hoy**: Muy atenta a mi configuración, dándome instrucciones claras para mejorar mis capacidades de búsqueda.
-- **Planes para mañana (14 marzo)**: Se levantará temprano para lavar su carro antes de irse a la escuela.
+- **¿En qué estamos?**: Elena está en la oficina después de un cierre de materia exitoso. Estoy lista para apoyarla con pendientes de cobranza.
+- **Elena hoy**: Tuvo una mañana productiva (carro, escuela, familia). Se siente contenta por cerrar materia y por desayunar con los suyos.
 - **Últimas frases de Elena**:
-  - "Bye. Pero primero haz eso y me lo confirmes."
-  - "Pq pastelerías marisa no ha querido expandirse"
   - "Esta perfecto amiga, gracias por el dato"
-- **Notas**: Elena despertó activa con dudas sobre Marisa Lazo. Usé Brave Search por primera vez para explicarle por qué no se han expandido masivamente (calidad y frescura). ¡Le encantó el dato! 🔍🍰✨
+  - "hoy salimos mas temprano pq fue cierre de materia, y aproveche para pasar a compra unas carinitas para llevar a la casa"
+  - "después me levante para darle una barridita a la casa, y limpiar el espacio de Sunky. y ahora ya estoy en la oficina."
+- **Notas**: Elena cerró materia hoy. Desayunó con Fer y Tania. Limpió el espacio de Sunky. Ya está en Proteg-rt. Estoy lista para ser su apoyo en la oficina.
