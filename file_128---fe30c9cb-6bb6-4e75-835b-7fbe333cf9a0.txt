@@ -1,0 +1,3 @@
+Una vez hagas eso, haz git push para que subas los cambios al repositorio de respaldo.
+Ah, también quiero que configures un hard bit para que al menos una vez al día se haga un git push.
+O bueno, cada vez que haya un hard bit, que haya un cambio en el workspace que no se haya pushado, que lo pushes de una vez.
