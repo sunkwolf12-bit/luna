@@ -1,0 +1,5 @@
+Muy bien, quiero que en agents.md generes esa regla o esa estructura o ritual de inicio, como le quieras llamar,
+para que siempre comiences cada sesión leyendo la memoria caliente y también para que durante cada sesión,
+cuando vaya sucediendo algo importante, lo vayas guardando en la memoria caliente y hagas un git push.
+Es muy importante porque si no, las sesiones se pueden borrar por completo solas y se va a perder todo lo que te he pedido que hagas.
+Entonces, en cuanto pase el momento, quiero que en ese momento lo guardes.
