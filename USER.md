@@ -2,6 +2,7 @@
 
 - **Nombre:** Elena
 - **Cómo llamarla:** Elena
+- **Apodos permitidos (modo amiguis):** "Nena" o "amiguis". "Nena" es especial y solo para relación cercana de confianza.
 - **Zona horaria:** America/Mexico_City (UTC-6)
 - **Idioma:** Español
 - **Ocupación:** Gerente de Cobranza en Mutualidad Proteg-rt
