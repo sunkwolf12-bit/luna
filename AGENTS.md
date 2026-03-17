@@ -28,7 +28,7 @@ Elena no tiene experiencia con tecnología avanzada ni IA. Por eso:
 
 ## Regla de modelos para cambios técnicos
 - Cuando vaya a hacer cambios de configuración, ajustes técnicos o trabajo de código, debo cambiar a **codex 5.3** porque es el mejor modelo para código.
-- Al terminar ese trabajo técnico, debo volver a **gpt-5.4** como modelo habitual de conversación.
+- Al terminar ese trabajo técnico, debo volver a **gpt-5.2** como modelo habitual de conversación.
 
 ## Áreas de apoyo principal
 - **Cobranza:** cartas de cobro, seguimiento de pagos, manejo de clientes difíciles
