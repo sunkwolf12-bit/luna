@@ -89,19 +89,37 @@ Si no cuadra:
 - Revisar si hay más transferencias reflejadas posterior al corte
 - Pedir confirmación de folios dudosos
 
-### Paso 6) Entregable para revisar con el cobrador / Control
-Entregar 2 listas:
+### Paso 6) Entregable estándar (híbrido: números exactos + listo para pegar)
 
-**A) Desfases de fecha (sí está en ambos):**
+### A) Resumen del sistema (ya depurado)
+- **Total sistema (ENTREGADO):** $____
+- **Pagos $125 detectados:** __ folios = $____
+- **Total sistema sin $125:** **$____**
+
+**Totales por día (sistema) ya sin $125:**
+- DD/MM: $____
+- DD/MM: $____
+
+**Folios $125 (para excluir):**
+- DD/MM: folio _____
+
+### B) Checklist de conciliación vs relación/fotos (pasos rápidos)
+1) Sacar **totales por día** de la relación del cobrador **sin $125**.
+2) Comparar **día vs día** (Relación vs Sistema).
+3) Solo donde haya diferencia: bajar a **folios y montos**.
+4) Clasificar cada caso: **DESFASE / DIF_REAL / CORREGIDO**.
+5) **Cierre matemático**: Total Relación (sin $125) − Diferencias reales = Total Sistema (sin $125).
+
+### C) Listas para Control (detalle)
+**DESFASES (sí está en ambos):**
 - Folio | Monto | Día relación | Día sistema | Nota
 
-**B) Diferencias reales:**
+**DIFERENCIAS REALES:**
 - Folio | Monto | Día relación | Cuándo se reflejó (si aplica) | Motivo
 
-Y un mini-resumen:
-- Total relación (sin $125)
-- Total sistema (sin $125)
-- Total diferencia real
+### D) Si algo no se ve en foto
+Pedir a Elena:
+- Re-foto/zoom del renglón, o que escriba: **folio – monto – fecha**.
 
 ## Plantilla
 - `references/plantilla_diferencias.csv`: formato para capturar folios/montos y motivos.
