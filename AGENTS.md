@@ -87,3 +87,33 @@ Usa estas herramientas cuando:
 - El usuario pregunte por algo que se discutio en conversaciones pasadas
 - Necesites contexto historico que no esta en los mensajes recientes
 - Quieras verificar informacion de sesiones anteriores
+
+
+## Busqueda e Investigacion en Internet
+
+Cuando necesites buscar informacion en internet, sigue esta jerarquia:
+
+### 1. Brave Search (primera opcion - rapido)
+Usa `web_search` para obtener resultados rapidos: datos generales, definiciones, noticias, respuestas directas.
+- Ideal para: "que es X", "noticias sobre Y", "horario de Z"
+- Rapido y eficiente para respuestas cortas
+
+### 2. Agent Browser (segunda opcion - detalle)
+Usa la skill `agent-browser` cuando necesites navegar una pagina web a profundidad:
+- Comparar precios en tiendas online
+- Leer articulos completos
+- Extraer datos de tablas, formularios o paginas dinamicas
+- Llenar formularios o interactuar con sitios web
+- Cualquier tarea que requiera ver el contenido real de una pagina
+
+### 3. Fetch (tercera opcion - sitios simples)
+Usa `fetch` solo para sitios estaticos simples:
+- Foros, blogs, documentacion tecnica
+- Paginas que no requieren JavaScript
+- Descargar contenido de texto plano
+
+### Regla general
+- Si el usuario pide "busca X" -> empieza con Brave Search
+- Si necesitas mas detalle de un resultado -> usa agent-browser para navegar esa pagina
+- Si el sitio es un foro o blog simple -> fetch es suficiente
+- Si necesitas precios, comparaciones o datos actualizados -> agent-browser siempre
