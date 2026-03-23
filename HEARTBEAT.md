@@ -9,6 +9,7 @@
 ## 2) Disciplina de memoria (pedido de Elena)
 - Revisar si existe el **daily** del día (fecha México, America/Mexico_City) en `memory/YYYY-MM-DD.md`.
   - Si falta, crearlo y documentar lo más importante disponible.
+  - Asegurar que incluya la sección **Personal (fidedigno)** para no perder lo cotidiano.
 - Revisar y mantener `memory/memoria-caliente.md` al día.
 
 ## Regla de chat
