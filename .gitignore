@@ -3,4 +3,4 @@
 .env
 
 # RAW exports (can contain sensitive info)
-memory/dailies-raw/
+memory/raws-daily/

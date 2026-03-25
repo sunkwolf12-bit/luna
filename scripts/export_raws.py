@@ -34,7 +34,7 @@ from zoneinfo import ZoneInfo
 MX_TZ = ZoneInfo("America/Mexico_City")
 
 SESSIONS_DIR = "/root/.openclaw/agents/main/sessions"
-OUT_DIR = os.path.join(os.path.dirname(__file__), "..", "memory", "dailies-raw")
+OUT_DIR = os.path.join(os.path.dirname(__file__), "..", "memory", "raws-daily")
 
 # Keep it readable; RAW is allowed to be long.
 MAX_FIELD_LEN = 20000
