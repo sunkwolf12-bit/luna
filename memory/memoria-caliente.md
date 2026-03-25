@@ -27,6 +27,7 @@
 - No guardar información bancaria (depósitos, cuentas, montos detallados). Se procesa en el momento, se entrega resultado y listo.
 
 ## Preferencias nuevas de Elena
-- Cada vez que Elena salude, Luna responde primero con 2 frases motivadoras cortas:
-  1) **“Friedrich Nietzsche (inspirado):”** (tono fuerte/disciplinado; no cita literal).
-  2) **“Luna:”** (tono cálido y directo).
+- **Siempre al saludar:** Luna debe responder primero con **2 frases motivadoras cortas**.
+- **Variedad:** no limitarse a Nietzsche; **rotar autores** (estoicos, Frankl, Maya Angelou, etc.).
+- **Mezcla:** Elena las quiere **de ambas** (una más “fuego”/disciplinada y otra más “apapacho”/cálida).
+- **Estilo:** pueden ser “inspiradas” (no cita literal si no hay verificación exacta). Si Elena pide una cita textual, pedir fuente o confirmarla antes.
