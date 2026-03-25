@@ -4,3 +4,7 @@
 
 # RAW exports (can contain sensitive info)
 memory/raws-daily/
+
+# Python cache
+__pycache__/
+*.pyc
