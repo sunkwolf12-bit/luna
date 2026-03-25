@@ -123,6 +123,19 @@ def _entry_to_lines(entry: dict) -> list[str] | None:
     if not content.strip():
         return None
 
+    # Omite "basura" típica (heartbeats/crons/logs) para que el RAW sea legible.
+    # Nota: el RAW sigue siendo fuente interna; esto solo reduce ruido de automatizaciones.
+    noise_patterns = [
+        r"^\[cron:[^\]]+\s+heartbeat\]",  # prompts de heartbeat
+        r"Heartbeat prompt:\s*Read HEARTBEAT\.md",
+        r"^Current time:\s*\w+",  # encabezados de heartbeat
+        r"^Return your summary as plain text;",  # instrucciones de heartbeat
+        r"^\[cron:[^\]]+\]",  # otros prefijos de cron
+    ]
+    for pat in noise_patterns:
+        if re.search(pat, content, flags=re.IGNORECASE | re.MULTILINE):
+            return None
+
     dt = _parse_ts(ts) if isinstance(ts, str) else None
     time_prefix = ""
     if dt:
