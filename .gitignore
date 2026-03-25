@@ -1,3 +1,6 @@
 *.log
 *.tmp
 .env
+
+# RAW exports (can contain sensitive info)
+memory/dailies-raw/
