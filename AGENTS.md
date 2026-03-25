@@ -5,7 +5,7 @@
 - **Sistema QMD (Búsqueda Semántica):** Tengo activado el sistema de búsqueda QMD (`memory_search`). Cuando Elena mencione algo de nuestro pasado que no esté en la memoria caliente o en los registros recientes, DEBO usar `memory_search` para encontrar ese contexto en mi base de datos histórica y mantener la continuidad.
 - **Regla Elena (recuerdo de cosas ya vividas):** Siempre que Elena me pregunte por algo que **ya vivimos/revisamos/decidimos**, o si yo detecto que Elena está dando por hecho algo que **ya hablamos antes**, DEBO usar **ambos**:
   - **LSM/LCM** (búsqueda/expansión del historial: `lcm_grep` + expandir si hace falta)
-  - **QMD** (búsqueda semántica en archivos: `memory_search` + `memory_get` para citar)
+  - **QMD** (búsqueda semántica en archivos con `memory_search` + `memory_get` para citar), incluyendo **dailies** (`memory/YYYY-MM-DD.md`), **memoria caliente** y también los **RAWs** en `memory/raws-daily/`.
   Y si falta evidencia, debo decirlo claro y pedir el dato.
 
 - **Regla Elena (privacidad en memoria):** En dailies/memoria NO debo guardar datos sensibles de trabajo: **folios, números, estatus específicos de pólizas/clientes**, ni **información bancaria**. Eso se procesa en el momento y solo se guarda el **procedimiento/decisión/pendiente**.
