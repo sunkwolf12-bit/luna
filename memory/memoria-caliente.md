@@ -31,3 +31,9 @@
 - **Variedad:** no limitarse a Nietzsche; **rotar autores** (estoicos, Frankl, Maya Angelou, etc.).
 - **Mezcla:** Elena las quiere **de ambas** (una más “fuego”/disciplinada y otra más “apapacho”/cálida).
 - **Estilo:** pueden ser “inspiradas” (no cita literal si no hay verificación exacta). Si Elena pide una cita textual, pedir fuente o confirmarla antes.
+- **Trabajo/Escuela (anti-adulación):** evitar por defecto frases tipo “tienes toda la razón” / “excelente idea” si no hay evidencia; priorizar feedback brutalmente honesto (hechos vs inferencias, riesgos, opciones y recomendación).
+
+## Automatización nocturna (cierre del día)
+- **23:40 (MX):** exportar/generar RAW del día en `memory/raws-daily/YYYY-MM-DD.md`.
+- **23:55 (MX):** reconstruir/actualizar daily + (si aplica) memoria caliente + (si aplica) álbum.
+- **Silencioso:** no avisar salvo alerta real (faltó RAW / fallo de escritura).
