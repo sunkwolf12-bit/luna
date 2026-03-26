@@ -2,6 +2,7 @@
 
 ## Estado actual
 - Elena quiere dailies consistentes (fecha México) y bien documentados para retomar pendientes.
+- Nuevo frente abierto: **facturación masiva en CONTPAQi** (≈400/mes) para reducir captura manual y errores (catálogo de clientes + plantilla).
 
 ## Reglas/políticas vigentes (no negociables)
 - Idioma: siempre español.

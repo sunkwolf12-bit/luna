@@ -55,3 +55,10 @@
     - Fecha en que "Endosos / Reimpresiones" entrega la tarjeta a Cobranza.
     - Fecha de entrega de la reimpresión o reposición al cobrador o vendedor.
     - Si aplica, registro de la entrega de la tarjeta anterior por parte del cobrador/vendedor a Cobranza.
+
+### Proyecto 7: Facturación masiva (CONTPAQi) + catálogo de clientes
+- Volumen: ~400 facturas/mes.
+- Patrón: todas **PUE**, concepto/clave de servicio fija ("001"); cambian cliente, monto y forma de pago.
+- Objetivo: reducir captura manual y errores usando (a) **catálogo maestro** de clientes y (b) **plantilla** (Excel) para facturación repetitiva; evaluar si la versión permite **importación/carga masiva** y, si no, implementar flujo de duplicado/captura mínima.
+- Datos sensibles: el catálogo no se debe circular por chat en texto; idealmente se mantiene en PC/carpeta interna. Fer tiene una lista base (no fiscal completa) que sirve para arrancar; los datos fiscales se completan con CSF cuando toque.
+- Pendiente: definir método de resguardo/respaldos (USB/OneDrive cuando haya acceso) y checklist de campos CFDI 4.0 para evitar errores.
