@@ -62,3 +62,9 @@
 - Objetivo: reducir captura manual y errores usando (a) **catálogo maestro** de clientes y (b) **plantilla** (Excel) para facturación repetitiva; evaluar si la versión permite **importación/carga masiva** y, si no, implementar flujo de duplicado/captura mínima.
 - Datos sensibles: el catálogo no se debe circular por chat en texto; idealmente se mantiene en PC/carpeta interna. Fer tiene una lista base (no fiscal completa) que sirve para arrancar; los datos fiscales se completan con CSF cuando toque.
 - Pendiente: definir método de resguardo/respaldos (USB/OneDrive cuando haya acceso) y checklist de campos CFDI 4.0 para evitar errores.
+
+### Herramienta: consultas a “la base de datos” (skill + API en VPS)
+- Si Elena pide “consultar la base de datos”, usar la skill **db-consultas** (solo lectura) del asistente de Óscar, que pega a la API REST en este VPS.
+- Base URL: `http://165.22.129.133:8000` · Docs: `/docs`.
+- Autenticación: header `X-API-Key` (la llave ya está en el servidor/skill; no compartirla por chat).
+- Nota: hay endpoints de **guardias** (ej. `/api/v1/guardias/hoy`, `/api/v1/guardias/semana`).
