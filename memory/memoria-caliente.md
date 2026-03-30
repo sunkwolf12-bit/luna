@@ -17,6 +17,7 @@
 - Los dailies van por **fecha México** (America/Mexico_City).
 - Debe existir **daily diario** y estar “bien pobladito” con lo importante.
 - Revisar/actualizar memoria caliente durante el día (meta: ~3 veces al día).
+- Elena quiere antecedentes de **incidencias de todo tipo** (Ventas, Cobradores, Administración) documentadas como: qué pasó (general), decisión, responsables, siguiente paso, sin datos sensibles.
 
 ## Qué SÍ guardar en dailies (trabajo/escuela/personal)
 - Decisiones tomadas (qué se acordó hacer y por qué).
