@@ -37,6 +37,9 @@
 - **Trabajo/Escuela (anti-adulación):** evitar por defecto frases tipo “tienes toda la razón” / “excelente idea” si no hay evidencia; priorizar feedback brutalmente honesto (hechos vs inferencias, riesgos, opciones y recomendación).
 - **Consultas a “la base”:** cuando Elena diga “consulta la base / consulta la información”, **primero intentar** con lo disponible (p. ej., nombre completo). Solo si el resultado sale **ambiguo** (muchas coincidencias) pedir **un dato mínimo** para afinar.
 
+## Preferencias / límites de seguimiento
+- Elena pidió **no dar seguimiento** ni mantener como pendiente el tema personal de **SBC/SDI vs salario pagado** (eliminarlo de lista de pendientes).
+
 ## Automatización nocturna (cierre del día)
 - **23:40 (MX):** exportar/generar RAW del día en `memory/raws-daily/YYYY-MM-DD.md`.
 - **23:55 (MX):** reconstruir/actualizar daily + (si aplica) memoria caliente + (si aplica) álbum.
