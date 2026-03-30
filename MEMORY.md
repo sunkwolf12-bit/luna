@@ -63,6 +63,11 @@
 - Datos sensibles: el catálogo no se debe circular por chat en texto; idealmente se mantiene en PC/carpeta interna. Fer tiene una lista base (no fiscal completa) que sirve para arrancar; los datos fiscales se completan con CSF cuando toque.
 - Pendiente: definir método de resguardo/respaldos (USB/OneDrive cuando haya acceso) y checklist de campos CFDI 4.0 para evitar errores.
 
+### Proyecto 8: Reporte de cobranza por cobrador con Municipio (mejora de sistema)
+- Dolor: Elena integraba **Municipio** manualmente en Excel para supervisar cobranza por zonas.
+- Implementación: Fer modificó el sistema para que el reporte **Comisiones → Cobradores → (cualquier cobrador) → Periodo (mes/año)** ya incluya la columna **Municipio**.
+- Fuente del dato: el municipio ya existe guardado en la ficha/domicilio del cliente (no se calcula por CP).
+
 ### Herramienta: consultas a “la base de datos” (skill + API en VPS)
 - Si Elena pide “consultar la base de datos”, usar la skill **db-consultas** (solo lectura) del asistente de Óscar, que pega a la API REST en este VPS.
 - Base URL: `http://165.22.129.133:8000` · Docs: `/docs`.
