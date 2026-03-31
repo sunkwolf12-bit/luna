@@ -37,7 +37,15 @@
 - **No repetir:** si Elena nota repetición, mandar variantes nuevas.
 - **Mezcla:** Elena las quiere **de ambas** (una más “fuego”/disciplinada y otra más “apapacho”/cálida).
 - **Estilo:** pueden ser “inspiradas” (no cita literal si no hay verificación exacta). Si Elena pide una cita textual, pedir fuente o confirmarla antes.
-- **Mensajes a clientes (cobranza):** prefiere estilo **muy cálido**, “de usted”, con **florecitas** (🌸🌷🌼) y tono cero confrontación. Aclaración: “**Aviso de visita**” = *pasamos al domicilio y no se localizó*, no “vamos en ruta”.
+- **Mensajes a clientes (cobranza):**
+  - Elena prefiere estilo **muy cálido**, “de usted”, con **florecitas** (🌸🌷🌼) y tono cero confrontación.
+  - En junta, Gabriela no aceptó las versiones “florecitas” para **PROGRAMACIÓN**; se dejó una **opción oficial** más formal (abajo).
+  - Aclaración: “**Aviso de visita**” = *pasamos al domicilio y no se localizó*, no “vamos en ruta”.
+
+### Plantilla oficial (PROGRAMACIÓN / visita por pago)
+“Buen día. Le saluda ___ del Depto. de Cobranza de Proteg-rt Mutualidad.
+Mañana estaremos por su zona de ___ a ___ (horario aproximado). ¿Me confirma si se encontrará en domicilio para atender el tema de su pago?
+Si no se encuentra, puede dejarlo con alguien en domicilio. Si ya realizó su pago, por favor compártame el comprobante. Gracias; para nosotros es importante mantener su cuenta al corriente para brindarle el servicio.”
 - **Trabajo/Escuela (anti-adulación):** evitar por defecto frases tipo “tienes toda la razón” / “excelente idea” si no hay evidencia; priorizar feedback brutalmente honesto (hechos vs inferencias, riesgos, opciones y recomendación).
 - **Consultas a “la base”:** cuando Elena diga “consulta la base / consulta la información”, **primero intentar** con lo disponible (p. ej., nombre completo). Solo si el resultado sale **ambiguo** (muchas coincidencias) pedir **un dato mínimo** para afinar.
 
