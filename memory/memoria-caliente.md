@@ -46,6 +46,12 @@
 “Buen día. Le saluda ___ del Depto. de Cobranza de Proteg-rt Mutualidad.
 Mañana estaremos por su zona de ___ a ___ (horario aproximado). ¿Me confirma si se encontrará en domicilio para atender el tema de su pago?
 Si no se encuentra, puede dejarlo con alguien en domicilio. Si ya realizó su pago, por favor compártame el comprobante. Gracias; para nosotros es importante mantener su cuenta al corriente para brindarle el servicio.”
+
+### Plantilla oficial (REPROGRAMACIÓN / visita por pago)
+“Hola. Con gusto lo reprogramamos. ¿Qué día le acomoda y en qué horario prefiere que pasemos por su zona para el tema de su pago? En cuanto me confirme, queda agendado. Gracias.
+Si prefiere realizar depósito o transferencia, me avisa y con gusto le comparto los datos. Si ya realizó su pago, por favor compártame el comprobante para validarlo.”
+
+**Nota operativa (cuenta):** no enviar la imagen con datos bancarios desde el primer mensaje. Enviarla solo si el cliente confirma que pagará por depósito/transferencia o pide los datos.
 - **Trabajo/Escuela (anti-adulación):** evitar por defecto frases tipo “tienes toda la razón” / “excelente idea” si no hay evidencia; priorizar feedback brutalmente honesto (hechos vs inferencias, riesgos, opciones y recomendación).
 - **Consultas a “la base”:** cuando Elena diga “consulta la base / consulta la información”, **primero intentar** con lo disponible (p. ej., nombre completo). Solo si el resultado sale **ambiguo** (muchas coincidencias) pedir **un dato mínimo** para afinar.
 
