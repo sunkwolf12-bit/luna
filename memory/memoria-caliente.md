@@ -51,6 +51,11 @@ Si no se encuentra, puede dejarlo con alguien en domicilio. Si ya realizó su pa
 “Hola. Con gusto lo reprogramamos. ¿Qué día le acomoda y en qué horario prefiere que pasemos por su zona para el tema de su pago? En cuanto me confirme, queda agendado. Gracias.
 Si prefiere realizar depósito o transferencia, me avisa y con gusto le comparto los datos. Si ya realizó su pago, por favor compártame el comprobante para validarlo.”
 
+### Plantilla oficial (AVISO DE VISITA / no se localizó)
+“Buen día. Le saluda ___ del Depto. de Cobranza de Proteg-rt Mutualidad.
+El día de hoy pasamos a su domicilio por el tema de su pago y no fue posible localizarlo. ¿Me indica por favor en qué horario lo podemos encontrar mañana para reprogramar la visita?
+Si ya realizó su pago por depósito o transferencia, compártame su comprobante para aplicar su pago. Gracias.”
+
 **Nota operativa (cuenta):** no enviar la imagen con datos bancarios desde el primer mensaje. Enviarla solo si el cliente confirma que pagará por depósito/transferencia o pide los datos.
 - **Trabajo/Escuela (anti-adulación):** evitar por defecto frases tipo “tienes toda la razón” / “excelente idea” si no hay evidencia; priorizar feedback brutalmente honesto (hechos vs inferencias, riesgos, opciones y recomendación).
 - **Consultas a “la base”:** cuando Elena diga “consulta la base / consulta la información”, **primero intentar** con lo disponible (p. ej., nombre completo). Solo si el resultado sale **ambiguo** (muchas coincidencias) pedir **un dato mínimo** para afinar.
