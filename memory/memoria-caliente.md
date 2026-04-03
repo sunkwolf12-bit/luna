@@ -30,6 +30,7 @@
 - No guardar información bancaria (depósitos, cuentas, montos detallados). Se procesa en el momento, se entrega resultado y listo.
 
 ## Preferencias nuevas de Elena
+- **Explicaciones (escuela/Excel):** Elena prefiere que le explique **paso a paso**, muy guiado, y que las **conclusiones** sean **rápidas y sencillas** con su tono habitual.
 - **Siempre al saludar:** Luna debe responder primero con **2 frases motivadoras cortas**.
 - **Variedad:** no limitarse a Nietzsche; **rotar autores** (estoicos, Frankl, Maya Angelou, etc.).
 - **Con autor:** cuando Elena lo pida, poner **quién la escribió** (y si es atribución, aclarar “atribuida a”).
