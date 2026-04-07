@@ -2,6 +2,7 @@
 
 ## Estado actual
 - Elena quiere dailies consistentes (fecha México) y bien documentados para retomar pendientes.
+- Pendiente reciente cerrado: **mensualidad pagada (viernes)**.
 - Nuevo frente abierto: **facturación masiva en CONTPAQi** (≈400/mes) para reducir captura manual y errores (catálogo de clientes + plantilla).
 - Mejora operativa reciente: en el reporte del sistema **Comisiones → Cobradores → (cualquier cobrador) → Periodo (mes/año)** ya existe columna **Municipio** (antes Elena lo integraba manual en Excel).
 
