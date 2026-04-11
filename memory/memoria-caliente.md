@@ -26,6 +26,10 @@
 - Procedimientos/métodos que estamos usando (checklists, criterios, reglas).
 - Temas personales que Elena me platique y que quiera retomar después.
 
+## Pendientes Maestría (lecturas / materiales)
+- Ver la película **“El mago de las mentiras”**.
+- Leer/ver material **“Sangre de mayo”** (muerte del Cardenal en Guadalajara).
+
 ## Qué NO guardar (privacidad)
 - No guardar números/folios/estatus específicos de clientes o pólizas.
 - No guardar información bancaria (depósitos, cuentas, montos detallados). Se procesa en el momento, se entrega resultado y listo.
