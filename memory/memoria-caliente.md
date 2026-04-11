@@ -29,6 +29,7 @@
 ## Pendientes Maestría (lecturas / materiales)
 - Ver la película **“El mago de las mentiras”**.
 - Leer/ver material **“Sangre de mayo”** (muerte del Cardenal en Guadalajara).
+- Ver documentales sobre los presidentes de México a partir de los 80’s.
 
 ## Qué NO guardar (privacidad)
 - No guardar números/folios/estatus específicos de clientes o pólizas.
