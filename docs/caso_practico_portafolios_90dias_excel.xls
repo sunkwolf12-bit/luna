@@ -1,0 +1,119 @@
+<?xml version="1.0"?>
+<?mso-application progid="Excel.Sheet"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:o="urn:schemas-microsoft-com:office:office"
+ xmlns:x="urn:schemas-microsoft-com:office:excel"
+ xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:html="http://www.w3.org/TR/REC-html40">
+  <Worksheet ss:Name="Portafolios 90 dias">
+    <Table>
+      <Row>
+        <Cell><Data ss:Type="String">Portafolio</Data></Cell>
+        <Cell><Data ss:Type="String">Instrumento</Data></Cell>
+        <Cell><Data ss:Type="String">%</Data></Cell>
+        <Cell><Data ss:Type="String">Capital total</Data></Cell>
+        <Cell><Data ss:Type="String">Capital asignado</Data></Cell>
+        <Cell><Data ss:Type="String">Tasa anual (R)</Data></Cell>
+        <Cell><Data ss:Type="String">Dias (t)</Data></Cell>
+        <Cell><Data ss:Type="String">Factor (t/360)</Data></Cell>
+        <Cell><Data ss:Type="String">Rendimiento ($)</Data></Cell>
+        <Cell><Data ss:Type="String">Monto final ($)</Data></Cell>
+      </Row>
+
+      <Row>
+        <Cell><Data ss:Type="String">BANAMEX</Data></Cell>
+        <Cell><Data ss:Type="String">CETES 91 dias</Data></Cell>
+        <Cell><Data ss:Type="Number">0.70</Data></Cell>
+        <Cell><Data ss:Type="Number">6700000</Data></Cell>
+        <Cell ss:Formula="=RC[-1]*RC[-2]"><Data ss:Type="Number">0</Data></Cell>
+        <Cell><Data ss:Type="Number">0.0916</Data></Cell>
+        <Cell><Data ss:Type="Number">90</Data></Cell>
+        <Cell ss:Formula="=RC[-1]/360"><Data ss:Type="Number">0</Data></Cell>
+        <Cell ss:Formula="=RC[-4]*RC[-3]*RC[-1]"><Data ss:Type="Number">0</Data></Cell>
+        <Cell ss:Formula="=RC[-5]+RC[-1]"><Data ss:Type="Number">0</Data></Cell>
+      </Row>
+
+      <Row>
+        <Cell><Data ss:Type="String">BANAMEX</Data></Cell>
+        <Cell><Data ss:Type="String">CETES 28 dias</Data></Cell>
+        <Cell><Data ss:Type="Number">0.20</Data></Cell>
+        <Cell><Data ss:Type="Number">6700000</Data></Cell>
+        <Cell ss:Formula="=RC[-1]*RC[-2]"><Data ss:Type="Number">0</Data></Cell>
+        <Cell><Data ss:Type="Number">0.122</Data></Cell>
+        <Cell><Data ss:Type="Number">90</Data></Cell>
+        <Cell ss:Formula="=RC[-1]/360"><Data ss:Type="Number">0</Data></Cell>
+        <Cell ss:Formula="=RC[-4]*RC[-3]*RC[-1]"><Data ss:Type="Number">0</Data></Cell>
+        <Cell ss:Formula="=RC[-5]+RC[-1]"><Data ss:Type="Number">0</Data></Cell>
+      </Row>
+
+      <Row>
+        <Cell><Data ss:Type="String">BANAMEX</Data></Cell>
+        <Cell><Data ss:Type="String">Fondo deuda corto plazo</Data></Cell>
+        <Cell><Data ss:Type="Number">0.10</Data></Cell>
+        <Cell><Data ss:Type="Number">6700000</Data></Cell>
+        <Cell ss:Formula="=RC[-1]*RC[-2]"><Data ss:Type="Number">0</Data></Cell>
+        <Cell><Data ss:Type="String"></Data></Cell>
+        <Cell><Data ss:Type="Number">90</Data></Cell>
+        <Cell><Data ss:Type="String"></Data></Cell>
+        <Cell><Data ss:Type="Number">56789</Data></Cell>
+        <Cell ss:Formula="=RC[-5]+RC[-1]"><Data ss:Type="Number">0</Data></Cell>
+      </Row>
+
+      <Row>
+        <Cell><Data ss:Type="String">FINESTRA</Data></Cell>
+        <Cell><Data ss:Type="String">CETES 91 dias</Data></Cell>
+        <Cell><Data ss:Type="Number">0.50</Data></Cell>
+        <Cell><Data ss:Type="Number">6700000</Data></Cell>
+        <Cell ss:Formula="=RC[-1]*RC[-2]"><Data ss:Type="Number">0</Data></Cell>
+        <Cell><Data ss:Type="Number">0.1022</Data></Cell>
+        <Cell><Data ss:Type="Number">90</Data></Cell>
+        <Cell ss:Formula="=RC[-1]/360"><Data ss:Type="Number">0</Data></Cell>
+        <Cell ss:Formula="=RC[-4]*RC[-3]*RC[-1]"><Data ss:Type="Number">0</Data></Cell>
+        <Cell ss:Formula="=RC[-5]+RC[-1]"><Data ss:Type="Number">0</Data></Cell>
+      </Row>
+
+      <Row>
+        <Cell><Data ss:Type="String">FINESTRA</Data></Cell>
+        <Cell><Data ss:Type="String">CETES 182 dias</Data></Cell>
+        <Cell><Data ss:Type="Number">0.30</Data></Cell>
+        <Cell><Data ss:Type="Number">6700000</Data></Cell>
+        <Cell ss:Formula="=RC[-1]*RC[-2]"><Data ss:Type="Number">0</Data></Cell>
+        <Cell><Data ss:Type="Number">0.1302</Data></Cell>
+        <Cell><Data ss:Type="Number">90</Data></Cell>
+        <Cell ss:Formula="=RC[-1]/360"><Data ss:Type="Number">0</Data></Cell>
+        <Cell ss:Formula="=RC[-4]*RC[-3]*RC[-1]"><Data ss:Type="Number">0</Data></Cell>
+        <Cell ss:Formula="=RC[-5]+RC[-1]"><Data ss:Type="Number">0</Data></Cell>
+      </Row>
+
+      <Row>
+        <Cell><Data ss:Type="String">FINESTRA</Data></Cell>
+        <Cell><Data ss:Type="String">CETES 28 dias</Data></Cell>
+        <Cell><Data ss:Type="Number">0.20</Data></Cell>
+        <Cell><Data ss:Type="Number">6700000</Data></Cell>
+        <Cell ss:Formula="=RC[-1]*RC[-2]"><Data ss:Type="Number">0</Data></Cell>
+        <Cell><Data ss:Type="Number">0.0889</Data></Cell>
+        <Cell><Data ss:Type="Number">90</Data></Cell>
+        <Cell ss:Formula="=RC[-1]/360"><Data ss:Type="Number">0</Data></Cell>
+        <Cell ss:Formula="=RC[-4]*RC[-3]*RC[-1]"><Data ss:Type="Number">0</Data></Cell>
+        <Cell ss:Formula="=RC[-5]+RC[-1]"><Data ss:Type="Number">0</Data></Cell>
+      </Row>
+
+      <Row>
+        <Cell><Data ss:Type="String"></Data></Cell>
+        <Cell><Data ss:Type="String">TOTAL BANAMEX (rendimiento)</Data></Cell>
+        <Cell/><Cell/><Cell/><Cell/><Cell/><Cell/>
+        <Cell ss:Formula="=SUM(R2C9:R4C9)"><Data ss:Type="Number">0</Data></Cell>
+        <Cell/>
+      </Row>
+
+      <Row>
+        <Cell><Data ss:Type="String"></Data></Cell>
+        <Cell><Data ss:Type="String">TOTAL FINESTRA (rendimiento)</Data></Cell>
+        <Cell/><Cell/><Cell/><Cell/><Cell/><Cell/>
+        <Cell ss:Formula="=SUM(R5C9:R7C9)"><Data ss:Type="Number">0</Data></Cell>
+        <Cell/>
+      </Row>
+
+    </Table>
+  </Worksheet>
+</Workbook>
