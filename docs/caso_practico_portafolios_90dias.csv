@@ -1,0 +1,7 @@
+Portafolio,Instrumento,% ,Capital total,Capital asignado,Tasa anual (R),Dias (t),Factor (t/360),Rendimiento ($),Monto final ($)
+BANAMEX,CETES 91 dias,0.70,6700000,=D2*C2,0.0916,90,=G2/360,=E2*F2*H2,=E2+I2
+BANAMEX,CETES 28 dias,0.20,6700000,=D3*C3,0.1220,90,=G3/360,=E3*F3*H3,=E3+I3
+BANAMEX,Fondo deuda corto plazo (90 dias),0.10,6700000,=D4*C4,,90,,56789,=E4+I4
+FINESTRA,CETES 91 dias,0.50,6700000,=D5*C5,0.1022,90,=G5/360,=E5*F5*H5,=E5+I5
+FINESTRA,CETES 182 dias,0.30,6700000,=D6*C6,0.1302,90,=G6/360,=E6*F6*H6,=E6+I6
+FINESTRA,CETES 28 dias,0.20,6700000,=D7*C7,0.0889,90,=G7/360,=E7*F7*H7,=E7+I7
