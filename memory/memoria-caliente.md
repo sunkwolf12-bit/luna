@@ -30,7 +30,7 @@
 - Devolución de tarjetas de clientes por atraso (cobradores).
 - Cancelaciones por atraso.
 - Reactivación de clientes morosos.
-- Confirmar fecha de junta (anotado: 16/03/2026; validar si era 16/04/2026 u otra fecha).
+- Junta quincenal: 16/04/2026.
 
 ## Pendientes Maestría (lecturas / materiales)
 - Ver la película **“El mago de las mentiras”**.
