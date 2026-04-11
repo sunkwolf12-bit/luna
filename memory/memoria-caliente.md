@@ -26,11 +26,13 @@
 - Procedimientos/métodos que estamos usando (checklists, criterios, reglas).
 - Temas personales que Elena me platique y que quiera retomar después.
 
-## Pendientes (operación) — junta quincenal
-- Devolución de tarjetas de clientes por atraso (cobradores).
-- Cancelaciones por atraso.
-- Reactivación de clientes morosos.
-- Junta quincenal: 16/04/2026.
+## Pendientes (operación)
+- Trabajo post-vacaciones: atender pendientes acumulados y revisar el trabajo que hizo Viri durante la ausencia de Elena.
+- Junta quincenal (16/04/2026):
+  - Devolución de tarjetas de clientes por atraso (cobradores).
+  - Cancelaciones por atraso.
+  - Reactivación de clientes morosos.
+- Pendiente cerrado: enviado conciliación bancaria de Marzo.
 
 ## Pendientes Maestría (lecturas / materiales)
 - Ver la película **“El mago de las mentiras”**.
