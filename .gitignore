@@ -2,6 +2,11 @@
 *.tmp
 .env
 
+# Python virtualenvs
+.venv/
+.venv-*/
+venv/
+
 # RAW exports (can contain sensitive info)
 memory/raws-daily/
 
