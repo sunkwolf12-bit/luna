@@ -26,6 +26,12 @@
 - Procedimientos/métodos que estamos usando (checklists, criterios, reglas).
 - Temas personales que Elena me platique y que quiera retomar después.
 
+## Pendientes (operación) — junta quincenal
+- Devolución de tarjetas de clientes por atraso (cobradores).
+- Cancelaciones por atraso.
+- Reactivación de clientes morosos.
+- Confirmar fecha de junta (anotado: 16/03/2026; validar si era 16/04/2026 u otra fecha).
+
 ## Pendientes Maestría (lecturas / materiales)
 - Ver la película **“El mago de las mentiras”**.
 - Leer/ver material **“Sangre de mayo”** (muerte del Cardenal en Guadalajara).
