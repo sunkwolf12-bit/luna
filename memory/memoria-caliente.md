@@ -33,6 +33,7 @@
   - Cancelaciones por atraso.
   - Reactivación de clientes morosos.
 - Pendiente cerrado: enviado conciliación bancaria de Marzo.
+- Mejora operativa: con la implementación solicitada a Fer, Elena pudo hacer **muy rápido** el cuadre/revisión quincenal (ya aplicado en revisión de Eduardo, 2ª quincena mar-2026).
 
 ## Pendientes Maestría (lecturas / materiales)
 - Ver la película **“El mago de las mentiras”**.
