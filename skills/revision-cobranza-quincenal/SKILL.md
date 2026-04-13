@@ -144,8 +144,9 @@ Si no cuadra:
 Pedir a Elena:
 - Re-foto/zoom del renglón, o que escriba: **folio – monto – fecha**.
 
-## Plantilla
-- `references/plantilla_diferencias.csv`: formato para capturar folios/montos y motivos.
+## Plantillas
+- `references/plantilla_diferencias.csv`: captura de folios/montos y clasificación (DESFASE / DIF_REAL / CORREGIDO).
+- `references/plantilla_dictamen_por_dia.md`: formato listo para copiar/pegar por día (totales + listas + motivo para exponer).
 
 ## Script incluido (opcional)
 ### `scripts/resumen_sistema.py`

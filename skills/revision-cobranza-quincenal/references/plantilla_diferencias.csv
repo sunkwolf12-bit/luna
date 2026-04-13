@@ -1,4 +1,4 @@
-tipo,fecha_relacion,fecha_sistema,folio,monto,motivo,nota
-DESFASE,,,,,,
-DIF_REAL,,,,,,
-CORREGIDO,,,,,,
+tipo,fecha_relacion,fecha_sistema,folio,monto,motivo,nota,aparece_en_sistema_otro_dia,detalle_otro_dia
+DESFASE,,,,,,,,
+DIF_REAL,,,,,,,,
+CORREGIDO,,,,,,,,
