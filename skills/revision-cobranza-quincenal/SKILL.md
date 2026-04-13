@@ -55,8 +55,21 @@ Interpretación:
 
 ### Paso 4) Bajar a detalle SOLO en los días con diferencia
 Para cada día con diferencia:
-1. Listar folios del sistema de ese día (con monto) y folios de la relación de ese día.
-2. Detectar qué folio(s) explican la diferencia y clasificar en:
+
+**Meta del paso:** que el día quede explicado con listas claras tipo:
+- **En RELACIÓN/FOTO pero NO en SISTEMA** (folios + monto)
+- **En SISTEMA pero NO en RELACIÓN/FOTO** (folios + monto)
+- **Mismo folio, distinto monto** (folio + monto_foto vs monto_sistema)
+
+1) Listar **folios + montos** del **sistema** de ese día.
+2) Listar **folios + montos** de la **relación/foto** de ese día.
+   - Si viene en foto y no se ve perfecto: pedir a Elena **zoom solo de la columna ENTRADAS + MONTO**.
+   - Si Elena corrige lecturas (folio/monto): aplicar la corrección y re-ejecutar el comparativo.
+3) Comparar por conjuntos:
+   - `foto_not_in_sys = folios_foto − folios_sistema`
+   - `sys_not_in_foto = folios_sistema − folios_foto`
+   - `mismatches_monto = {folio común | monto_foto ≠ monto_sistema}`
+4) Con esas listas, ya sí detectar qué folio(s) explican la diferencia y clasificar en:
 
 #### Caso A) Desfase de fecha (cuadra, no es faltante)
 Se identifica cuando:
@@ -111,7 +124,12 @@ Si no cuadra:
 5) **Cierre matemático**: Total Relación (sin $125) − Diferencias reales = Total Sistema (sin $125).
 
 ### C) Listas para Control (detalle)
-**DESFASES (sí está en ambos):**
+**POR DÍA (cuando hay diferencia):**
+- **En FOTO pero NO en SISTEMA:** folio | monto
+- **En SISTEMA pero NO en FOTO:** folio | monto
+- **Mismo folio, distinto monto:** folio | monto_foto | monto_sistema
+
+**DESFASES (sí está en ambos, solo cambia de fecha):**
 - Folio | Monto | Día relación | Día sistema | Nota
 
 **DIFERENCIAS REALES:**
