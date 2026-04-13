@@ -28,6 +28,7 @@
 
 ## Pendientes (operación)
 - Trabajo post-vacaciones: atender pendientes acumulados y revisar el trabajo que hizo Viri durante la ausencia de Elena.
+- Personal/gestión: **cita para cambio de propietario del carro “Dory”** agendada **vie 17/04/2026 14:40 (MX)**.
 - Junta quincenal (16/04/2026):
   - Devolución de tarjetas de clientes por atraso (cobradores).
   - Cancelaciones por atraso.
