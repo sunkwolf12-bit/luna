@@ -69,7 +69,12 @@ Para cada día con diferencia:
    - `foto_not_in_sys = folios_foto − folios_sistema`
    - `sys_not_in_foto = folios_sistema − folios_foto`
    - `mismatches_monto = {folio común | monto_foto ≠ monto_sistema}`
-4) Con esas listas, ya sí detectar qué folio(s) explican la diferencia y clasificar en:
+
+4) **Regla extra (muy importante):** por cada folio en `foto_not_in_sys`, buscarlo en **TODO el Excel** (toda la quincena) para reportar si:
+   - **sí aparece en otro día del sistema** (anotar: día + monto + ENTREGADO), o
+   - **no aparece en ningún día** (queda como “no está en sistema”).
+
+5) Con esas listas, ya sí detectar qué folio(s) explican la diferencia y clasificar en:
 
 #### Caso A) Desfase de fecha (cuadra, no es faltante)
 Se identifica cuando:
