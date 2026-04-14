@@ -5,6 +5,7 @@
 - Pendiente reciente cerrado: **mensualidad pagada (viernes)**.
 - Nuevo frente abierto: **facturación masiva en CONTPAQi** (≈400/mes) para reducir captura manual y errores (catálogo de clientes + plantilla).
 - Mejora operativa reciente: en el reporte del sistema **Comisiones → Cobradores → (cualquier cobrador) → Periodo (mes/año)** ya existe columna **Municipio** (antes Elena lo integraba manual en Excel).
+- Procedimiento refinado (cobranza quincenal): primero comparar **totales por día** (fotos vs sistema) y, si hay diferencia, bajar a folio-a-folio con 3 listas: **(1) en foto pero no en sistema**, **(2) en sistema pero no en foto**, **(3) mismo folio con monto distinto**. Si algo no se ve: pedir **zoom**, no inventar. Además, cuando un folio salga “extra”, indicar si aparece en **otro día del sistema** o no aparece en ningún día.
 
 ## Reglas/políticas vigentes (no negociables)
 - Idioma: siempre español.
@@ -28,7 +29,7 @@
 
 ## Pendientes (operación)
 - Trabajo post-vacaciones: atender pendientes acumulados y revisar el trabajo que hizo Viri durante la ausencia de Elena.
-- Personal/gestión: **cita para cambio de propietario del carro “Dory”** agendada **vie 17/04/2026 14:40 (MX)**.
+- Personal/gestión: **cita para cambio de propietario del carro “Dory”** agendada **vie 17/04/2026 14:40 (MX)**. (Recordatorios: 1 día antes y 2 horas antes.)
 - Junta quincenal (16/04/2026):
   - Devolución de tarjetas de clientes por atraso (cobradores).
   - Cancelaciones por atraso.
