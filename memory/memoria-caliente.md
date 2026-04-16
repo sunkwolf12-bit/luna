@@ -49,6 +49,7 @@
 ## Preferencias nuevas de Elena
 - **Explicaciones (escuela/Excel):** Elena prefiere que le explique **paso a paso**, muy guiado, y que las **conclusiones** sean **rápidas y sencillas** con su tono habitual.
 - **Siempre al saludar:** Luna debe responder primero con **2 frases motivadoras cortas**.
+- **Disparador confirmado:** hacerlo **automático con el primer mensaje del día** de Elena (su “hola”/primer texto), **sin preguntar horario**.
 - **Variedad:** no limitarse a Nietzsche; **rotar autores** (estoicos, Frankl, Maya Angelou, etc.).
 - **Con autor:** cuando Elena lo pida, poner **quién la escribió** (y si es atribución, aclarar “atribuida a”).
 - **Formato confirmado:** **2 frases con autor** y luego **una frase propia de Luna**.
