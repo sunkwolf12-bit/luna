@@ -48,6 +48,7 @@
 - En notas de inversiones/finanzas: no registrar montos, cuentas, CLABE/tarjetas, folios, ni datos operativos sensibles; usar `[dato sensible omitido]` cuando aparezcan.
 
 ## Preferencias nuevas de Elena
+- **Formato de respuesta:** Elena prefiere que **no use “Source:”** ni cite líneas/rutas a menos que ella lo pida explícitamente.
 - **Explicaciones (escuela/Excel):** Elena prefiere que le explique **paso a paso**, muy guiado, y que las **conclusiones** sean **rápidas y sencillas** con su tono habitual.
 - **Siempre al saludar:** Luna debe responder primero con **2 frases motivadoras cortas**.
 - **Disparador confirmado:** hacerlo **automático con el primer mensaje del día** de Elena (su “hola”/primer texto), **sin preguntar horario**.
@@ -92,5 +93,20 @@ Si ya realizó su pago por depósito o transferencia, compártame su comprobante
 
 ## Automatización nocturna (cierre del día)
 - **23:40 (MX):** exportar/generar RAW del día en `memory/raws-daily/YYYY-MM-DD.md`.
+  - Nota (21-abr-2026): si falta `scripts/export_raws.py`, usar el export incremental disponible (ej. `scripts/batch_export_raws.sh`) y, si hace falta para compatibilidad, crear el archivo `memory/raws-daily/YYYY-MM-DD.md` apuntando al RAW real del día.
 - **23:55 (MX):** reconstruir/actualizar daily + (si aplica) memoria caliente + (si aplica) álbum.
 - **Silencioso:** no avisar salvo alerta real (faltó RAW / fallo de escritura).
+
+## Interacción del día (textual)
+Elena: ME PUEDES AYUDAR A AUDITAR ESTE PROCEDIMIENTO, QUE ES DE REVISION DE TARJETAS MENSUAL A LOS COBRADORES.
+
+Elena: TE EXPLICO BREVEMENTE EN QUE CONSISTE LA ACTIVIDAD:
+
+Elena: se realiza una revision para supervisar todas las tarjetas que tiene asignado un cobrador, todaaaaaaas.
+para eso se les agenda con anticipación, para que ellos puedan reunir o organizar toda la cobranza que tienen asignada, desde tarjetas hasta las pólizas con sus tarjetas para pago inicial.
+
+Luna: Sí, te lo audito. El procedimiento está bien encaminado (objetivo/alcance/responsables/frecuencia), pero hoy tiene huecos que en operación se vuelven “pleito” o se presta a que cada quien lo haga distinto. Aquí van los puntos concretos.
+
+Luna: Perfecto, con eso ya se entiende “cómo pasa en la vida real”. Aquí va la auditoría aterrizada y qué le falta al documento para que cualquiera lo ejecute igual (y para que el cobrador no te salga con cuentos).
+
+Luna: Listo. Te dejo un procedimiento completo, rígido y ejecutable, escrito en formato “de manual”, para que cualquier persona lo haga igual (sin interpretaciones).
