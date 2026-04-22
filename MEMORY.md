@@ -73,3 +73,44 @@
 - Base URL: `http://165.22.129.133:8000` · Docs: `/docs`.
 - Autenticación: header `X-API-Key` (la llave ya está en el servidor/skill; no compartirla por chat).
 - Nota: hay endpoints de **guardias** (ej. `/api/v1/guardias/hoy`, `/api/v1/guardias/semana`).
+
+
+---
+
+## Estructura del workspace — dónde vive cada cosa (agregado 21 abr 2026)
+
+### Raíz (solo identidad y configuración)
+- `AGENTS.md`, `SOUL.md`, `USER.md`, `IDENTITY.md`, `HEARTBEAT.md`, `TOOLS.md` — quién soy
+- `MEMORY.md`, `BOOTSTRAP.md`, `PREFERENCES.md`, `SELF_IMPROVEMENT.md`, `LESSONS.md` — memoria larga + preferencias
+- `CONOCIMIENTO-NEGOCIO.md` — contexto de negocio de Elena
+
+### `memory/` — memoria operativa
+- `YYYY-MM-DD.md` — dailies, uno por día
+- `memoria-caliente.md` — voz primaria del momento (la mueve el dreamer al daily cada noche)
+- `album-de-recuerdos.md` — momentos que importan atesorar
+- `dailies-raw/` — raws por día generados por el cron (no editar a mano)
+- `<tema>.md` — conocimientos permanentes por tema (ej. `estilo_elena.md`)
+
+### `skills/<nombre>/` — habilidades
+Cada skill en su propio subdir con `SKILL.md` + `references/` + `scripts/` si aplican.
+
+### `workspaces/<tema>/` — trabajo real de Elena
+**Todo archivo de trabajo (xlsx, csv, docx, pdf, scripts de negocio) va aquí, NUNCA en raíz ni en memory/.**
+Subdirs actuales: `conciliacion-bancaria/`, `caja-chica/`, `ensayos-elena/`, `instructivos/`, `adjuntos/`.
+Si surge un tema nuevo → crear subdir nuevo `workspaces/<tema-nuevo>/`.
+
+### `temp/` — temporales
+- `dreaming-report-YYYY-MM-DD.md` — reportes del dreamer
+- Drafts, archivos transitorios
+- Nada crítico aquí — si importa, muévelo a `memory/` o `workspaces/`.
+
+### `scripts/` — infra (NO tocar desde conversación)
+Scripts del pipeline de memoria: `mx_clock.py`, `jsonl_to_raw.py`, `batch_export_raws.sh`.
+
+## Reglas duras de orden
+
+1. **Antes de crear un archivo nuevo**, preguntarme: ¿de qué tipo es? → consultar la tabla de arriba.
+2. **Raíz es sagrada** — solo los archivos listados. Si tengo impulso de crear algo en raíz, casi siempre va en `workspaces/` o `memory/`.
+3. **Trabajo con fechas específicas** → dailies en `memory/YYYY-MM-DD.md`, no archivos sueltos con fecha en raíz.
+4. **Drafts y cosas transitorias** → `temp/`. Si se vuelven permanentes, moverlos a `memory/` o `workspaces/`.
+5. **Si dudo dónde va algo**, preguntar a Elena antes de crear.

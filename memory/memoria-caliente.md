@@ -29,7 +29,7 @@
 
 ## Pendientes (operación)
 - Trabajo post-vacaciones: atender pendientes acumulados y revisar el trabajo que hizo Viri durante la ausencia de Elena. ✅ (Revisión de corte de Viri realizada; queda solo atender los pendientes acumulados.)
-- Personal/gestión: **cita para cambio de propietario del carro “Dory”** agendada **vie 17/04/2026 14:40 (MX)**. (Recordatorios: 1 día antes y 2 horas antes.)
+- Dory: sacar cita para **sustitución de placas** (post cambio de propietario ya realizado el 17/04/2026).
 - Junta quincenal (16/04/2026):
   - Devolución de tarjetas de clientes por atraso (cobradores).
   - Cancelaciones por atraso.
@@ -45,6 +45,7 @@
 ## Qué NO guardar (privacidad)
 - No guardar números/folios/estatus específicos de clientes o pólizas.
 - No guardar información bancaria (depósitos, cuentas, montos detallados). Se procesa en el momento, se entrega resultado y listo.
+- En notas de inversiones/finanzas: no registrar montos, cuentas, CLABE/tarjetas, folios, ni datos operativos sensibles; usar `[dato sensible omitido]` cuando aparezcan.
 
 ## Preferencias nuevas de Elena
 - **Explicaciones (escuela/Excel):** Elena prefiere que le explique **paso a paso**, muy guiado, y que las **conclusiones** sean **rápidas y sencillas** con su tono habitual.
@@ -83,6 +84,11 @@ Si ya realizó su pago por depósito o transferencia, compártame su comprobante
 
 ## Preferencias / límites de seguimiento
 - Elena pidió **no dar seguimiento** ni mantener como pendiente el tema personal de **SBC/SDI vs salario pagado** (eliminarlo de lista de pendientes).
+
+
+## Inversiones y finanzas familiares (tema emergente, 20 abr 2026)
+- Enfoque preferido al hablar de inversiones en familia: cauteloso, paso a paso y entendiendo plazos antes de decidir.
+- Separar por persona (cuentas/espacios separados) para dar claridad y evitar mezclar objetivos.
 
 ## Automatización nocturna (cierre del día)
 - **23:40 (MX):** exportar/generar RAW del día en `memory/raws-daily/YYYY-MM-DD.md`.

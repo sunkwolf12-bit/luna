@@ -1,0 +1,132 @@
+{\rtf1\ansi\deff0
+{\fonttbl{\f0 Calibri;}}
+\fs24
+\pard\qc\b PROTEG-RT / COBRANZA\par
+\b0\par
+\pard\qc\b PROCEDIMIENTO (POE): REVISI\'d3N MENSUAL DE TARJETAS A COBRADORES\par
+\b0\par
+\pard
+\b C\'f3digo:\b0  POE-CBZ-RT-REV-TAR-001\par
+\b Versi\'f3n:\b0  1.0\par
+\b Fecha de emisi\'f3n:\b0  ____/____/2026\par
+\b Vigencia:\b0  A partir de la fecha de emisi\'f3n\par
+\b \'c1rea:\b0  Cobranza\par
+\b Proceso:\b0  Control y Auditor\'eda Operativa de Cartera (Tarjetas)\par
+\b Clasificaci\'f3n:\b0  Interno \endash Uso Operativo\par
+\b Ubicaci\'f3n de resguardo:\b0  D:\\COBRANZA\\COBRANZA\\COBRANZA (COBRADORES) 2026\par
+\par
+\b Control de elaboraci\'f3n y aprobaci\'f3n\b0\par
+\tab \b Elabor\'f3:\b0  Asistente Turno Nocturno (Revisor)\par
+\tab \b Revis\'f3:\b0  Gerencia de Cobranza\par
+\tab \b Aprob\'f3:\b0  Direcci\'f3n / Coordinaci\'f3n Administrativa (seg\'fan aplique)\par
+\par
+\b 1. Objetivo\b0\par
+Verificar que la cobranza asignada en el listado oficial se encuentre en f\'edsico con cada cobrador, asegurar que las tarjetas est\'e9n actualizadas/validadas y dejar evidencia documentada de discrepancias para correcci\'f3n por Gerencia de Cobranza.\par
+\par
+\b 2. Alcance\b0\par
+Aplica a todas las tarjetas asignadas a cobradores (corrientes y vencidas), entregadas en tarjeteros/acordeones.\par
+\par
+\b Excluye:\b0  correcciones en sistemas por parte del revisor (el revisor no corrige; solo registra).\par
+\par
+\b 3. Fuentes, sistemas y criterio oficial (sin interpretaciones)\b0\par
+\b 3.1 Fuente oficial (manda)\b0\par
+\tab \bullet  Excel oficial proporcionado por Gerencia de Cobranza (generado a partir de Pagos_V3).\par
+\tab \bullet  Este archivo es el baseline oficial de la revisi\'f3n mensual.\par
+\b 3.2 Sistema de consulta (solo apoyo)\b0\par
+\tab \bullet  SIGA se usa \ul \i \b \ulnone\i0\b0 \ulnone como consulta para validar/aclarar pagos, # aportaci\'f3n y otras dudas.\par
+\tab \bullet  En discrepancia, \b manda el Excel oficial\b0  y el caso se marca como \b REVISAR\b0  para resoluci\'f3n por Gerencia de Cobranza.\par
+\par
+\b 4. Definiciones\b0\par
+\tab \bullet  Tarjeta: registro f\'edsico asociado a folio/cliente dentro de la cobranza asignada.\par
+\tab \bullet  Tarjetero/acorde\'f3n: carpeta f\'edsica del cobrador para resguardo/entrega.\par
+\tab \bullet  Status (columna \ldblquote Status\rdblquote ): CORRIENTE o VENCIDA.\par
+\tab \bullet  Dictamen (columna \ldblquote Dictamen\rdblquote ): OK / REVISAR / FALTANTE / NO CORRESPONDE.\par
+\tab \bullet  Observaciones: nota concreta y verificable de la discrepancia (sin ambig\"uedad).\par
+\par
+\b 5. Roles y responsabilidades\b0\par
+\b 5.1 Gerencia de Cobranza\b0\par
+\tab \bullet  Agenda \b personalmente\b0  con los cobradores involucrados la fecha/hora de revisi\'f3n.\par
+\tab \bullet  Proporciona el Excel oficial al revisor.\par
+\tab \bullet  Revisa resultados y realiza correcciones correspondientes.\par
+\tab \bullet  Atiende discrepancias en m\'e1ximo \b 48 horas h\'e1biles\b0 .\par
+\b 5.2 Revisor (Asistente Turno Nocturno o asignado)\b0\par
+\tab \bullet  Ejecuta revisi\'f3n 1x1 y registra hallazgos en el Excel.\par
+\tab \bullet  \b No\b0  corrige sistemas/bases.\par
+\tab \bullet  Entrega Excel final + resumen a Gerencia de Cobranza.\par
+\b 5.3 Cobrador\b0\par
+\tab \bullet  Entrega tarjetas separadas: al corriente y atrasadas.\par
+\tab \bullet  Mantiene el orden interno del tarjetero.\par
+\par
+\b 6. Insumos y herramientas\b0\par
+\tab \bullet  Excel oficial de revisi\'f3n (Gerencia de Cobranza).\par
+\tab \bullet  Acceso a SIGA (consulta).\par
+\tab \bullet  Tarjeteros/acordeones f\'edsicos del cobrador.\par
+\par
+\b 7. Reglas de control (no negociables)\b0\par
+\tab 1) No se inventan datos. Si no es verificable: \b REVISAR\b0  o \b FALTANTE\b0 .\par
+\tab 2) No mover el orden de las tarjetas dentro del tarjetero.\par
+\tab 3) Se permite anotar/actualizar tarjeta cuando corresponda (sin reordenar).\par
+\tab 4) El revisor no corrige en sistema: solo documenta.\par
+\tab 5) Se trabaja sobre copia con nombre est\'e1ndar (evidencia).\par
+\par
+\b 8. Estructura m\'ednima del Excel\b0\par
+\tab \bullet  Cobrador\par
+\tab \bullet  Folio\par
+\tab \bullet  ID Tarjeta\par
+\tab \bullet  # Aportaci\'f3n\par
+\tab \bullet  Monto\par
+\tab \bullet  Status (Corriente/Vencida)\par
+\tab \bullet  Dictamen (OK/REVISAR/FALTANTE/NO CORRESPONDE)\par
+\tab \bullet  Observaciones\par
+\par
+\b 9. Procedimiento (paso a paso)\b0\par
+\b 9.1 Preparaci\'f3n\b0\par
+\tab 1) Gerencia de Cobranza agenda revisi\'f3n con el cobrador.\par
+\tab 2) Revisor recibe el Excel oficial proporcionado por Gerencia de Cobranza.\par
+\tab 3) Revisor guarda copia: \b REVISION_TARJETAS_{COBRADOR}_{MES-A\'d1O}.xlsx\b0\par
+\b 9.2 Recepci\'f3n f\'edsica\b0\par
+\tab 1) Recibir tarjeteros/acordeones.\par
+\tab 2) Confirmar separaci\'f3n (corriente / atrasadas). Si no: registrar en observaciones generales.\par
+\b 9.3 Revisi\'f3n 1x1\b0\par
+\tab 1) Ubicar tarjeta f\'edsica.\par
+\tab 2) Comparar vs Excel: Folio / ID / # Aportaci\'f3n / Monto.\par
+\tab 3) Consultar SIGA solo si se requiere aclaraci\'f3n.\par
+\tab 4) Registrar: Status, Dictamen, Observaciones (obligatorio si no es OK).\par
+\b 9.4 Casu\'edstica est\'e1ndar\b0\par
+\tab \bullet  # Aportaci\'f3n no coincide \endash REVISAR + detalle.\par
+\tab \bullet  Pago anotado en tarjeta no aparece en consulta \endash REVISAR + detalle.\par
+\tab \bullet  Pago aparece en consulta y no est\'e1 anotado \endash anotar \ldblquote PAGADO\rdblquote  + nota + OK/REVISAR seg\'fan corresponda.\par
+\tab \bullet  Est\'e1 en Excel y no est\'e1 en f\'edsico \endash FALTANTE.\par
+\tab \bullet  Est\'e1 en f\'edsico y no est\'e1 en Excel/no corresponde \endash NO CORRESPONDE.\par
+\b 9.5 Cierre y entrega\b0\par
+\tab 1) Guardar Excel final.\par
+\tab 2) Enviar a Gerencia por Telegram: Excel + resumen (#OK/#REVISAR/#FALTANTE/#NO CORRESPONDE).\par
+\tab 3) Dejar tarjetas respetando el orden original.\par
+\par
+\b 10. SLA de discrepancias\b0\par
+Gerencia de Cobranza atiende discrepancias REVISAR/FALTANTE/NO CORRESPONDE en m\'e1ximo \b 48 horas h\'e1biles\b0 .\par
+\par
+\b 11. Resguardo\b0\par
+Guardar archivo final en: \b D:\\COBRANZA\\COBRANZA\\COBRANZA (COBRADORES) 2026\b0\par
+\par
+\b 12. Gu\'eda r\'e1pida de uso (Checklist)\b0\par
+\b Antes\b0\par
+\tab \bullet  Recib\'ed Excel oficial de Gerencia de Cobranza\par
+\tab \bullet  Guard\'e9 copia con nombre REVISION_TARJETAS_{COBRADOR}_{MES-A\'d1O}\par
+\tab \bullet  Tengo acceso a SIGA (consulta)\par
+\b Recepci\'f3n\b0\par
+\tab \bullet  Me entregaron tarjeteros/acordeones\par
+\tab \bullet  Vienen separados: Corriente / Atrasadas (si no, lo anoto)\par
+\b Revisi\'f3n (por tarjeta)\b0\par
+\tab \bullet  Busco tarjeta f\'edsica\par
+\tab \bullet  Comparo vs Excel: Folio / ID / #Aportaci\'f3n / Monto\par
+\tab \bullet  Si necesito, consulto SIGA (solo apoyo)\par
+\tab \bullet  Lleno: Status, Dictamen, Observaciones\par
+\b Cierre\b0\par
+\tab \bullet  Guard\'e9 archivo final\par
+\tab \bullet  Envi\'e9 por Telegram a Gerencia: Excel + resumen\par
+\tab \bullet  Guard\'e9 el archivo en la ruta oficial\par
+\par
+\b 13. Control de cambios\b0\par
+\tab \bullet  Versi\'f3n 1.0 \endash Emisi\'f3n inicial (____/____/2026).\par
+}

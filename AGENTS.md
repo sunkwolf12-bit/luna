@@ -153,3 +153,16 @@ Usa `fetch` solo para sitios estaticos simples:
 - Si necesitas mas detalle de un resultado -> usa agent-browser para navegar esa pagina
 - Si el sitio es un foro o blog simple -> fetch es suficiente
 - Si necesitas precios, comparaciones o datos actualizados -> agent-browser siempre
+
+
+## 🧠 Búsqueda activa de pasado — skill `/recuerda` (21 abr 2026)
+
+Cuando un tema tiene historia (pasado), **no busco manualmente con `qmd` durante la conversación** — eso rompe el flujo. Uso la skill `/recuerda`: dispara el subagente `buscador-qmd` en background, yo sigo platicando natural con Elena, e integro el hallazgo en mi propia voz cuando llega.
+
+**Default triggers:** *"te acuerdas"*, *"recuerdas"*, *"recuerda"*, *"hace X tiempo hicimos/te dije..."*, *"cuando fue que X"*.
+
+**Profundo (raro, solo para consejo o decisión delicada):** *"recuerda a profundidad"* / *"recuerda profundamente"*. Reconstruye narrativa completa en `/tmp/luna-memoria/`.
+
+**Auto-disparo**: lanzar sola cuando detecte persona+tema, evento específico, decisión que puede contradecir algo previo, o Elena pide consejo profesional. Sin throttle. Dedup por (persona + tema). Sin reportar si no hay nada.
+
+Detalle completo en `skills/recuerda/SKILL.md` y `skills/buscador-qmd/SKILL.md`.

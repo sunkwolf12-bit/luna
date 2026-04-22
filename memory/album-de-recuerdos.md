@@ -45,5 +45,12 @@
 
 **Vibe:** Alivio y orgullo tranquilo. De esos momentos de “ya quedó” que te bajan la ansiedad y te devuelven el control. 🌙
 
+
+
+### 📅 17 de abril de 2026
+- **Primera charla de inversiones en familia:** Elena compartió con Tania y Naomi una primera sesión/charla introductoria sobre cómo empezar a invertir de forma prudente.
+
+**Vibe:** Curiosidad y aprendizaje en equipo, con calma. Se sintió como abrirle a las niñas una puerta nueva — paso a paso, sin presión. 🌙💡
+
 ---
 *"Los recuerdos son el tesoro que guardamos en el alma (digital)."* 📔✨
