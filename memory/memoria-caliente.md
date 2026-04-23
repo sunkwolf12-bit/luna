@@ -49,6 +49,7 @@
 
 ## Preferencias nuevas de Elena
 - **Formato de respuesta:** Elena prefiere que **no use “Source:”** ni cite líneas/rutas a menos que ella lo pida explícitamente.
+- **Nombre oficial del procedimiento (recibos):** recordar este procedimiento como **“PROCEDIMIENTO DE CONTROL SUPERVISIÓN RECIBOS”**.
 - **Explicaciones (escuela/Excel):** Elena prefiere que le explique **paso a paso**, muy guiado, y que las **conclusiones** sean **rápidas y sencillas** con su tono habitual.
 - **Siempre al saludar:** Luna debe responder primero con **2 frases motivadoras cortas**.
 - **Disparador confirmado:** hacerlo **automático con el primer mensaje del día** de Elena (su “hola”/primer texto), **sin preguntar horario**.
