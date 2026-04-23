@@ -98,15 +98,23 @@ Si ya realizó su pago por depósito o transferencia, compártame su comprobante
 - **Silencioso:** no avisar salvo alerta real (faltó RAW / fallo de escritura).
 
 ## Interacción del día (textual)
-Elena: ME PUEDES AYUDAR A AUDITAR ESTE PROCEDIMIENTO, QUE ES DE REVISION DE TARJETAS MENSUAL A LOS COBRADORES.
+Elena: [cron:d2987208-0967-4e0e-9cf6-b9bc9e9c9220 Nightly RAW export (MX 23:40)] TAREA NOCTURNA (automatización) — MX 23:40
 
-Elena: TE EXPLICO BREVEMENTE EN QUE CONSISTE LA ACTIVIDAD:
+Objetivo: exportar el RAW del día (MX) para que quede listo antes del rebuild.
 
-Elena: se realiza una revision para supervisar todas las tarjetas que tiene asignado un cobrador, todaaaaaaas.
-para eso se les agenda con anticipación, para que ellos puedan reunir o organizar toda la cobranza que tienen asignada, desde tarjetas hasta las pólizas con sus tarjetas para pago inicial.
+Pasos:
+1) Ejecuta en workspace: python3 scripts/export_raws.py day today
+2) Verifica que exista/actualice: memory/raws-daily/YYYY-MM-DD.md
 
-Luna: Sí, te lo audito. El procedimiento está bien encaminado (objetivo/alcance/responsables/frecuencia), pero hoy tiene huecos que en operación se vuelven “pleito” o se presta a que cada quien lo haga distinto. Aquí van los puntos concretos.
+Privacidad:
+- Este paso solo exporta RAW (sin publicar); no enviar mensaje a Elena salvo ERROR real (no se pudo leer sesiones o escribir archivo).
+Current time: Wednesday, April 22nd, 2026 — 11:40 PM (America/Mexico_City) / 2026-04-23 05:40 UTC
 
-Luna: Perfecto, con eso ya se entiende “cómo pasa en la vida real”. Aquí va la auditoría aterrizada y qué le falta al documento para que cualquiera lo ejecute igual (y para que el cobrador no te salga con cuentos).
+Luna: ERROR real en el paso 1: **no existe** `scripts/export_raws.py` en el workspace.
 
-Luna: Listo. Te dejo un procedimiento completo, rígido y ejecutable, escrito en formato “de manual”, para que cualquier persona lo haga igual (sin interpretaciones).
+Luna: **Acción correctiva aplicada (fallback operativo):**
+- Ejecuté `bash scripts/batch_export_raws.sh` (export incremental).
+- Se generó el RAW de hoy: `memory/raws-daily/luna-2026-04-22.md`.
+- Creé el alias esperado: `memory/raws-daily/2026-04-22.md -> luna-2026-04-22.md`.
+
+Luna: Quedó listo para el rebuild.
