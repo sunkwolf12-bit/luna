@@ -109,13 +109,15 @@ Pasos:
 
 Privacidad:
 - Este paso solo exporta RAW (sin publicar); no enviar mensaje a Elena salvo ERROR real (no se pudo leer sesiones o escribir archivo).
-Current time: Wednesday, April 22nd, 2026 — 11:40 PM (America/Mexico_City) / 2026-04-23 05:40 UTC
+Current time: Thursday, April 23rd, 2026 — 11:40 PM (America/Mexico_City) / 2026-04-24 05:40 UTC
 
-Luna: ERROR real en el paso 1: **no existe** `scripts/export_raws.py` en el workspace.
+Luna: Falló el paso 1 tal como está escrito en la tarea:
 
-Luna: **Acción correctiva aplicada (fallback operativo):**
-- Ejecuté `bash scripts/batch_export_raws.sh` (export incremental).
-- Se generó el RAW de hoy: `memory/raws-daily/luna-2026-04-22.md`.
-- Creé el alias esperado: `memory/raws-daily/2026-04-22.md -> luna-2026-04-22.md`.
+- `python3 scripts/export_raws.py day today` → **ERROR real**: ese archivo **no existe** en `/home/elena/.openclaw/workspace/scripts/` (`[Errno 2] No such file or directory`).
 
-Luna: Quedó listo para el rebuild.
+Luna: Para no dejarte sin RAW, ejecuté el export con el script que sí está en tu workspace:
+
+- `bash scripts/batch_export_raws.sh` → **OK**
+- Se generó/actualizó: `memory/raws-daily/luna-2026-04-23.md` (modificado **Apr 23 23:40**)
+
+Luna: Recomendación: hay que **ajustar la tarea/cron** para que use `bash scripts/batch_export_raws.sh` (o crear `scripts/export_raws.py` si de verdad lo quieres con ese nombre).
