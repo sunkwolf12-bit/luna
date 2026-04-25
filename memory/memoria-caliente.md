@@ -109,15 +109,16 @@ Pasos:
 
 Privacidad:
 - Este paso solo exporta RAW (sin publicar); no enviar mensaje a Elena salvo ERROR real (no se pudo leer sesiones o escribir archivo).
-Current time: Thursday, April 23rd, 2026 — 11:40 PM (America/Mexico_City) / 2026-04-24 05:40 UTC
+Current time: Friday, April 24th, 2026 — 11:40 PM (America/Mexico_City) / 2026-04-25 05:40 UTC
 
-Luna: Falló el paso 1 tal como está escrito en la tarea:
+Luna: Falló el paso tal como está en la tarea:
 
-- `python3 scripts/export_raws.py day today` → **ERROR real**: ese archivo **no existe** en `/home/elena/.openclaw/workspace/scripts/` (`[Errno 2] No such file or directory`).
+- **ERROR:** `python3 scripts/export_raws.py day today` → **no existe** `scripts/export_raws.py` en el workspace.
 
-Luna: Para no dejarte sin RAW, ejecuté el export con el script que sí está en tu workspace:
+Luna: Para no dejarte sin RAW, lo saqué con el script que sí está:
 
-- `bash scripts/batch_export_raws.sh` → **OK**
-- Se generó/actualizó: `memory/raws-daily/luna-2026-04-23.md` (modificado **Apr 23 23:40**)
+- Ejecuté: `bash scripts/batch_export_raws.sh`
+- Resultado: **sí escribió RAW del día 2026-04-24**
+- Archivo generado (ojo al nombre): **`memory/raws-daily/luna-2026-04-24.md`** (no `memory/raws-daily/2026-04-24.md`)
 
-Luna: Recomendación: hay que **ajustar la tarea/cron** para que use `bash scripts/batch_export_raws.sh` (o crear `scripts/export_raws.py` si de verdad lo quieres con ese nombre).
+Luna: Si quieres, mañana te ajusto la tarea nocturna para que use el script correcto y valide el nombre correcto del archivo.
