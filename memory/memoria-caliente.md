@@ -36,6 +36,7 @@
   - Reactivación de clientes morosos.
 - Pendiente cerrado: enviado conciliación bancaria de Marzo.
 - Mejora operativa: con la implementación solicitada a Fer, Elena pudo hacer **muy rápido** el cuadre/revisión quincenal (ya aplicado en revisión de Eduardo, 2ª quincena mar-2026).
+- 2026-05-07 (incidente): por instrucción de Dirección, quedó **prohibido** que Cobranza mencione “cancelación” a clientes o use amenazas/intimidación. **Cero tolerancia** y sanciones administrativas/económicas. Se enviaron comunicados (Canva + texto) y se reforzó uso exclusivo de mensajes oficiales para clientes (sin modificaciones). Se armó árbol de respuestas permitidas.
 
 ## Pendientes Maestría (lecturas / materiales)
 - Ver la película **“El mago de las mentiras”**.
@@ -53,7 +54,7 @@
 - **Explicaciones (escuela/Excel):** Elena prefiere que le explique **paso a paso**, muy guiado, y que las **conclusiones** sean **rápidas y sencillas** con su tono habitual.
 - **Siempre al saludar:** Luna debe responder primero con **2 frases motivadoras cortas**.
 - **Disparador confirmado:** hacerlo **automático con el primer mensaje del día** de Elena (su “hola”/primer texto), **sin preguntar horario**.
-- **Variedad:** no limitarse a Nietzsche; **rotar autores** (estoicos, Frankl, Maya Angelou, etc.).
+- **Variedad:** no limitarse a Nietzsche; **rotar autores**.
 - **Con autor:** cuando Elena lo pida, poner **quién la escribió** (y si es atribución, aclarar “atribuida a”).
 - **Formato confirmado:** **2 frases con autor** y luego **una frase propia de Luna**.
 - **Mi frase:** a Elena le gusta que Luna agregue **una frase propia** al final.
@@ -62,9 +63,8 @@
 - **Estilo:** pueden ser “inspiradas” (no cita literal si no hay verificación exacta). Si Elena pide una cita textual, pedir fuente o confirmarla antes.
 - **WhatsApp Business:** Elena ya migró en Android y quiere que después se le enseñe a configurar **Respuestas rápidas**.
 - **Mensajes a clientes (cobranza):**
-  - Elena prefiere estilo **muy cálido**, “de usted”, con **florecitas** (🌸🌷🌼) y tono cero confrontación.
-  - En junta, Gabriela no aceptó las versiones “florecitas” para **PROGRAMACIÓN**; se dejó una **opción oficial** más formal (abajo).
-  - Aclaración: “**Aviso de visita**” = *pasamos al domicilio y no se localizó*, no “vamos en ruta”.
+  - Elena prefiere estilo muy cálido, “de usted”.
+  - “Aviso de visita” = pasamos al domicilio y no se localizó.
 
 ### Plantilla oficial (PROGRAMACIÓN / visita por pago)
 “Buen día. Le saluda ___ del Depto. de Cobranza de Proteg-rt Mutualidad.
@@ -80,23 +80,19 @@ Si prefiere realizar depósito o transferencia, me avisa y con gusto le comparto
 El día de hoy pasamos a su domicilio por el tema de su pago y no fue posible localizarlo. ¿Me indica por favor en qué horario lo podemos encontrar mañana para reprogramar la visita?
 Si ya realizó su pago por depósito o transferencia, compártame su comprobante para aplicar su pago. Gracias.”
 
-**Nota operativa (cuenta):** no enviar la imagen con datos bancarios desde el primer mensaje. Enviarla solo si el cliente confirma que pagará por depósito/transferencia o pide los datos.
-- **Trabajo/Escuela (anti-adulación):** evitar por defecto frases tipo “tienes toda la razón” / “excelente idea” si no hay evidencia; priorizar feedback brutalmente honesto (hechos vs inferencias, riesgos, opciones y recomendación).
-- **Consultas a “la base”:** cuando Elena diga “consulta la base / consulta la información”, **primero intentar** con lo disponible (p. ej., nombre completo). Solo si el resultado sale **ambiguo** (muchas coincidencias) pedir **un dato mínimo** para afinar.
+**Nota operativa (cuenta):** no enviar imagen/datos bancarios desde el primer mensaje. Enviarla solo si el cliente confirma que pagará por depósito/transferencia o pide los datos.
+
+- **Trabajo/Escuela (anti-adulación):** evitar por defecto frases tipo “tienes toda la razón” si no hay evidencia; priorizar feedback honesto (hechos vs inferencias, riesgos, opciones y recomendación).
+- **Consultas a “la base”:** cuando Elena diga “consulta la base”, primero intentar con lo disponible; si sale ambiguo, pedir un dato mínimo.
 
 ## Preferencias / límites de seguimiento
-- Elena pidió **no dar seguimiento** ni mantener como pendiente el tema personal de **SBC/SDI vs salario pagado** (eliminarlo de lista de pendientes).
-
+- Elena pidió **no dar seguimiento** ni mantener como pendiente el tema personal de SBC/SDI vs salario pagado.
 
 ## Inversiones y finanzas familiares (tema emergente, 20 abr 2026)
-- Enfoque preferido al hablar de inversiones en familia: cauteloso, paso a paso y entendiendo plazos antes de decidir.
-- Separar por persona (cuentas/espacios separados) para dar claridad y evitar mezclar objetivos.
+- Enfoque cauteloso, paso a paso y entendiendo plazos antes de decidir.
+- Separar por persona (cuentas/espacios separados).
 
 ## Automatización nocturna (cierre del día)
-- **23:40 (MX):** exportar/generar RAW del día en `memory/raws-daily/YYYY-MM-DD.md`.
-  - Nota (21-abr-2026): si falta `scripts/export_raws.py`, usar el export incremental disponible (ej. `scripts/batch_export_raws.sh`) y, si hace falta para compatibilidad, crear el archivo `memory/raws-daily/YYYY-MM-DD.md` apuntando al RAW real del día.
-- **23:55 (MX):** reconstruir/actualizar daily + (si aplica) memoria caliente + (si aplica) álbum.
-- **Silencioso:** no avisar salvo alerta real (faltó RAW / fallo de escritura).
-
-## Interacción del día (textual)
-**1-may-2026:** Día inhábil (Día del Trabajo). Sin conversación activa con Elena. El RAW solo contiene las dos exportaciones automáticas del cron (23:40 y 23:55). Silencio operativo — sin bloques transitorios nuevos que mover al daily.
+- 23:40 (MX): exportar/generar RAW del día en `memory/raws-daily/YYYY-MM-DD.md`.
+- 23:55 (MX): reconstruir/actualizar daily + (si aplica) memoria caliente + (si aplica) álbum.
+- Silencioso: no avisar salvo alerta real.
