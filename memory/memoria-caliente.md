@@ -36,7 +36,6 @@
   - Reactivación de clientes morosos.
 - Pendiente cerrado: enviado conciliación bancaria de Marzo.
 - Mejora operativa: con la implementación solicitada a Fer, Elena pudo hacer **muy rápido** el cuadre/revisión quincenal (ya aplicado en revisión de Eduardo, 2ª quincena mar-2026).
-- 2026-05-07 (incidente): por instrucción de Dirección, quedó **prohibido** que Cobranza mencione “cancelación” a clientes o use amenazas/intimidación. **Cero tolerancia** y sanciones administrativas/económicas. Se enviaron comunicados (Canva + texto) y se reforzó uso exclusivo de mensajes oficiales para clientes (sin modificaciones). Se armó árbol de respuestas permitidas.
 
 ## Pendientes Maestría (lecturas / materiales)
 - Ver la película **“El mago de las mentiras”**.
@@ -96,3 +95,27 @@ Si ya realizó su pago por depósito o transferencia, compártame su comprobante
 - 23:40 (MX): exportar/generar RAW del día en `memory/raws-daily/YYYY-MM-DD.md`.
 - 23:55 (MX): reconstruir/actualizar daily + (si aplica) memoria caliente + (si aplica) álbum.
 - Silencioso: no avisar salvo alerta real.
+
+## Interacción del día (textual)
+Elena:
+[cron:d2987208-0967-4e0e-9cf6-b9bc9e9c9220 Nightly RAW export (MX 23:40)] TAREA NOCTURNA (automatización) — MX 23:40
+
+Objetivo: exportar el RAW del día (MX) para que quede listo antes del rebuild.
+
+Pasos:
+1) Ejecuta en workspace: python3 scripts/export_raws.py day today
+2) Verifica que exista/actualice: memory/raws-daily/YYYY-MM-DD.md
+
+Privacidad:
+- Este paso solo exporta RAW (sin publicar); no enviar mensaje a Elena salvo ERROR real (no se pudo leer sesiones o escribir archivo).
+
+Luna:
+ERROR real en la tarea nocturna.
+
+1) El comando indicado falló porque **no existe** el script:
+- `python3 scripts/export_raws.py day today`
+- Error: `can't open file .../scripts/export_raws.py: [Errno 2] No such file or directory`
+
+2) Para cumplir el objetivo (exportar RAW del día), ejecuté el exportador que sí existe:
+- `bash scripts/batch_export_raws.sh`
+- Resultado: **sí generó/actualizó RAW para 2026-05-07** y actualizó cursor.
