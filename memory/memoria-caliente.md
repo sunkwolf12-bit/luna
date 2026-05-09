@@ -92,7 +92,9 @@ Si ya realizó su pago por depósito o transferencia, compártame su comprobante
 - Separar por persona (cuentas/espacios separados).
 
 ## Automatización nocturna (cierre del día)
-- 23:40 (MX): exportar/generar RAW del día en `memory/raws-daily/YYYY-MM-DD.md`.
+- 23:40 (MX): exportar/generar RAW del día en `memory/raws-daily/`.
+  - **Nota (workspace actual):** el export está generando `luna-YYYY-MM-DD.md` (no `YYYY-MM-DD.md`).
+  - Si falla el comando principal por script inexistente, usar fallback `bash scripts/batch_export_raws.sh`.
 - 23:55 (MX): reconstruir/actualizar daily + (si aplica) memoria caliente + (si aplica) álbum.
 - Silencioso: no avisar salvo alerta real.
 
@@ -110,12 +112,16 @@ Privacidad:
 - Este paso solo exporta RAW (sin publicar); no enviar mensaje a Elena salvo ERROR real (no se pudo leer sesiones o escribir archivo).
 
 Luna:
-ERROR real en la tarea nocturna.
+ERROR real en la tarea nocturna:
 
-1) El comando indicado falló porque **no existe** el script:
-- `python3 scripts/export_raws.py day today`
-- Error: `can't open file .../scripts/export_raws.py: [Errno 2] No such file or directory`
+- Falló el paso 1 porque **no existe** el script: `scripts/export_raws.py`
+  (`[Errno 2] No such file or directory`).
 
-2) Para cumplir el objetivo (exportar RAW del día), ejecuté el exportador que sí existe:
-- `bash scripts/batch_export_raws.sh`
-- Resultado: **sí generó/actualizó RAW para 2026-05-07** y actualizó cursor.
+Para no dejar el día sin RAW, corrí el **fallback operativo**:
+- `bash scripts/batch_export_raws.sh` ✅
+
+Resultado:
+- Sí se generó/actualizó el RAW del día en:
+  `memory/raws-daily/luna-2026-05-08.md` ✅
+
+Nota: el nombre que queda en este workspace es `luna-YYYY-MM-DD.md` (no `YYYY-MM-DD.md`), por eso no aparece el archivo con el nombre “esperado” del paso 2.
