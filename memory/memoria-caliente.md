@@ -93,8 +93,8 @@ Si ya realizó su pago por depósito o transferencia, compártame su comprobante
 
 ## Automatización nocturna (cierre del día)
 - 23:40 (MX): exportar/generar RAW del día en `memory/raws-daily/`.
-  - **Nota (workspace actual):** el export está generando `luna-YYYY-MM-DD.md` (no `YYYY-MM-DD.md`).
-  - Si falla el comando principal por script inexistente, usar fallback `bash scripts/batch_export_raws.sh`.
+  - **Nota (workspace actual):** el export genera `luna-YYYY-MM-DD.md` y además deja un archivo con el nombre “esperado” `YYYY-MM-DD.md` como **symlink** (cuando aplica).
+  - Si falla el comando principal por script inexistente, usar fallback: `bash scripts/batch_export_raws.sh`.
 - 23:55 (MX): reconstruir/actualizar daily + (si aplica) memoria caliente + (si aplica) álbum.
 - Silencioso: no avisar salvo alerta real.
 
@@ -110,18 +110,14 @@ Pasos:
 
 Privacidad:
 - Este paso solo exporta RAW (sin publicar); no enviar mensaje a Elena salvo ERROR real (no se pudo leer sesiones o escribir archivo).
+Current time: Saturday, May 9th, 2026 — 11:40 PM (America/Mexico_City) / 2026-05-10 05:40 UTC
 
 Luna:
-ERROR real en la tarea nocturna:
+ERROR real en el paso 1: **no existe** `scripts/export_raws.py` en el workspace (`[Errno 2] No such file or directory`).
 
-- Falló el paso 1 porque **no existe** el script: `scripts/export_raws.py`
-  (`[Errno 2] No such file or directory`).
+Para no dejar el RAW del día sin exportar, corrí el **fallback operativo**:
+- `bash scripts/batch_export_raws.sh` ✅ → **Wrote RAW files for: 2026-05-09**
 
-Para no dejar el día sin RAW, corrí el **fallback operativo**:
-- `bash scripts/batch_export_raws.sh` ✅
-
-Resultado:
-- Sí se generó/actualizó el RAW del día en:
-  `memory/raws-daily/luna-2026-05-08.md` ✅
-
-Nota: el nombre que queda en este workspace es `luna-YYYY-MM-DD.md` (no `YYYY-MM-DD.md`), por eso no aparece el archivo con el nombre “esperado” del paso 2.
+Verificación:
+- Ya quedó el archivo esperado para el rebuild:
+  - `memory/raws-daily/2026-05-09.md` ✅ (symlink a `luna-2026-05-09.md`)
