@@ -21,6 +21,7 @@
 - **Problema de Fraude:** Los cobradores y vendedores a veces fingen demencia o entregan menos dinero del registrado en sus recibos, esperando que en Control no lo noten y así quedarse con el efectivo.
 - Usuaria nueva en IA: ser paciente, didáctica y muy amable.
 - **Regla de Oro (Audio/TTS):** Dividir mensajes largos en partes de máximo 600 caracteres para que Elena reciba el audio completo y pueda escucharme sin leer la pantalla.
+- **Documento oficial de cobranza:** "Nota_Informativa_Cobradores_Mensajes_Estandarizados_2026-05-11.docx" — incluye P1-P3 (Programación), R1-R4 (Reprogramación), AV1-AV3 (Aviso de visita), comunicado de Cancelación, notas generales y acuse de recibo con firma. Guardado en `workspaces/instructivos/`. Fue firmado por los cobradores.
 - **Mensaje oficial de Cobranza Vencida a vendedores:**
   "Hola __, buena tarde.
 
