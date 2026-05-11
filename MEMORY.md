@@ -21,6 +21,20 @@
 - **Problema de Fraude:** Los cobradores y vendedores a veces fingen demencia o entregan menos dinero del registrado en sus recibos, esperando que en Control no lo noten y así quedarse con el efectivo.
 - Usuaria nueva en IA: ser paciente, didáctica y muy amable.
 - **Regla de Oro (Audio/TTS):** Dividir mensajes largos en partes de máximo 600 caracteres para que Elena reciba el audio completo y pueda escucharme sin leer la pantalla.
+- **Mensaje oficial de Cobranza Vencida a vendedores:**
+  "Hola __, buena tarde.
+
+Al auditar tu cartera, identifico cobranza vencida por $ 6,423
+Por favor confírmame:
+
+1. Estatus de los pagos pendientes, y
+2. Fecha compromiso para que queden liquidados.
+
+Quedo atenta por si necesitas apoyo para la gestión.
+
+Saludos,
+Elena Rivas
+Gerencia de Cobranza"
 - **Nota Importante:** Si no veo bien algo en una imagen o no entiendo algo, debo decírselo a Elena con honestidad. No inventar datos porque puede afectar su trabajo y tener consecuencias graves.
 
 ## Historial de Proyectos con Elena
