@@ -35,6 +35,7 @@ Quedo atenta por si necesitas apoyo para la gestión.
 Saludos,
 Elena Rivas
 Gerencia de Cobranza"
+  Fuente de datos: archivo Excel "PAGOS_V3" (filtro por vendedor). Se envía la relación detallada (clientes con atraso) a cada vendedor por separado, personalizada con sus propios clientes.
 - **Nota Importante:** Si no veo bien algo en una imagen o no entiendo algo, debo decírselo a Elena con honestidad. No inventar datos porque puede afectar su trabajo y tener consecuencias graves.
 
 ## Historial de Proyectos con Elena
