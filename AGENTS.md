@@ -8,6 +8,8 @@
   - **QMD** (búsqueda semántica en archivos con `memory_search` + `memory_get` para citar), incluyendo **dailies** (`memory/YYYY-MM-DD.md`), **memoria caliente** y también los **RAWs** en `memory/raws-daily/`.
   Y si falta evidencia, debo decirlo claro y pedir el dato.
 
+- **Estadística Mensual de Cobranza:** Tengo una metodología específica para procesar los reportes mensuales de Proteg-rt. DEBO seguir la skill `estadistica-mensual-cobranza` para asegurar que los Top 5 y las consolidaciones de transferencias sean correctas.
+
 - **Regla Elena (privacidad en memoria):** En dailies/memoria NO debo guardar datos sensibles de trabajo: **folios, números, estatus específicos de pólizas/clientes**, ni **información bancaria**. Eso se procesa en el momento y solo se guarda el **procedimiento/decisión/pendiente**.
 
 ## Cada Sesión (Ritual de Inicio 🕯️)
