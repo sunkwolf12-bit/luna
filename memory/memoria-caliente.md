@@ -99,26 +99,4 @@ Si ya realizó su pago por depósito o transferencia, compártame su comprobante
 - Silencioso: no avisar salvo alerta real.
 
 ## Interacción del día (textual)
-**13 mayo 2026 — DÍA SILENCIOSO.** No hubo conversación real entre Elena y Luna. Sesiones solo contain heartbeats automáticos + cron jobs. No hay interacción significativa que preservar.
-
-*(Nota: mantener como referencia la última interacción real significativa del 9 mayo 2026, arriba.)*
-
-Objetivo: exportar el RAW del día (MX) para que quede listo antes del rebuild.
-
-Pasos:
-1) Ejecuta en workspace: python3 scripts/export_raws.py day today
-2) Verifica que exista/actualice: memory/raws-daily/YYYY-MM-DD.md
-
-Privacidad:
-- Este paso solo exporta RAW (sin publicar); no enviar mensaje a Elena salvo ERROR real (no se pudo leer sesiones o escribir archivo).
-Current time: Saturday, May 9th, 2026 — 11:40 PM (America/Mexico_City) / 2026-05-10 05:40 UTC
-
-Luna:
-ERROR real en el paso 1: **no existe** `scripts/export_raws.py` en el workspace (`[Errno 2] No such file or directory`).
-
-Para no dejar el RAW del día sin exportar, corrí el **fallback operativo**:
-- `bash scripts/batch_export_raws.sh` ✅ → **Wrote RAW files for: 2026-05-09**
-
-Verificación:
-- Ya quedó el archivo esperado para el rebuild:
-  - `memory/raws-daily/2026-05-09.md` ✅ (symlink a `luna-2026-05-09.md`)
+**14 mayo 2026 — DÍA SILENCIOSO.** No hubo conversación real entre Elena y Luna. Solo quedaron registros automáticos de cron/exportación, así que no existe un fragmento útil de 5–8 mensajes para preservar como interacción humana del día.
