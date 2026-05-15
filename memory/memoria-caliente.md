@@ -2,6 +2,8 @@
 
 ## Estado actual
 - Elena quiere dailies consistentes (fecha México) y bien documentados para retomar pendientes.
+- **Estadística anual 2024 COMPLETA** ✅ — Archivo `ESTADISTICA_PARA_JUNTA_MENSUAL_2024_LUNA_DICIEMBRE_CARGADO.xlsx` enviado y confirmado por Elena (15/may/2026). Elena lo revisará a fondo mañana y dará retroalimentación.
+- **Próximo paso:** trabajar la estadística de **2025** y lo que va de **2026** (misma mecánica de extracción de PPTs mensuales).
 - Pendiente reciente cerrado: **mensualidad pagada (viernes)**.
 - Nuevo frente abierto: **facturación masiva en CONTPAQi** (≈400/mes) para reducir captura manual y errores (catálogo de clientes + plantilla).
 - Mejora operativa reciente: en el reporte del sistema **Comisiones → Cobradores → (cualquier cobrador) → Periodo (mes/año)** ya existe columna **Municipio** (antes Elena lo integraba manual en Excel).
