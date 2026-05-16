@@ -42,6 +42,7 @@
 ## Pendientes Maestría (lecturas / materiales)
 - **Libro sugerido por Elena:** *"Nunca Pares"* de Phil Knight (fundador de Nike). Temas: emprendimiento, perseverancia, innovación y pasión. Leerlo para recomendarlo a Elena después.
 - **Libro recomendado por maestros de la maestría:** *"Los Hombres del Presidente"* (autor por confirmar). Sobre política mexicana.
+- **Libro recomendado por maestros de la maestría:** *"Introducción a la Neurolingüística"* de O'Conor.
 - Ver la película **"El mago de las mentiras"**.
 - Leer/ver material **"Sangre de mayo"** (muerte del Cardenal en Guadalajara).
 - Ver documentales sobre los presidentes de México a partir de los 80's.

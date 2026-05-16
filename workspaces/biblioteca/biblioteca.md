@@ -10,6 +10,7 @@ Biblioteca para llevar registro de libros recomendados, leídos y por leer. Meta
 |---|-------|-------|-----------------|------|---------|
 | 1 | *Nunca Pares* | Phil Knight | Elena misma | Emprendimiento, perseverancia, Nike | Pendiente leer (Luna) |
 | 2 | *Los Hombres del Presidente* | por confirmar | Maestros de la maestría | Política mexicana | Por confirmar autor |
+| 3 | *Introducción a la Neurolingüística* | O'Conor | Maestros de la maestría | Neurolingüística | Pendiente |
 
 ---
 
