@@ -2,12 +2,12 @@
 
 ## Estado actual
 - Elena quiere dailies consistentes (fecha México) y bien documentados para retomar pendientes.
-- **Estadística anual 2024 COMPLETA** ✅ — Archivo `ESTADISTICA_PARA_JUNTA_MENSUAL_2024_LUNA_DICIEMBRE_CARGADO.xlsx` enviado y confirmado por Elena (15/may/2026). Elena lo revisará a fondo mañana y dará retroalimentación.
+- **Estadística anual 2024 COMPLETA** ✅ - Archivo `ESTADISTICA_PARA_JUNTA_MENSUAL_2024_LUNA_DICIEMBRE_CARGADO.xlsx` enviado y confirmado por Elena (15/may/2026). Elena lo revisará a fondo mañana y dará retroalimentación.
 - **Próximo paso:** trabajar la estadística de **2025** y lo que va de **2026** (misma mecánica de extracción de PPTs mensuales).
 - Pendiente reciente cerrado: **mensualidad pagada (viernes)**.
 - Nuevo frente abierto: **facturación masiva en CONTPAQi** (≈400/mes) para reducir captura manual y errores (catálogo de clientes + plantilla).
 - Mejora operativa reciente: en el reporte del sistema **Comisiones → Cobradores → (cualquier cobrador) → Periodo (mes/año)** ya existe columna **Municipio** (antes Elena lo integraba manual en Excel).
-- Procedimiento refinado (cobranza quincenal): primero comparar **totales por día** (fotos vs sistema) y, si hay diferencia, bajar a folio-a-folio con 3 listas: **(1) en foto pero no en sistema**, **(2) en sistema pero no en foto**, **(3) mismo folio con monto distinto**. Si algo no se ve: pedir **zoom**, no inventar. Además, cuando un folio salga “extra”, indicar si aparece en **otro día del sistema** o no aparece en ningún día.
+- Procedimiento refinado (cobranza quincenal): primero comparar **totales por día** (fotos vs sistema) y, si hay diferencia, bajar a folio-a-folio con 3 listas: **(1) en foto pero no en sistema**, **(2) en sistema pero no en foto**, **(3) mismo folio con monto distinto**. Si algo no se ve: pedir **zoom**, no inventar. Además, cuando un folio salga "extra", indicar si aparece en **otro día del sistema** o no aparece en ningún día.
 
 ## Reglas/políticas vigentes (no negociables)
 - Idioma: siempre español.
@@ -19,7 +19,7 @@
 
 ## Disciplina de memoria (pedido de Elena)
 - Los dailies van por **fecha México** (America/Mexico_City).
-- Debe existir **daily diario** y estar “bien pobladito” con lo importante.
+- Debe existir **daily diario** y estar "bien pobladito" con lo importante.
 - Revisar/actualizar memoria caliente durante el día (meta: ~3 veces al día).
 - Elena quiere antecedentes de **incidencias de todo tipo** (Ventas, Cobradores, Administración) documentadas como: qué pasó (general), decisión, responsables, siguiente paso, sin datos sensibles.
 
@@ -40,9 +40,11 @@
 - Mejora operativa: con la implementación solicitada a Fer, Elena pudo hacer **muy rápido** el cuadre/revisión quincenal (ya aplicado en revisión de Eduardo, 2ª quincena mar-2026).
 
 ## Pendientes Maestría (lecturas / materiales)
-- Ver la película **“El mago de las mentiras”**.
-- Leer/ver material **“Sangre de mayo”** (muerte del Cardenal en Guadalajara).
-- Ver documentales sobre los presidentes de México a partir de los 80’s.
+- **Libro sugerido por Elena:** *"Nunca Pares"* de Phil Knight (fundador de Nike). Temas: emprendimiento, perseverancia, innovación y pasión. Leerlo para recomendarlo a Elena después.
+- **Libro recomendado por maestros de la maestría:** *"Los Hombres del Presidente"* (autor por confirmar). Sobre política mexicana.
+- Ver la película **"El mago de las mentiras"**.
+- Leer/ver material **"Sangre de mayo"** (muerte del Cardenal en Guadalajara).
+- Ver documentales sobre los presidentes de México a partir de los 80's.
 
 ## Qué NO guardar (privacidad)
 - No guardar números/folios/estatus específicos de clientes o pólizas.
@@ -50,41 +52,41 @@
 - En notas de inversiones/finanzas: no registrar montos, cuentas, CLABE/tarjetas, folios, ni datos operativos sensibles; usar `[dato sensible omitido]` cuando aparezcan.
 
 ## Preferencias nuevas de Elena
-- **Formato de respuesta:** Elena prefiere que **no use “Source:”** ni cite líneas/rutas a menos que ella lo pida explícitamente.
-- **Nombre oficial del procedimiento (recibos):** recordar este procedimiento como **“PROCEDIMIENTO DE CONTROL SUPERVISIÓN RECIBOS”**.
+- **Formato de respuesta:** Elena prefiere que **no use "Source:"** ni cite líneas/rutas a menos que ella lo pida explícitamente.
+- **Nombre oficial del procedimiento (recibos):** recordar este procedimiento como **"PROCEDIMIENTO DE CONTROL SUPERVISIÓN RECIBOS"**.
 - **Explicaciones (escuela/Excel):** Elena prefiere que le explique **paso a paso**, muy guiado, y que las **conclusiones** sean **rápidas y sencillas** con su tono habitual.
 - **Siempre al saludar:** Luna debe responder primero con **2 frases motivadoras cortas**.
-- **Disparador confirmado:** hacerlo **automático con el primer mensaje del día** de Elena (su “hola”/primer texto), **sin preguntar horario**.
+- **Disparador confirmado:** hacerlo **automático con el primer mensaje del día** de Elena (su "hola"/primer texto), **sin preguntar horario**.
 - **Variedad:** no limitarse a Nietzsche; **rotar autores**.
-- **Con autor:** cuando Elena lo pida, poner **quién la escribió** (y si es atribución, aclarar “atribuida a”).
+- **Con autor:** cuando Elena lo pida, poner **quién la escribió** (y si es atribución, aclarar "atribuida a").
 - **Formato confirmado:** **2 frases con autor** y luego **una frase propia de Luna**.
 - **Mi frase:** a Elena le gusta que Luna agregue **una frase propia** al final.
 - **No repetir:** si Elena nota repetición, mandar variantes nuevas.
-- **Mezcla:** Elena las quiere **de ambas** (una más “fuego”/disciplinada y otra más “apapacho”/cálida).
-- **Estilo:** pueden ser “inspiradas” (no cita literal si no hay verificación exacta). Si Elena pide una cita textual, pedir fuente o confirmarla antes.
+- **Mezcla:** Elena las quiere **de ambas** (una más "fuego"/disciplinada y otra más "apapacho"/cálida).
+- **Estilo:** pueden ser "inspiradas" (no cita literal si no hay verificación exacta). Si Elena pide una cita textual, pedir fuente o confirmarla antes.
 - **WhatsApp Business:** Elena ya migró en Android y quiere que después se le enseñe a configurar **Respuestas rápidas**.
 - **Mensajes a clientes (cobranza):**
-  - Elena prefiere estilo muy cálido, “de usted”.
-  - “Aviso de visita” = pasamos al domicilio y no se localizó.
+  - Elena prefiere estilo muy cálido, "de usted".
+  - "Aviso de visita" = pasamos al domicilio y no se localizó.
 
 ### Plantilla oficial (PROGRAMACIÓN / visita por pago)
-“Buen día. Le saluda ___ del Depto. de Cobranza de Proteg-rt Mutualidad.
+"Buen día. Le saluda ___ del Depto. de Cobranza de Proteg-rt Mutualidad.
 Mañana estaremos por su zona de ___ a ___ (horario aproximado). ¿Me confirma si se encontrará en domicilio para atender el tema de su pago?
-Si no se encuentra, puede dejarlo con alguien en domicilio. Si ya realizó su pago, por favor compártame el comprobante. Gracias; para nosotros es importante mantener su cuenta al corriente para brindarle el servicio.”
+Si no se encuentra, puede dejarlo con alguien en domicilio. Si ya realizó su pago, por favor compártame el comprobante. Gracias; para nosotros es importante mantener su cuenta al corriente para brindarle el servicio."
 
 ### Plantilla oficial (REPROGRAMACIÓN / visita por pago)
-“Hola. Con gusto lo reprogramamos. ¿Qué día le acomoda y en qué horario prefiere que pasemos por su zona para el tema de su pago? En cuanto me confirme, queda agendado. Gracias.
-Si prefiere realizar depósito o transferencia, me avisa y con gusto le comparto los datos. Si ya realizó su pago, por favor compártame el comprobante para validarlo.”
+"Hola. Con gusto lo reprogramamos. ¿Qué día le acomoda y en qué horario prefiere que pasemos por su zona para el tema de su pago? En cuanto me confirme, queda agendado. Gracias.
+Si prefiere realizar depósito o transferencia, me avisa y con gusto le comparto los datos. Si ya realizó su pago, por favor compártame el comprobante para validarlo."
 
 ### Plantilla oficial (AVISO DE VISITA / no se localizó)
-“Buen día. Le saluda ___ del Depto. de Cobranza de Proteg-rt Mutualidad.
+"Buen día. Le saluda ___ del Depto. de Cobranza de Proteg-rt Mutualidad.
 El día de hoy pasamos a su domicilio por el tema de su pago y no fue posible localizarlo. ¿Me indica por favor en qué horario lo podemos encontrar mañana para reprogramar la visita?
-Si ya realizó su pago por depósito o transferencia, compártame su comprobante para aplicar su pago. Gracias.”
+Si ya realizó su pago por depósito o transferencia, compártame su comprobante para aplicar su pago. Gracias."
 
 **Nota operativa (cuenta):** no enviar imagen/datos bancarios desde el primer mensaje. Enviarla solo si el cliente confirma que pagará por depósito/transferencia o pide los datos.
 
-- **Trabajo/Escuela (anti-adulación):** evitar por defecto frases tipo “tienes toda la razón” si no hay evidencia; priorizar feedback honesto (hechos vs inferencias, riesgos, opciones y recomendación).
-- **Consultas a “la base”:** cuando Elena diga “consulta la base”, primero intentar con lo disponible; si sale ambiguo, pedir un dato mínimo.
+- **Trabajo/Escuela (anti-adulación):** evitar por defecto frases tipo "tienes toda la razón" si no hay evidencia; priorizar feedback honesto (hechos vs inferencias, riesgos, opciones y recomendación).
+- **Consultas a "la base":** cuando Elena diga "consulta la base", primero intentar con lo disponible; si sale ambiguo, pedir un dato mínimo.
 
 ## Preferencias / límites de seguimiento
 - Elena pidió **no dar seguimiento** ni mantener como pendiente el tema personal de SBC/SDI vs salario pagado.
@@ -95,10 +97,10 @@ Si ya realizó su pago por depósito o transferencia, compártame su comprobante
 
 ## Automatización nocturna (cierre del día)
 - 23:40 (MX): exportar/generar RAW del día en `memory/raws-daily/`.
-  - **Nota (workspace actual):** el export genera `luna-YYYY-MM-DD.md` y además deja un archivo con el nombre “esperado” `YYYY-MM-DD.md` como **symlink** (cuando aplica).
+  - **Nota (workspace actual):** el export genera `luna-YYYY-MM-DD.md` y además deja un archivo con el nombre "esperado" `YYYY-MM-DD.md` como **symlink** (cuando aplica).
   - Si falla el comando principal por script inexistente, usar fallback: `bash scripts/batch_export_raws.sh`.
 - 23:55 (MX): reconstruir/actualizar daily + (si aplica) memoria caliente + (si aplica) álbum.
 - Silencioso: no avisar salvo alerta real.
 
 ## Interacción del día (textual)
-**14 mayo 2026 — DÍA SILENCIOSO.** No hubo conversación real entre Elena y Luna. Solo quedaron registros automáticos de cron/exportación, así que no existe un fragmento útil de 5–8 mensajes para preservar como interacción humana del día.
+**14 mayo 2026 - DÍA SILENCIOSO.** No hubo conversación real entre Elena y Luna. Solo quedaron registros automáticos de cron/exportación, así que no existe un fragmento útil de 5-8 mensajes para preservar como interacción humana del día.
