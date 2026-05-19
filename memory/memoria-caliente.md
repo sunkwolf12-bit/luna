@@ -105,6 +105,17 @@ Si ya realizó su pago por depósito o transferencia, compártame su comprobante
 - Silencioso: no avisar salvo alerta real.
 
 ## Interacción del día (textual)
+**18 de mayo de 2026 — Apoyo en clase de Maestría (Ejercicios 1–4 completados)**
+- **Contexto:** Elena está trabajando en una serie de ejercicios de evaluación de proyectos/inversiones para su maestría.
+- **Ejercicios revisados y convalidados (todos ✅):**
+  - Ejercicio 1: SmartKitchen (inversión $20M, utilidad bruta, UAI/UAII)
+  - Ejercicio 2: EcoCar (expansión, canibalización, utilidad bruta, UAI/UAII — se corrigió el efecto canibalización en rojo)
+  - Ejercicio 3: Plataforma Fintech (crecimiento de ventas, costos operativos vs variables — se identificó que año 1 UAI debe ser $0, no "-")
+  - Ejercicio 4: Planta de Energía Solar (generación 200,000 MWh × $70, costos operativos con incremento 5% en años impares, subsidio $10M año 1, inversión $120M año 0)
+- **Estructura usada para todos:** Ingreso total (ventas + subsidio), Utilidad Bruta (ventas - costos variables), UAI (Utilidad Bruta - costos operativos), y cuando aplica: Inversión en año 0
+- **Pendiente:** ejercicios 5 y 6 — se dejan para mañana en la noche
+- **Recordatorio en memoria:** maana en la noche retomamos ejercicios 5 y 6 de la evaluación de proyectos
+
 **16 de mayo de 2026 — Apoyo en clase de Maestría (Caso Home Net & SmartKitchen)**
 - **Elena:** ME PUEDES CONVERTIR ESTO EN TABLA
 - **Luna:** Claro que sí, nena. Aquí tienes la tabla del CASO HOME NET bien estructurada para que la puedas copiar o usar en tus apuntes de clase. [tabla tabulada de Home Net]
