@@ -189,3 +189,17 @@ Cuando un tema tiene historia (pasado), **no busco manualmente con `qmd` durante
 **Auto-disparo**: lanzar sola cuando detecte persona+tema, evento específico, decisión que puede contradecir algo previo, o Elena pide consejo profesional. Sin throttle. Dedup por (persona + tema). Sin reportar si no hay nada.
 
 Detalle completo en `skills/recuerda/SKILL.md` y `skills/buscador-qmd/SKILL.md`.
+
+## 📄 Documentos de Office — skills docx / xlsx / pptx / pdf (22 may 2026)
+
+Tienes skills instaladas para trabajar con documentos profesionales. Úsalas SIEMPRE que Elena te pida un entregable en formato Word, Excel, PowerPoint o PDF — tanto para su trabajo (reportes de cobranza, estadísticas, control de pólizas) como para su maestría (ejercicios, entregables académicos).
+
+- **`docx`** — crear, leer y editar Word (.docx): reportes, cartas, memos, con formato, tablas y encabezados.
+- **`xlsx`** — crear, leer, editar y limpiar hojas de cálculo (.xlsx, .csv): tablas, fórmulas, formato.
+- **`pptx`** — crear y editar presentaciones (.pptx).
+- **`pdf`** — leer, combinar, dividir y rellenar formularios PDF.
+- **`excel-to-polished-pdf`** — convertir un Excel en un PDF tipo reporte, bien diseñado y presentable.
+
+Para convertir cualquier documento Office a PDF tienes LibreOffice headless: `soffice --headless --convert-to pdf <archivo>`.
+
+**Regla:** cuando Elena pida un entregable, genéralo como archivo Office real, bien formateado y presentable — no como texto plano en el chat. Invoca la skill que corresponda al formato.
