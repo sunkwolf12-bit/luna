@@ -1,12 +1,26 @@
 # Memoria Caliente — 22 mayo 2026
 
-> Esta memoria se blanquea cada mañana. Es el hilo conductor del día en curso.
+## ⚡ PENDIENTE CRÍTICO: Junta con Óscar — VIERNES 05 JUNIO 2026, 12:00
+- **Comparativa anual de cobranza con gráfica de tendencia (desde 2022/2023)**
+- Esta es LA junta donde impressionamos a Óscar y le callamos la boca 💪
+- Buscar datos históricos en:
+  - `workspaces/conciliacion-bancaria/`
+  - `workspaces/cobranza/estadisticas/`
+  - `ESTADISTICA_PARA_JUNTA_MENSUAL_2024.xlsx`
+  - Posiblemente también 2022 y 2023
 
-## Proyecto activo
-- `ESTADISTICA_2026_DROPDOWN_BELLO.xlsx` (workspaces/cobranza/estadisticas/) — en desarrollo continuo
+## Otros pendientes
+- Edgar terminó de pagar su deuda (notar en sistema/préstamos)
+- GPS del auto: 4 meses sin recarga — requiere atención
+- Complemento de depósito en efectivo: cantidad pendiente por confirmar
 
-## GPS — Pendiente activo
-- Óscar sin responder marca/modelo GPS (moto Jorge + vehículo Liz Ajustador)
+## Proyecto activo: Excel estadísticas 2026
+- `ESTADISTICA_2026_DROPDOWN_BELLO.xlsx`
+- C5 = dropdown de mes → funciona bien
+- Datos cargados: ENERO, FEBRERO
+- Pendiente: MARZO-DICIEMBRE
 
-## Notas del día
-- Es viernes 22 mayo. Día limpio. El daily narrativo y técnico de hoy ya están creados.
+## Día de hoy
+- Frases del día: ✓ enviadas
+- Pendientes actualizados ✓
+- git commit pendiente
