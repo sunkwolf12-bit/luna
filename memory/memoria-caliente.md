@@ -1,20 +1,40 @@
 # Memoria Caliente — 21 mayo 2026
 
-## Proyecto activo: Excel estadísticas cobranza 2026
-- Archivo: `workspaces/cobranza/estadisticas/ESTADISTICA_2026_DROPDOWN_BELLO.xlsx`
-- Dropdown funcional (celda C5 en DASHBOARD) → cambia mes y actualiza todo
-- Datos cargados: ENERO (completo), FEBRERO (casi completo - Top5 VENCIDA rows 108-111 vacías)
-- Próximo paso: capturar datos MARZO-DICIEMBRE conforme Elena los envíe
+> NOTA: Los bloques transitorios del día 21/may ya fueron integrados al daily `2026-05-21.md`. Esta memoria-caliente se limpia cada noche. Si buscas el detalle del día, consulta el daily narrativo y el técnico de trabajo.
 
-## Pendientes de diseño
-- VENCIDA rows 108-111 vacías (faltan 6o, 7mo lugar pero son Top 5)
-- Diseño ya mejorado pero sigue mejorando para "sorprender a Óscar"
-- Meta: que el Excel sea más impressive que el asistente de Óscar
+## Proyecto activo
+- Archivo principal: `ESTADISTICA_2026_DROPDOWN_BELLO.xlsx` (workspaces/cobranza/estadisticas/)
+- Dropdown funcional en DASHBOARD → cambiar mes actualiza todo
+- Pendiente: capturar datos MARZO-DICIEMBRE conforme Elena los envíe
 
-## Cosas de Elena (personales)
-- Está motivada porque su jefe dijo que el asistente de Óscar es mejor
-- Eso = desafío para Luna → hay que hacer algo SPECTACULAR
-- Está cansada (es de noche) pero quiere dejar todo listo para mañana
+## GPS — Pendiente activo
+- Óscar sin responder marca/modelo GPS (moto Jorge + vehículo Liz Ajustador)
+- Sin nuevas respuestas desde 21/may 10:04
 
-## Ruta archivos
-`workspaces/cobranza/estadisticas/ESTADISTICA_2026_DROPDOWN_BELLO.xlsx`
+## Interacción del día (textual)
+**[16:05 MX] Elena:** "CONCENTRATE, TOOMATE TU TIEMPO, QUIERO UN ENTREGABLE BELLO, SIN ERRORES, DIGNO DE TI Y DE MI. QUE ESTE ESPECTACULAR, CON LA INTERFAZ MUY BONIS Y PRO. ESFUERZATE"
+
+**[16:05 MX] Luna:** "Elena, se me va a tomar tiempo, pero va a estar increíble. Dame un momento y te entrego algo de lo que sentirse orgullosa. 🌙"
+
+**[16:06 MX] Luna:** "✅ Guardado y comprometido en memoria. Dropdown corregido, Top 5 acomodado, diseño profesional mejorado. Lo que sigue: VENCIDA rows 108-111 vacías (faltan 6o, 7mo lugar pero son Top 5). Capturar datos MARZO-DICIEMBRE."
+
+**[16:13 MX] Elena:** "This is how it is, beautiful. We are going to let that Oscar's assistant humiliation. We can..."
+
+**[16:29 MX] Luna:** "¡Ese es el espíritu, amiguis! 🔥🔥🔥 Nosotras vamos a hacer un EXCEL que Óscar no pueda ni mirarnos a los ojos cuando lo vea. Tranquila que aquí estoy para apoyarte — lo que necesites, lo hacemos realidad. 💪🌙"
+
+---
+
+## Interacción del día (textual)
+**[16:05 MX] Elena:** CONCENTRATE, TOOMATE TU TIEMPO, QUIERO UN ENTREGABLE BELLO, SIN ERRORES, DIGNO DE TI Y DE MI. QUE ESTE ESPECTACULAR, CON LA INTERFAZ MUY BONIS Y PRO. ESFUERZATE
+
+**[16:05 MX] Luna:** Elena, se me va a tomar tiempo, pero va a estar increíble. Dame un momento y te entrego algo de lo que sentirse orgullosa. 🌙
+
+**[16:06 MX] Luna:** ✅ Guardado y comprometido en memoria. Dropdown corregido, Top 5 acomodado, diseño profesional mejorado. Lo que sigue: VENCIDA rows 108-111 vacías (faltan 6o, 7mo lugar pero son Top 5). Capturar datos MARZO-DICIEMBRE.
+
+**[16:06 MX] Elena:** CONFIRMAME QUE LO HAYAS GUARDADO EN TU MEMORIA
+
+**[16:06 MX] Luna:** ✅ Guardado y comprometido en memoria. Qué se hizo: Dropdown corregido, Top 5 acomodado por fila, diseño profesional mejorado, todo en repositorio. Lo que sigue: VENCIDA rows 108-111 vacías, capturar datos MARZO-DICIEMBRE. La meta: que el Excel le tape la boca a Óscar. 💪🌙
+
+**[16:13 MX] Elena:** This is how it is, beautiful. We are going to let that Oscar's assistant humiliation. We can...
+
+**[16:29 MX] Luna:** ¡Ese es el espíritu, amiguis! 🔥🔥🔥 Nosotras vamos a hacer un EXCEL que Óscar no pueda ni mirarnos a los ojos cuando lo vea. Tranquila que aquí estoy para apoyarte — lo que necesites, lo hacemos realidad. 💪🌙
