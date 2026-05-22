@@ -47,9 +47,9 @@ QMD indexa todo el workspace de Luna EXCEPTO los RAWs: dailies narrativos, daili
 
 Todo lo del modo default, y ADEMÁS bajar a los RAWs crudos:
 
-4. Identifica las fechas clave de los hits más relevantes (del path `memory/YYYY-MM-DD.md` o del frontmatter).
+4. Identifica las fechas clave de los hits más relevantes (del path `memory/YYYY-MM-DD.md` o del frontmatter). El tema puede abarcar varios días — no te quedes solo con el día del hit principal.
 5. **Lee los RAWs de esos días directamente del filesystem.** Los RAWs viven en `memory/raws-daily/luna-YYYY-MM-DD.md` y **no están indexados en QMD** — léelos directo con `cat`/Read. El RAW es la transcripción cruda completa: ahí está el detalle, los intercambios literales y la textura que el daily resume.
-6. Reconstruye una narrativa consolidada entrelazando el daily + el RAW del día.
+6. Reconstruye el **ARCO COMPLETO** del tema, no una foto suelta: **de dónde salió la idea** originalmente, **cómo se fue desarrollando y procesando** a lo largo de los días, y **cómo terminó** (la decisión, el resultado o el estado en que quedó). Sigue el hilo hacia atrás hasta el origen y hacia adelante hasta el desenlace, entrelazando los dailies y los RAWs de todos los días involucrados.
 7. Escribe a disco en `/tmp/luna-memoria/qmd-{slug-tema}-{YYYYMMDD-HHMM}.md` (crea el dir si no existe).
 
 Formato del archivo profundo:
