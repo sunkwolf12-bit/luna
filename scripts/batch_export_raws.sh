@@ -1,68 +1,48 @@
 #!/bin/bash
 set -euo pipefail
 # Batch export RAWs for Luna (Elena's assistant).
-# Incremental mode by default. Full rebuild via --full.
-# Luna currently uses only DM (no topics); if topics are added later,
-# the same pattern from Claudy applies (topic-N → name mapping).
+#
+# Procesa TODAS las sesiones de OpenClaw, no solo la mas reciente: OpenClaw
+# fragmenta cada dia en decenas de sesiones (cada conversacion, reset y
+# heartbeat genera un JSONL). El modo --all de jsonl_to_raw.py recorre todas,
+# acumula y deduplica por hash en un solo RAW por dia.
+#
+# Modo incremental por default (cursor per-source + dedup por hash).
+# Rebuild historico completo via --full.
 
 SCRIPT="/home/elena/.openclaw/workspace/scripts/jsonl_to_raw.py"
-SESSIONS_DIR="/home/elena/.openclaw/agents/main/sessions"
+RAW_DIR="/home/elena/.openclaw/workspace/memory/raws-daily"
 FULL_MODE=0
-count=0
 
 if [[ "${1:-}" == "--full" ]]; then
   FULL_MODE=1
 fi
 
-latest_for_pattern() {
-  local pattern="$1"
-  local latest=""
-  local latest_mtime=0
-  for f in $pattern; do
-    [ -f "$f" ] || continue
-    local sz
-    sz=$(stat -c%s "$f" 2>/dev/null || echo 0)
-    [ "$sz" -lt 3000 ] && continue
-    # Skip .deleted and .reset sessions
-    [[ "$f" == *.deleted* ]] && continue
-    [[ "$f" == *.reset* ]] && continue
-    local mtime
-    mtime=$(stat -c%Y "$f" 2>/dev/null || echo 0)
-    if [ "$mtime" -gt "$latest_mtime" ]; then
-      latest="$f"
-      latest_mtime="$mtime"
-    fi
-  done
-  if [ -n "$latest" ]; then
-    echo "$latest"
+backup_raw_dir() {
+  local stamp backup
+  stamp=$(date +%Y%m%d-%H%M%S)
+  backup="/home/elena/.openclaw/workspace/backups/raws-daily-pre-full-$stamp"
+  mkdir -p "$(dirname "$backup")"
+  if [ -d "$RAW_DIR" ]; then
+    cp -a "$RAW_DIR" "$backup"
+    echo "Backup before --full: $backup"
   fi
 }
 
-process_one() {
-  local topic="$1"
-  local file="$2"
-  [ -f "$file" ] || return 0
-  echo "Processing: $topic <- $(du -h "$file" | cut -f1) $(basename "$file")"
-  if [[ "$FULL_MODE" -eq 1 ]]; then
-    python3 "$SCRIPT" --session-file "$file" --topic "$topic" --full
-  else
-    python3 "$SCRIPT" --session-file "$file" --topic "$topic"
-  fi
-  count=$((count + 1))
-}
-
-# Luna's DM session: most recent non-topic, non-deleted, non-reset jsonl
-DM_FILE=$(latest_for_pattern "$SESSIONS_DIR/*.jsonl")
-
-process_one luna "$DM_FILE"
+if [[ "$FULL_MODE" -eq 1 ]]; then
+  backup_raw_dir
+  python3 "$SCRIPT" --all --full --topic luna
+else
+  python3 "$SCRIPT" --all --topic luna
+fi
 
 echo ""
 if [[ "$FULL_MODE" -eq 1 ]]; then
-  echo "Processed $count JSONL files in FULL rebuild mode"
+  echo "RAW rebuild completo (--full) terminado"
 else
-  echo "Processed $count JSONL files in incremental mode"
+  echo "RAW export incremental terminado"
 fi
 
 echo "RAW files present:"
-find /home/elena/.openclaw/workspace/memory/raws-daily -maxdepth 1 -name '*.md' 2>/dev/null | wc -l
-du -sh /home/elena/.openclaw/workspace/memory/raws-daily/ 2>/dev/null || echo "(dailies-raw dir empty or missing)"
+find "$RAW_DIR" -maxdepth 1 -name 'luna-*.md' 2>/dev/null | wc -l
+du -sh "$RAW_DIR" 2>/dev/null || echo "(raws-daily dir empty or missing)"

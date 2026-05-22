@@ -19,12 +19,12 @@ El subagente recibe:
 
 ### Modo `default` (el 95% de las veces)
 
-Búsqueda estándar en QMD con múltiples queries complementarias. NO bajar a raws.
+Búsqueda estándar en QMD con múltiples búsquedas complementarias. NO bajar a raws.
 
-1. **Ejecutar 2-3 queries QMD complementarias** sobre el tema:
-   - `qmd search "keywords exactos"` para palabras clave fuertes (nombres de clientes, fechas, folios).
-   - `qmd query "pregunta semántica"` para búsqueda con re-ranking.
-   - Una tercera formulación si el tema es ambiguo.
+1. **Ejecutar 2-3 búsquedas QMD complementarias** sobre el tema. **NUNCA usar `qmd query`** — este VPS no tiene GPU y `qmd query` (expansión + reranking en CPU) se cuelga varios minutos y hace timeout. Usar SOLO estos dos comandos:
+   - `qmd search "keywords exactos"` — full-text BM25, sin modelo, instantáneo. Para palabras clave fuertes: nombres de clientes, fechas (tipo `2026-05-20`), folios.
+   - `qmd vsearch "frase semántica"` — similitud vectorial (~2s en CPU). Para búsqueda por significado cuando no hay keyword exacto.
+   - Lanzar ambos siempre. Combinar los resultados: `search` atrapa fechas/nombres exactos, `vsearch` atrapa el sentido. Si el tema es ambiguo, agregar una tercera formulación con el comando que mejor aplique.
 
 2. **Leer top 3-5 resultados** (con `qmd get` si hace falta el archivo completo) para verificar relevancia. Desechar los que no apliquen al tema real.
 
