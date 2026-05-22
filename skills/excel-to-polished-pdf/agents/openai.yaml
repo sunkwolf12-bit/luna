@@ -1,0 +1,4 @@
+interface:
+  display_name: "Excel to Polished PDF"
+  short_description: "Turn Excel workbooks into polished PDF reports"
+  default_prompt: "Use $excel-to-polished-pdf to turn this Excel workbook into a polished, presentation-ready PDF."
