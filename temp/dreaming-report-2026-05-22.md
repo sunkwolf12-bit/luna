@@ -122,4 +122,6 @@ Ninguna. Todos los bloques transitorios fueron claros y se movieron correctament
 - Dailies generados: ✅ Narrativo + Técnico Trabajo
 - Memoria caliente: ✅ Actualizada (bloques transitorios movidos, interacción del día guardada)
 - Álbum de recuerdos: ✅ Entrada 22/may agregada
-- QMD: ⏳ Pendiente (ejecutar paso final)
+- QMD update: ✅ 17 new/updated, 234 unchanged, 0 removed
+- QMD embed: ✅ 49 chunks embedded from 5 docs in 26s
+- Git: ✅ a00af74 committed + pushed
