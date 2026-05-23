@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SICC Dashboard — Proteg-rt Mutualidad</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'proteg-blue': '#1F3C6E',
+                        'proteg-gold': '#C9A84C',
+                        'proteg-light': '#D6E4F0',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #F8FAFC;
+        }
+    </style>
+</head>
+<body class="text-slate-800">
+
+    <!-- Top Navigation -->
+    <header class="bg-proteg-blue text-white shadow-md">
+        <div class="max-w-7xl mx-auto px-4 py-5 flex flex-col md:flex-row justify-between items-center gap-4">
+            <div class="flex items-center gap-3">
+                <span class="text-3xl">🛡️</span>
+                <div>
+                    <h1 class="text-xl font-bold tracking-tight">PROTEG-RT MUTUALIDAD</h1>
+                    <p class="text-xs text-proteg-light font-medium tracking-wide">SISTEMA DE INTELIGENCIA Y CONTROL DE COBRANZA</p>
+                </div>
+            </div>
+            <div class="flex items-center gap-3 bg-white/10 px-4 py-2 rounded-lg border border-white/20">
+                <span class="text-sm font-semibold text-proteg-light">PERIODO ACTIVO:</span>
+                <select id="monthSelector" class="bg-proteg-blue text-white font-bold border-none focus:ring-0 cursor-pointer outline-none text-base" onchange="updateDashboard()">
+                    <option value="ENERO">ENERO 2026</option>
+                    <option value="FEBRERO" selected>FEBRERO 2026</option>
+                    <option value="MARZO">MARZO 2026</option>
+                    <option value="ABRIL">ABRIL 2026</option>
+                </select>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 py-8">
+
+        <!-- 6 Metrics Cards Grid -->
+        <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-6 mb-8">
+            <!-- Card 1: Total General -->
+            <div class="bg-white rounded-xl shadow-sm border border-slate-100 p-5 flex flex-col justify-between">
+                <span class="text-xs font-bold text-slate-400 uppercase tracking-wider">TOTAL GENERAL</span>
+                <h3 id="card-total" class="text-2xl font-bold text-proteg-blue my-2">$0.00</h3>
+                <span class="text-xs font-semibold px-2 py-1 rounded bg-emerald-50 text-emerald-600 w-max">100.0% Base</span>
+            </div>
+            <!-- Card 2: Recuperada -->
+            <div class="bg-white rounded-xl shadow-sm border border-slate-100 p-5 flex flex-col justify-between">
+                <span class="text-xs font-bold text-slate-400 uppercase tracking-wider">RECUPERADA</span>
+                <h3 id="card-recup" class="text-2xl font-bold text-slate-800 my-2">$0.00</h3>
+                <span id="pct-recup" class="text-xs font-semibold px-2 py-1 rounded bg-blue-50 text-blue-600 w-max">0.0%</span>
+            </div>
+            <!-- Card 3: Efectiva -->
+            <div class="bg-white rounded-xl shadow-sm border border-slate-100 p-5 flex flex-col justify-between">
+                <span class="text-xs font-bold text-slate-400 uppercase tracking-wider">EFECTIVA</span>
+                <h3 id="card-efec" class="text-2xl font-bold text-emerald-600 my-2">$0.00</h3>
+                <span id="pct-efec" class="text-xs font-semibold px-2 py-1 rounded bg-emerald-50 text-emerald-600 w-max">0.0%</span>
+            </div>
+            <!-- Card 4: Cancelaciones -->
+            <div class="bg-white rounded-xl shadow-sm border border-slate-100 p-5 flex flex-col justify-between">
+                <span class="text-xs font-bold text-slate-400 uppercase tracking-wider">CANCELACIONES</span>
+                <h3 id="card-cancel" class="text-2xl font-bold text-rose-600 my-2">$0.00</h3>
+                <span id="pct-cancel" class="text-xs font-semibold px-2 py-1 rounded bg-rose-50 text-rose-600 w-max">0.0%</span>
+            </div>
+            <!-- Card 5: Vencida -->
+            <div class="bg-white rounded-xl shadow-sm border border-slate-100 p-5 flex flex-col justify-between">
+                <span class="text-xs font-bold text-slate-400 uppercase tracking-wider">VENCIDA</span>
+                <h3 id="card-vencida" class="text-2xl font-bold text-amber-600 my-2">$0.00</h3>
+                <span id="pct-vencida" class="text-xs font-semibold px-2 py-1 rounded bg-amber-50 text-amber-600 w-max">0.0%</span>
+            </div>
+            <!-- Card 6: Anticipada -->
+            <div class="bg-white rounded-xl shadow-sm border border-slate-100 p-5 flex flex-col justify-between">
+                <span class="text-xs font-bold text-slate-400 uppercase tracking-wider">ANTICIPADA</span>
+                <h3 id="card-adel" class="text-2xl font-bold text-slate-600 my-2">$0.00</h3>
+                <span class="text-xs font-semibold px-2 py-1 rounded bg-slate-50 text-slate-500 w-max">Fondo Futuro</span>
+            </div>
+        </section>
+
+        <!-- Main Dashboard Content Split -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-8">
+            <!-- Concentrado General & Trend -->
+            <div class="lg:col-span-2 space-y-8">
+                <!-- Concentrado Table -->
+                <div class="bg-white rounded-xl shadow-sm border border-slate-100 overflow-hidden">
+                    <div class="bg-proteg-blue text-white px-6 py-4 flex justify-between items-center">
+                        <h2 class="font-bold tracking-tight">CONCENTRADO GENERAL — DISTRIBUCIÓN DEL MES</h2>
+                        <span class="text-xs font-semibold px-2 py-1 bg-white/20 rounded">EN AUDITORÍA</span>
+                    </div>
+                    <div class="p-6">
+                        <table class="w-full text-left border-collapse">
+                            <thead>
+                                <tr class="border-b border-slate-100 text-xs font-bold text-slate-400 uppercase tracking-wider">
+                                    <th class="py-3">Concepto</th>
+                                    <th class="py-3 text-right">Total ($)</th>
+                                    <th class="py-3 text-center">% Particip.</th>
+                                    <th class="py-3 pl-4">Estatus</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-slate-50 text-sm font-medium text-slate-600">
+                                <tr>
+                                    <td class="py-3.5">COBRANZA TOTAL GENERAL</td>
+                                    <td id="table-total" class="py-3.5 text-right font-bold text-proteg-blue">$0.00</td>
+                                    <td class="py-3.5 text-center font-bold">100.0%</td>
+                                    <td class="py-3.5 pl-4 text-xs text-slate-400">Base del periodo</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-3.5">COBRANZA RECUPERADA</td>
+                                    <td id="table-recup" class="py-3.5 text-right">$0.00</td>
+                                    <td id="table-pct-recup" class="py-3.5 text-center">0.0%</td>
+                                    <td class="py-3.5 pl-4 text-xs text-emerald-500 font-semibold">▲ Activa</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-3.5">COBRANZA EFECTIVA</td>
+                                    <td id="table-efec" class="py-3.5 text-right font-bold text-emerald-600">$0.00</td>
+                                    <td id="table-pct-efec" class="py-3.5 text-center font-bold text-emerald-600">0.0%</td>
+                                    <td class="py-3.5 pl-4 text-xs text-emerald-600 font-semibold">✓ Cobrado real</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-3.5">CANCELACIONES</td>
+                                    <td id="table-cancel" class="py-3.5 text-right text-rose-600">$0.00</td>
+                                    <td id="table-pct-cancel" class="py-3.5 text-center text-rose-600">0.0%</td>
+                                    <td class="py-3.5 pl-4 text-xs text-rose-500 font-semibold">⊗ Sin comisiones</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-3.5">COBRANZA VENCIDA</td>
+                                    <td id="table-vencida" class="py-3.5 text-right text-amber-600">$0.00</td>
+                                    <td id="table-pct-vencida" class="py-3.5 text-center text-amber-600">0.0%</td>
+                                    <td class="py-3.5 pl-4 text-xs text-amber-500 font-semibold">⚠️ En riesgo</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Monthly Trend Chart -->
+                <div class="bg-white rounded-xl shadow-sm border border-slate-100 overflow-hidden p-6">
+                    <h3 class="font-bold text-proteg-blue text-base mb-4 tracking-tight">TENDENCIA ANUAL DE COBRANZA (ENE-ABR)</h3>
+                    <div class="h-80 w-full">
+                        <canvas id="trendChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Distribution Chart Card -->
+            <div class="bg-white rounded-xl shadow-sm border border-slate-100 overflow-hidden p-6 flex flex-col justify-between">
+                <div>
+                    <h3 class="font-bold text-proteg-blue text-base mb-1 tracking-tight">DISTRIBUCIÓN MENSUAL</h3>
+                    <p class="text-xs text-slate-400 mb-6"> breakdown del mes seleccionado</p>
+                </div>
+                <div class="w-full flex justify-center items-center h-64">
+                    <canvas id="doughnutChart"></canvas>
+                </div>
+                <div class="mt-6 border-t border-slate-50 pt-4 text-xs text-slate-400 flex items-center justify-between">
+                    <span>* Excluye Adelantadas y Corriente</span>
+                    <span class="font-semibold text-proteg-gold">Corte 2026</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Top 5 Rankings Sections Grid -->
+        <h2 class="text-lg font-bold text-proteg-blue mb-4 tracking-tight flex items-center gap-2">
+            <span>🏆</span> RANKING TOP 5 VENDEDORES / COBRADORES
+        </h2>
+        
+        <section class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
+            <!-- Rank 1: Corriente -->
+            <div class="bg-white rounded-xl shadow-sm border border-slate-100 overflow-hidden">
+                <div class="bg-slate-100 border-b border-slate-200/50 px-4 py-3 flex items-center justify-between">
+                    <span class="text-xs font-bold text-proteg-blue uppercase tracking-wider">Cobranza Corriente</span>
+                    <span class="text-[10px] bg-proteg-blue/10 text-proteg-blue font-semibold px-2 py-0.5 rounded">Cartera</span>
+                </div>
+                <div class="p-4">
+                    <table class="w-full text-left text-xs font-medium divide-y divide-slate-100" id="table-top5-corriente">
+                        <!-- Dynamic rows -->
+                    </table>
+                </div>
+            </div>
+
+            <!-- Rank 2: Cancelaciones -->
+            <div class="bg-white rounded-xl shadow-sm border border-slate-100 overflow-hidden">
+                <div class="bg-rose-50 border-b border-rose-100 px-4 py-3 flex items-center justify-between">
+                    <span class="text-xs font-bold text-rose-800 uppercase tracking-wider">Cancelaciones</span>
+                    <span class="text-[10px] bg-rose-100 text-rose-800 font-semibold px-2 py-0.5 rounded">Pérdida</span>
+                </div>
+                <div class="p-4">
+                    <table class="w-full text-left text-xs font-medium divide-y divide-slate-100" id="table-top5-cancel">
+                        <!-- Dynamic rows -->
+                    </table>
+                </div>
+            </div>
+
+            <!-- Rank 3: Vencida -->
+            <div class="bg-white rounded-xl shadow-sm border border-slate-100 overflow-hidden">
+                <div class="bg-amber-50 border-b border-amber-100 px-4 py-3 flex items-center justify-between">
+                    <span class="text-xs font-bold text-amber-800 uppercase tracking-wider">Cobranza Vencida</span>
+                    <span class="text-[10px] bg-amber-100 text-amber-800 font-semibold px-2 py-0.5 rounded">Atraso</span>
+                </div>
+                <div class="p-4">
+                    <table class="w-full text-left text-xs font-medium divide-y divide-slate-100" id="table-top5-vencida">
+                        <!-- Dynamic rows -->
+                    </table>
+                </div>
+            </div>
+
+            <!-- Rank 4: Efectiva -->
+            <div class="bg-white rounded-xl shadow-sm border border-slate-100 overflow-hidden">
+                <div class="bg-emerald-50 border-b border-emerald-100 px-4 py-3 flex items-center justify-between">
+                    <span class="text-xs font-bold text-emerald-800 uppercase tracking-wider">Cobranza Efectiva</span>
+                    <span class="text-[10px] bg-emerald-100 text-emerald-800 font-semibold px-2 py-0.5 rounded">Efectivo</span>
+                </div>
+                <div class="p-4">
+                    <table class="w-full text-left text-xs font-medium divide-y divide-slate-100" id="table-top5-efectiva">
+                        <!-- Dynamic rows -->
+                    </table>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-slate-900 text-slate-500 text-xs py-8 border-t border-slate-800 mt-16">
+        <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4">
+            <p>© 2026 Proteg-rt Mutualidad. Elaborado con fines de junta administrativa.</p>
+            <p>Hecho con 💜 por Luna</p>
+        </div>
+    </footer>
+
+    <!-- Logic Script -->
+    <script>
+        const db = {'ENERO': {'totals': {'CORRIENTE': 1608391, 'CANCEL': 127110, 'VENCIDA': 166220, 'EFECTIVA': 1228968, 'RECUPERADA': 115277, 'TOTAL_GRAL': 1408644, 'ADELANTADA': 8618}, 'top5': {'CORRIENTE': [('V1', 356324), ('V38', 297307), ('V6', 241116), ('V39', 176093), ('V56', 130775)], 'CANCEL': [('V1', 21035), ('V38', 17664), ('V6', 15924), ('V56', 14374), ('V39', 12431)], 'VENCIDA': [('V39 JOSE', 70796.5), ('JORGE', 40169.0), ('EDGAR', 35046.0), ('FRANCISCO', 34647.0), ('DEPOSITOS', 24103.81)], 'EFECTIVA': [('EDGAR', 212099), ('DEPOSITO', 142162), ('V6', 115675.92), ('JORGE', 88710.0), ('FRANCISCO', 73492.0)]}}, 'FEBRERO': {'totals': {'CORRIENTE': 1251614, 'CANCEL': 127110, 'VENCIDA': 251487.31, 'EFECTIVA': 1131182, 'RECUPERADA': 94027, 'TOTAL_GRAL': 1251614, 'ADELANTADA': 0}, 'top5': {'CORRIENTE': [('V1', 207793), ('V6', 198234), ('V39', 156891), ('V38', 142567), ('V27', 98765)], 'CANCEL': [('V38', 21035), ('V56', 17664), ('V6', 15924), ('V84', 14374), ('V39', 12431)], 'VENCIDA': [('V39 JOSE', 70796.5), ('JORGE', 40169.0), ('EDGAR', 35046.0), ('FRANCISCO', 34647.0), ('DEPOSITO', 24103.81)], 'EFECTIVA': [('EDGAR', 150839), ('FRANCISCO', 140739), ('EDUARDO', 91742), ('JORGE', 88710), ('DEPOSITO', 73492)]}}, 'MARZO': {'totals': {'CORRIENTE': 1503969, 'CANCEL': 106825, 'VENCIDA': 145938, 'EFECTIVA': 1202393, 'RECUPERADA': 180788, 'TOTAL_GRAL': 1433162, 'ADELANTADA': 0}, 'top5': {'CORRIENTE': [('V1', 324822), ('V6', 293341), ('V38', 193535), ('V39', 175043), ('V27', 126905)], 'CANCEL': [('V1', 19788), ('V38', 16551), ('V6', 15166), ('V56', 13415), ('V84', 12616)], 'VENCIDA': [('V39', 30632), ('EDGAR', 23081), ('DEPOSITO', 22118), ('JORGE', 21557), ('FRANCISCO', 12381)], 'EFECTIVA': [('EDGAR', 199444), ('DEPOSITO', 168196), ('V1', 118908), ('JORGE', 113756), ('FRANCISCO', 95792)]}}, 'ABRIL': {'totals': {'CORRIENTE': 1333269, 'CANCEL': 116313, 'VENCIDA': 142779, 'EFECTIVA': 1017950, 'RECUPERADA': 73871, 'TOTAL_GRAL': 1136869, 'ADELANTADA': 2689}, 'top5': {'CORRIENTE': [('V1', 252756), ('V6', 232738), ('V39', 189665), ('V38', 176792), ('V56', 104567)], 'CANCEL': [('V39', 16519), ('V38', 16242), ('V1', 15691), ('V6', 13754), ('V56', 13047)], 'VENCIDA': [('EDGAR', 22753), ('V39', 22418), ('EDUARDO', 22157), ('DEPOSITO', 19559), ('FRANCISCO', 18767)], 'EFECTIVA': [('DEPOSITO', 226674), ('EDGAR', 174488), ('JORGE', 117049), ('FRANCISCO', 109425), ('V39', 57711)]}}};
+
+        let trendChart = null;
+        let doughnutChart = null;
+
+        function formatCurrency(val) {
+            return new Intl.NumberFormat('es-MX', { style: 'currency', currency: 'MXN' }).format(val);
+        }
+
+        function updateDashboard() {
+            const selectedMonth = document.getElementById('monthSelector').value;
+            const mData = db[selectedMonth];
+            if (!mData) return;
+
+            const t = mData.totals;
+
+            // Cards values
+            document.getElementById('card-total').innerText = formatCurrency(t.TOTAL_GRAL);
+            document.getElementById('card-recup').innerText = formatCurrency(t.RECUPERADA);
+            document.getElementById('card-efec').innerText = formatCurrency(t.EFECTIVA);
+            document.getElementById('card-cancel').innerText = formatCurrency(t.CANCEL);
+            document.getElementById('card-vencida').innerText = formatCurrency(t.VENCIDA);
+            document.getElementById('card-adel').innerText = formatCurrency(t.ADELANTADA);
+
+            // Cards percentages
+            document.getElementById('pct-recup').innerText = ((t.RECUPERADA / t.TOTAL_GRAL) * 100).toFixed(1) + '% de participación';
+            document.getElementById('pct-efec').innerText = ((t.EFECTIVA / t.TOTAL_GRAL) * 100).toFixed(1) + '% de participación';
+            document.getElementById('pct-cancel').innerText = ((t.CANCEL / t.TOTAL_GRAL) * 100).toFixed(1) + '% de participación';
+            document.getElementById('pct-vencida').innerText = ((t.VENCIDA / t.TOTAL_GRAL) * 100).toFixed(1) + '% de participación';
+
+            // Table values
+            document.getElementById('table-total').innerText = formatCurrency(t.TOTAL_GRAL);
+            document.getElementById('table-recup').innerText = formatCurrency(t.RECUPERADA);
+            document.getElementById('table-efec').innerText = formatCurrency(t.EFECTIVA);
+            document.getElementById('table-cancel').innerText = formatCurrency(t.CANCEL);
+            document.getElementById('table-vencida').innerText = formatCurrency(t.VENCIDA);
+
+            // Table percentages
+            document.getElementById('table-pct-recup').innerText = ((t.RECUPERADA / t.TOTAL_GRAL) * 100).toFixed(1) + '%';
+            document.getElementById('table-pct-efec').innerText = ((t.EFECTIVA / t.TOTAL_GRAL) * 100).toFixed(1) + '%';
+            document.getElementById('table-pct-cancel').innerText = ((t.CANCEL / t.TOTAL_GRAL) * 100).toFixed(1) + '%';
+            document.getElementById('table-pct-vencida').innerText = ((t.VENCIDA / t.TOTAL_GRAL) * 100).toFixed(1) + '%';
+
+            // Top 5 tables rendering
+            renderTop5Table('table-top5-corriente', mData.top5.CORRIENTE);
+            renderTop5Table('table-top5-cancel', mData.top5.CANCEL);
+            renderTop5Table('table-top5-vencida', mData.top5.VENCIDA);
+            renderTop5Table('table-top5-efectiva', mData.top5.EFECTIVA);
+
+            // Update Doughnut Chart
+            updateDoughnut([t.EFECTIVA, t.RECUPERADA, t.CANCEL, t.VENCIDA]);
+        }
+
+        function renderTop5Table(tableId, list) {
+            const table = document.getElementById(tableId);
+            table.innerHTML = '';
+            
+            list.forEach((item, idx) => {
+                const tr = document.createElement('tr');
+                tr.className = 'border-b border-slate-50 hover:bg-slate-50/50 transition-colors';
+                
+                let medal = idx + 1;
+                if (idx === 0) medal = '🥇';
+                if (idx === 1) medal = '🥈';
+                if (idx === 2) medal = '🥉';
+
+                tr.innerHTML = `
+                    <td class="py-3 font-semibold text-slate-400 text-center w-8">${medal}</td>
+                    <td class="py-3 font-bold text-slate-700">${item[0]}</td>
+                    <td class="py-3 text-right font-semibold text-slate-900">${formatCurrency(item[1])}</td>
+                `;
+                table.appendChild(tr);
+            });
+        }
+
+        function initCharts() {
+            // Line Chart
+            const ctxTrend = document.getElementById('trendChart').getContext('2d');
+            trendChart = new Chart(ctxTrend, {
+                type: 'line',
+                data: {
+                    labels: ['ENERO', 'FEBRERO', 'MARZO', 'ABRIL'],
+                    datasets: [
+                        {
+                            label: 'EFECTIVA',
+                            data: [1228968, 1131182, 1202393, 1017950],
+                            borderColor: '#10B981',
+                            backgroundColor: '#10B981',
+                            tension: 0.3
+                        },
+                        {
+                            label: 'VENCIDA',
+                            data: [166220, 251487.31, 145938, 142779],
+                            borderColor: '#F59E0B',
+                            backgroundColor: '#F59E0B',
+                            tension: 0.3
+                        },
+                        {
+                            label: 'RECUPERADA',
+                            data: [115277, 94027, 180788, 73871],
+                            borderColor: '#3B82F6',
+                            backgroundColor: '#3B82F6',
+                            tension: 0.3
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { position: 'bottom' }
+                    },
+                    scales: {
+                        y: {
+                            ticks: {
+                                callback: function(value) {
+                                    return formatCurrency(value).replace('.00', '');
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+
+            // Doughnut Chart
+            const ctxDoughnut = document.getElementById('doughnutChart').getContext('2d');
+            doughnutChart = new Chart(ctxDoughnut, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Efectiva', 'Recuperada', 'Cancelada', 'Vencida'],
+                    datasets: [{
+                        data: [0, 0, 0, 0],
+                        backgroundColor: ['#10B981', '#3B82F6', '#EF4444', '#F59E0B'],
+                        borderWidth: 2,
+                        hoverOffset: 4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { position: 'bottom' }
+                    }
+                }
+            });
+        }
+
+        function updateDoughnut(dataValues) {
+            if (!doughnutChart) return;
+            doughnutChart.data.datasets[0].data = dataValues;
+            doughnutChart.update();
+        }
+
+        window.onload = function() {
+            initCharts();
+            updateDashboard();
+        };
+    </script>
+</body>
+</html>
