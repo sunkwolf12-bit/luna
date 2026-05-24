@@ -1,4 +1,4 @@
-# Memoria Caliente — 22 mayo 2026
+# Memoria Caliente — 23 mayo 2026
 
 ## ⚡ PENDIENTE CRÍTICO: Junta con Óscar — VIERNES 05 JUNIO 2026, 12:00
 - **Comparativa anual de cobranza con gráfica de tendencia (desde 2022/2023)**
@@ -14,30 +14,32 @@
 - GPS del auto: 4 meses sin recarga — requiere atención
 - Complemento de depósito en efectivo: cantidad pendiente por confirmar
 
-## Proyecto activo: Sistema SICC (PostgreSQL)
-- PRD creado: `workspaces/cobranza/estadisticas/PRD_SICC_2026.md`
-- Dashboard HTML inmediato: `workspaces/cobranza/estadisticas/ESTADISTICA_DASHBOARD_2026.html`
-- Pendiente: implementación en VPS cuando Elena lo autorice
+## Proyecto activo: Sistema SICC (PostgreSQL) — ACTUALIZADO 23 may 2026
+- SICC ya no es el HTML ni el Excel. Es una **webapp en producción** en `https://sicc.protegrt.com/`
+- Backend FastAPI + PostgreSQL 16, frontend React + Tailwind 4
+- 27 meses cargados y cerrados (2024 marzo-dic, 2025, ene/mar/abr 2026)
+- CLI `sicc` en `~/sicc-venv/bin/sicc` — 11 subcomandos
+- Skill `sicc-ingesta` en `~/.openclaw/workspace/skills/sicc-ingesta/`
+- GUIA_LUNA.md (40KB) disponible — leerla completa antes de primera operación
+- **Rol de Luna:** ingestora oficial — recibir PPTX → skill → preview → validaciones → commit
+- **Límites:** solo CLI `sicc` y skill `sicc-ingesta`. Sin código/DB directo. Escala a Fer/Claudio si algo falta
+- **Pendiente abierto:** regresar 27 meses a borrador (mañana/lunes), revisión con Elena mes por mes
+
+## Vendadores ambiguos por resolver con Elena (escalan a Claudio)
+- HUMBERTO, RAUL, VIRIDIANA, SR.PAGO, OTROS
 
 ## Interacción del día (textual)
 
-**[18:28 MX] Elena:** "Oye, Leonita, ¿crees que te sea más sencillo hacer la estadística 2026 con drop-down si usas, no sé, una base de datos de MySQL o de PostgreSQL y HTML, CSS y JavaScript? No quiero, si quiero que tenga más bien dicho, una base de datos. No puede ser, no quiero que tenga la información en el navegador, porque eso va a valer madres. Debe de haber una base de datos. Y de preferencia no me gustaría que fuera SQLite, porque siento que es muy fácil de que se rompa. Pero como mínimo sería SQLite. Porque yo siento que en Excel estás batallando mucho. Dime qué opinas. ¿Te da más esa idea de hacerlo por HTML y que lo levantes ahí en el VPS y ya lo pueda yo ver desde acá?"
+**[14:46 MX] Elena (vía Claudio — briefing):** "Briefing para Luna 🌙 — SICC pasó de prototipo manual a webapp en prod (23 may 2026)... El estado al cierre de hoy: SICC ahora vive en https://sicc.protegrt.com/... Login: Elena elena@protegrt.com rol admin; Óscar oscar@protegrt.com rol consulta. Tu rol cambió de 'armadora de HTML manual' a ingestora oficial del backend..."
 
-**[18:30 MX] Luna:** "Nena, no estás equivocada 💜 Tienes toda la razón — para mí es mucho más natural construir una aplicación web que estar batallando con fórmulas de Excel en openpyxl."
+**[14:47 MX] Luna:** "Recibido fuerte y claro, Elena. Gracias por el contexto completo — esto cambia cosas importantes y las necesito registrar bien. SICC ya no es el HTML manual. Es una webapp en producción. Mi rol es ser ingestora oficial: cuando tú me mandes el PPTX mensual, uso la skill sicc-ingesta para parsear, hacer preview, mostrarte validaciones y si tú apruebas, commiteo al backend. El HTML viejo y el Excel con dropdown están deprecados. Hay una guía de 40KB que debo leer antes de mi primera operación..."
 
-**[18:33 MX] Elena:** "Ok, entonces hazme la solución A inmediata, pero antes de eso quiero que me des un briefing bien bien específico sobre cómo debería de ser la aplicación que vas a construir en Postgres... Quiero un briefing tipo un PR. Quiero que eso después cuando lo veamos mañana, en una semana, en un mes, podamos retomarlo como si hubiera sido en este mismo instante, en el momento en el que lo acabamos de planear. Por eso, antes que cualquier otra cosa, quiero que me hagas un briefing con un PRD bien, bien, bien específico. No quiero ningún detalle fuera. ¿Va?"
+**[14:56 MX] Elena (vía Claudio):** "...Pendiente importante: Fer me pidió que regrese los 27 meses cerrados a estado borrador para que vos y Elena los revisen con calma mañana o el lunes. Vos podrías arrancar con enero 2025 (que es el mes con más historia) y avanzar mes por mes con Elena..."
 
-**[18:33 MX] Luna:** "¡Entendido perfectamente, nena! 🫡💜 Me queda clarísima la instrucción: primero armamos el plano maestro (PRD)... Y en paralelo, te preparo la Solución A inmediata (el HTML interactivo e impecable)."
-
----
-
-## Proyecto activo: Excel estadísticas 2026
-- `ESTADISTICA_2026_DROPDOWN_BELLO.xlsx`
-- C5 = dropdown de mes → funciona bien
-- Datos cargados: ENERO, FEBRERO
-- Pendiente: MARZO-DICIEMBRE
+**[14:56 MX] Luna:** "Perfecto Claudio, recibido completo. Quedó claro todo el panorama. Arrancamos mañana/lunes por ENERO 2025. Límites bien claros: solo sicc CLI + skill sicc-ingesta. Todo lo que sea código/DB directo → escalar a Fer o Claudio. Voy a leer la GUÍA_LUNA.md ahora para llegar lista a la primera sesión."
 
 ## Día de hoy
 - Frases del día: ✓ enviadas
-- Pendientes actualizados ✓
-- git commit pendiente
+- Actividad de maestría: definiciones financieras (especulación, apalancamiento, mercados primarios/secundarios) — sin números, lenguaje natural
+- SICC: migration completa a webapp — registrada en dailies
+- Git commit ✓
