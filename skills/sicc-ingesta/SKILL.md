@@ -42,6 +42,7 @@ export SICC_LUNA_TOKEN="<valor>"  # uso por sesion; Claudio lo persiste en bashr
 | Lo que dice/manda Elena | Accion |
 |---|---|
 | Adjunta `REPORTE_COBRANZA_<MES>_<ANIO>.pptx` | Flujo `PPTX -> commit` (seccion 2). |
+| Adjunta `ESTADISTICA_<ANIO>.xlsx` canonico | Flujo `XLSX -> commit` (seccion 2-bis). Pre-parse con `reconstruir_datos_gral.py`. |
 | Adjunta captura de pantalla del Excel (un solo apartado) | `sicc parse --imagen <ruta> --slot <categoria> --mes M --anio A`. |
 | "cargame ENERO" / "sube enero" | Buscar el ultimo PPTX de enero en `~/.openclaw/media/inbound/` y procesarlo. |
 | "como va MAYO" / "muestrame mayo" | `sicc show --anio 2026 --mes 5` (T2.6, cuando aterrice). |
@@ -59,7 +60,20 @@ Si el comando es T2.6 y aun no esta disponible, decirlo claro a Elena
 2. Inspeccionar cada imagen del Top5 con `Read <ruta>`. Para cada
    apartado extraer visualmente 5 entradas con `codigo_actor` (o nombre),
    monto y porcentaje. Verificar el TOTAL contra el text box de la slide.
-3. Construir el JSON candidato FINAL combinando lo del parser + lo extraido
+3. **Normalizar tokens de actor** con `scripts/normalize_actor.py` antes
+   de armar el JSON. Los PPTX 2026 muestran vendedores solo con numero
+   (`6: $356,324`); `normalize_actor_token("6")` devuelve
+   `actor_codigo="V6"` automaticamente. NO compensar manualmente.
+
+   ```python
+   from normalize_actor import normalize_actor_token
+   r = normalize_actor_token("6 GABY")
+   # -> actor_codigo="V6", actor_nombre="GABY", warning=None
+   ```
+
+   Si `r.warning` no es None, reportar el warning a Elena antes de
+   continuar (indica un placeholder ambiguo como `OTROS`).
+4. Construir el JSON candidato FINAL combinando lo del parser + lo extraido
    con vision. Aplicar `references/reglas-de-negocio.md` (especialmente la
    consolidacion `TRANSFER. / DEPTOS.`). Guardarlo en
    `/tmp/sicc/<sesion>/candidato_final.json`.
@@ -73,6 +87,55 @@ Si el comando es T2.6 y aun no esta disponible, decirlo claro a Elena
 
    > Cargue MAYO 2026. EFECTIVA $1,030,490.00, RECUPERADA $79,437.00,
    > total $1,184,720.00. Top5 EFECTIVA: 1) Laura V38 $254,xxx (24%), ...
+
+## 2-bis · Flujo XLSX canonico -> commit (pre-parse obligatorio)
+
+Cuando Elena adjunta el xlsx anual canonico (`ESTADISTICA_<ANIO>.xlsx`) o
+cuando se rehidrata un anio historico desde Excel, ejecutar SIEMPRE el
+pre-parse antes del flujo de ingesta:
+
+1. **Detectar drift de `DATOS GRAL.` mes-vacio** (regla operativa
+   documentada en `references/reconstruir-datos-gral.md`). Abrir el xlsx
+   y comprobar:
+   - Existen hojas `COBRANZA *` (CORRIENTE, EFECTIVA, RECUPERADA, etc.)
+     con totales en col B (`TOTAL MENSUAL`).
+   - La hoja `DATOS GRAL.` tiene meses con totales en cero (o celdas
+     vacias) en las columnas B/D/F/H/J/L mientras las hojas `COBRANZA *`
+     sí tienen totales para esos meses.
+   - Si ambas condiciones se cumplen -> drift confirmado (Luna llenó
+     top5 individuales pero olvidó replicar el resumen). Aplica el
+     pre-parse.
+
+2. **Pre-parse: reconstruir DATOS GRAL.** Ejecutar desde el directorio
+   de la skill (`scripts/` esta junto a `SKILL.md`):
+
+   ```bash
+   python scripts/reconstruir_datos_gral.py \
+       --xlsx /home/elena/.openclaw/media/inbound/ESTADISTICA_2024.xlsx \
+       --inplace
+   ```
+
+   - `--inplace` deja una copia de seguridad `.bak.xlsx` antes de
+     sobrescribir el original. Idempotente: si DATOS GRAL. ya esta
+     completo, no cambia nada (advertencias informativas).
+   - `--out RUTA.xlsx` si Elena prefiere mantener el original intacto.
+   - `--force` solo cuando Elena confirme override (sobrescribe celdas
+     no-cero existentes). Por defecto las celdas con valor se respetan.
+   - Salida `cambios=N saltadas=N advertencias=N` resume lo aplicado.
+
+3. **Continuar con el flujo normal de ingesta**: el xlsx ya tiene los
+   totales por mes en `DATOS GRAL.`, asi que `sicc parse --xlsx ...`
+   (T2.6) o el bridge `migrar_<anio>.py` los leera correctamente. Sin
+   este paso, los meses afectados quedan con `total=0` y la ingesta los
+   rechaza por validacion `cuadre_efectiva_recuperada_vs_total`.
+
+> **Fuente canonica del script**: `backend/scripts/reconstruir_datos_gral.py`
+> en el repo. La copia en `skill/sicc-ingesta/scripts/` se sincroniza
+> manualmente y existe para que la skill desplegada en lunita sea
+> autocontenida (no depende del checkout del repo backend). Si tocas la
+> logica, modifica el canonico y vuelve a copiar — la cabecera del
+> archivo en la skill lo recuerda. Tests viven en
+> `backend/tests/test_reconstruir_datos_gral.py` (11/11 verdes).
 
 ## 3 · Reglas criticas (resumen — detalle en `references/reglas-de-negocio.md`)
 
@@ -108,7 +171,26 @@ Casos puntuales 422:
 - **Mes ya cerrado** y Elena confirma override: agregar `--force` al
   commit y registrar la razon de override en el commit message del log.
 
-## 5 · TODO operativo (Claudio configura, Luna no)
+## 5 · Despues de cerrar un mes
+
+Cuando Elena confirme que un mes esta listo para cierre formal:
+
+1. `sicc cerrar --anio <A> --mes <M> --yes`
+   - El backend cierra el mes (status -> CERRADO) y dispara automaticamente
+     `REFRESH MATERIALIZED VIEW CONCURRENTLY mv_tendencia_anual` para que
+     el dashboard de tendencia anual incluya el nuevo mes (MD-002, F2
+     closeout).
+2. Si el refresh automatico falla (DB caida, lock conflictivo) o si Elena
+   tipea valores manualmente y la MV queda desactualizada por otra razon,
+   forzar el refresh manualmente:
+
+   ```bash
+   sicc admin mv-refresh
+   ```
+
+   El comando llama `POST /api/v1/admin/mv/refresh`. Rate-limited a 1/min.
+
+## 6 · TODO operativo (Claudio configura, Luna no)
 
 - **CLI `sicc` instalado en lunita para el usuario `elena`**: a la fecha
   (2026-05-23) Python en lunita es 3.10 y el CLI requiere 3.12+. Claudio
@@ -122,7 +204,7 @@ Casos puntuales 422:
   primer `sicc --version`. Default `api_base` ya apunta a
   `https://sicc.protegrt.com/api/v1`.
 
-## 6 · Referencias
+## 7 · Referencias
 
 - `references/reglas-de-negocio.md` — Reglas heredadas del SKILL
   `estadistica-mensual-cobranza` (consolidacion bancaria, criterio dual
@@ -133,8 +215,11 @@ Casos puntuales 422:
   aterrice.
 - `references/formato-pptx.md` — Estructura esperada de las slides del
   `REPORTE_COBRANZA_*.pptx` y como extraer cada categoria.
+- `references/reconstruir-datos-gral.md` — Regla de deteccion del drift
+  `DATOS GRAL. mes-vacio post-load Luna` y uso del pre-parse
+  `scripts/reconstruir_datos_gral.py` (F4-HF-001).
 
-## 7 · Restricciones (heredadas del SKILL viejo)
+## 8 · Restricciones (heredadas del SKILL viejo)
 
 - **Honestidad brutal**: si un monto no es legible, no adivinar. Pedir
   aclaracion.
