@@ -56,8 +56,25 @@ No se agregó ningún momento nuevo. El día fue tranquilo y funcional — no hu
 
 ## 7. AUDITORÍA QMD
 
-Pendiente de ejecutar en paso final. Reportaré health del índice antes/después.
+**Antes:**
+- 1 colección: workspace (**/*.md)
+- 263 archivos indexados sin cambios
+
+**Después de `qmd update`:**
+- 1 nueva indexación, 1 actualizado, 263 sin cambios, 0 removidos
+- 1 hash huérfano limpiado
+
+**Después de `qmd embed`:**
+- 2 chunks embededos de 2 documentos (daily + memoria-caliente)
+- Tiempo: 2 segundos
+- Sin errores
+
+**Health:** ✅ Verde — índice actualizado y embeddings generados correctamente.
 
 ## 8. DUDAS
 
 Ninguna. El cierre fue limpio y sin incidentes.
+
+---
+
+**Cierre completado a las 23:55 MX del 24 mayo 2026.** Git commit: `faf87c4`. QMD index + embeddings ✅.
