@@ -69,7 +69,7 @@ Crear documentos de procedimientos operativos para Proteg-rt usando como plantil
 
 | Archivo | Uso |
 |---------|-----|
-| `PCC2_PROCEDIMIENTO_TRATAMIENTO_DE_TARJETAS_DE_COBRO---1200a82e-0cde-4aa3-a31f-adf88b19d90d.docx` | Plantilla de formato para TODOS los procedimientos nuevos. Usar este como base para copiar encabezados y estructura. |
+| `PCC2_REFERENCIA.docx` | Plantilla de formato para TODOS los procedimientos nuevos. Usar este como base para copiar encabezados y estructura. |
 | `CHECK_LIST_ACTIVIDADES_GERENTE_COBRANZA_2025.xlsx` (hoja "ACTIVIDADES TOTALES") | Fuente oficial de códigos (PCA1–PCF3). Consultar SIEMPRE antes de crear un procedimiento. |
 | Carpeta: `workspaces/instructivos/` | Carpeta donde guardar los procedimientos generados. |
 
@@ -125,7 +125,7 @@ import zipfile, shutil, os
 from lxml import etree
 from docx import Document
 
-ref_path = "/home/elena/.openclaw/media/inbound/PCC2_PROCEDIMIENTO_TRATAMIENTO_DE_TARJETAS_DE_COBRO---1200a82e-0cde-4aa3-a31f-adf88b19d90d.docx"
+ref_path = "/home/elena/.openclaw/media/inbound/PCC2_REFERENCIA.docx"
 out_path = "/home/elena/.openclaw/workspace/workspaces/instructivos/[CLAVE].docx"
 tmp_path = out_path + ".tmp"
 
