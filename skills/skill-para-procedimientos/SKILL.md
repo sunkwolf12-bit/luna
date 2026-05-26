@@ -75,31 +75,32 @@ Crear documentos de procedimientos operativos para Proteg-rt usando como plantil
 
 ---
 
-## Formato del documento (estructura fija)
+## Estructura del documento de referencia (PCC2)
 
-### ENCABEZADOS (3 headers)
+### Los 3 headers (NO modificar — copiar tal cual de PCC2):
 
-**header1.xml** — Primera línea: `PROTEG-RT MUTUALIDAD`
-**header2.xml** — Tabla con:
-- Primera fila: `FIRMA` | `DIRECCIÓN` | `DEPT. ADMINISTRATIVO` | `DEPT. COBRANZA` | `DEPT. VENTAS` | `DEPT. JURÍDICO`
-- Segunda fila: campos editables en celdas
-- Tercera fila: `PROCEDIMIENTO [NOMBRE]` | `FECHA: DD/MM/AAAA` | `CLAVE: PCXn` | `REVISIÓN: 00` | `DEPARTAMENTO: Cobranza`
+- **header1.xml**: Logo grande con "PROTEG-RT MUTUALIDAD A.C." (imagen embebida). **Copiar exacto, no cambiar.**
+- **header2.xml**: Contiene UNA tabla con:
+  - **Fila de departamentos** (arriba): FIRMA DIRECCIÓN | DEPT.ADMINISTRATIVO | DEPT.VENTAS | DEPT.COBRANZA | DEPT.JURÍDICO — estos textos están **embebidos como parte de imágenes/dibujos**, no como texto editable. **NO intentar cambiar estos textos — copiar la tabla completa como está.**
+  - **Fila PROCEDIMIENTO** (abajo): `PROCEDIMIENTO [TÍTULO]` | `FECHA: DD/MM/AAAA` | `CLAVE: PCXn` | `REVISIÓN: 00` | `DEPARTAMENTO: Cobranza`
+  - **Imagen del escudo** (al final del header): imagen embedded (image2.png) — **copiar exacta**
+- **header3.xml**: Logo secundario (imagen embebida). **Copiar exacto, no cambiar.**
 
-**header3.xml** — Logo/corporativo (mantener igual que PCC2)
+### Cuerpo del documento (body) — contenido del procedimiento
 
-### CUERPO (body)
+El PCC2 tiene en su body el procedimiento "TRATAMIENTO DE TARJETAS DE COBRO". **Este contenido del body es específico de cada procedimiento y DEBE SER REEMPLAZADO COMPLETAMENTE al crear uno nuevo.**
 
-Estructura obligatoria por orden:
-1. **1. Objetivo** — Texto del objetivo del procedimiento
-2. **2. Alcance** — A quién aplica
-3. **3. Responsables** — Lista con • (bullets)
-4. **4. Definiciones** — Lista con • (bullets)
-5. **5.- DESARROLLO** — Subtítulo en negrita
-6. **5. Procedimiento** — Subtítulo en negrita
-7. **5.1** hasta **5.6** — Pasos numerados en negrita con descripción
-8. **REGLAS DE CONTROL:** — Lista numerada
-9. **SLA / TIEMPOS:** — Lista con •
-10. **RESGUARDO:** — Lista con • (ruta de archivo)
+Estructura obligatoria del cuerpo:
+1. **1. Objetivo**
+2. **2. Alcance**
+3. **3. Responsables** (lista con •)
+4. **4. Definiciones** (lista con •)
+5. **5.- DESARROLLO**
+6. **5. Procedimiento**
+7. **5.1** hasta **5.N** (pasos numerados)
+8. **REGLAS DE CONTROL:** (lista numerada 1-5)
+9. **SLA / TIEMPOS:** (lista con •)
+10. **RESGUARDO:** (ruta de archivo)
 
 ---
 
@@ -115,83 +116,250 @@ Estructura obligatoria por orden:
 
 ---
 
-## PASOS PARA CREAR UN PROCEDIMIENTO
+## PASO A PASO — CORREGIDO (26/may/2026)
 
-### Paso 1 — Abrir documento referencia
-Usar `zipfile` para leer el PCC2 y copiar sus headers:
+### Paso 1 — Copiar PCC2 como base
+
 ```python
+import zipfile, shutil, os
+from lxml import etree
+from docx import Document
+
+ref_path = "/home/elena/.openclaw/media/inbound/PCC2_PROCEDIMIENTO_TRATAMIENTO_DE_TARJETAS_DE_COBRO---1200a82e-0cde-4aa3-a31f-adf88b19d90d.docx"
+out_path = "/home/elena/.openclaw/workspace/workspaces/instructivos/[CLAVE].docx"
+tmp_path = out_path + ".tmp"
+
+shutil.copy(ref_path, out_path)
+
+# Leer TODOS los archivos del PCC2
 with zipfile.ZipFile(ref_path, 'r') as z:
-    xml_map = {name: z.read(name) for name in z.namelist()}
+    all_files = {name: z.read(name) for name in z.namelist()}
 ```
-Copiar header1.xml, header2.xml, header3.xml al nuevo documento.
 
-### Paso 2 — Modificar header2.xml
-Cambiar SOLO estos textos (mantener estructura de tabla):
-- `TRATAMIENTO DE TARJETAS DE COBRO` → Nombre oficial del procedimiento
-- `PCC2` → CLAVE oficial del Excel (ej: `PCA2`, `PCE1`, `PCC3`)
-- `31/08/2025` → `26/05/2026` (fecha actual)
-- `REVISION: 00` → dejar como 00
+### Paso 2 — Modificar SOLO la tabla de PROCEDIMIENTO en header2.xml
 
-### Paso 3 — Crear document.xml del nuevo procedimiento
-Copiar la estructura del `<w:body>` del PCC2 y modificar:
-1. Cambiar el título del cuerpo (`TRATAMIENTO DE TARJETAS DE COBRO`) por el nombre nuevo (DEBE coincidir exactamente con el encabezado)
-2. Escribir el contenido específico de cada sección (Objetivo, Alcance, etc.)
+**NO modificar la fila de departamentos (FIRMA, DIRECCIÓN, etc.) — esos textos están embebidos en imágenes y deben quedar como están.**
 
-### Paso 4 — Crear sectPr con headerReference
-El `<w:sectPr>` debe incluir:
-```xml
-<w:headerReference w:type="even" r:id="rId9"/>
-<w:headerReference w:type="default" r:id="rId10"/>
-<w:footerReference w:type="default" r:id="rId11"/>
-<w:headerReference w:type="first" r:id="rId12"/>
+Cambiar en header2.xml (solo estos tres elementos):
+1. Título del procedimiento en la primera celda de la tabla PROCEDIMIENTO
+2. La fecha (nota: la fecha está partida en dos runs XML: `: 31/08/202` + `5`)
+3. La CLAVE (PCC2 → nueva CLAVE)
+
+```python
+h2 = all_files['word/header2.xml'].decode('utf-8')
+
+# 1. Cambiar título del procedimiento
+h2 = h2.replace('TRATAMIENTO DE TARJETAS DE COBRO', 'NOMBRE DEL NUEVO PROCEDIMIENTO')
+
+# 2. Cambiar CLAVE
+import re
+h2 = re.sub(r'>PCC2<', '>PCE7<', h2)
+
+# 3. Cambiar fecha (partida en dos runs)
+# El patrón XML es: ": 31/08/202</w:t></w:r><w:r ...><w:t>5</w:t>"
+h2 = h2.replace(': 31/08/202</w:t></w:r><w:r w:rsidR="00BF75E2"><w:t>5</w:t>',
+                ': 26/05/2026</w:t>')
 ```
-Sin esto, los encabezados NO aparecen.
 
-### Paso 5 — Guardar y verificar
-Guardar como `.docx` en `workspaces/instructivos/` con el nombre del archivo igual a la CLAVE oficial (ej: `PCA2.docx`, `PCE1.docx`).
+### Paso 3 — Reemplazar COMPLETAMENTE el body del document.xml
 
-**Validaciones obligatorias antes de entregar:**
-1. El nombre en encabezado = nombre en cuerpo (100% match)
-2. Todos los headers (header1, header2, header3) están vinculados
-3. La fecha muestra `DD/MM/2026` (año completo, no truncado)
-4. El documento abre sin errores en Word
+**ERROR COMÚN: No basta con cambiar solo el título. Hay que reemplazar TODO el contenido del cuerpo.**
+
+```python
+from docx.oxml.ns import qn
+
+W = "http://schemas.openxmlformats.org/wordprocessingml/2006/main"
+NEW_TITLE = "NOMBRE DEL NUEVO PROCEDIMIENTO"
+
+def make_para(text, bold=False):
+    """Crear un párrafo con texto"""
+    para = etree.Element(qn('w:p'))
+    pPr = etree.SubElement(para, qn('w:pPr'))
+    jc = etree.SubElement(pPr, qn('w:jc'))
+    jc.set(qn('w:val'), 'both')
+    if text:
+        run = etree.SubElement(para, qn('w:r'))
+        rPr = etree.SubElement(run, qn('w:rPr'))
+        if bold:
+            etree.SubElement(rPr, qn('w:b'))
+            sz = etree.SubElement(rPr, qn('w:sz'))
+            sz.set(qn('w:val'), '22')
+            szCs = etree.SubElement(rPr, qn('w:szCs'))
+            szCs.set(qn('w:val'), '22')
+        t = etree.SubElement(run, qn('w:t'))
+        t.set('{http://www.w3.org/XML/1998/namespace}space', 'preserve')
+        t.text = text
+    return para
+
+def make_body():
+    """Construir el cuerpo completo del procedimiento"""
+    body = etree.Element(qn('w:body'))
+    
+    # 1. Objetivo
+    body.append(make_para("1. Objetivo", bold=True))
+    body.append(make_para("[Texto del objetivo del nuevo procedimiento]"))
+    body.append(make_para(""))
+    
+    # 2. Alcance
+    body.append(make_para("2. Alcance", bold=True))
+    body.append(make_para("[A quién aplica]"))
+    body.append(make_para(""))
+    
+    # 3. Responsables
+    body.append(make_para("3. Responsables", bold=True))
+    body.append(make_para("• [Responsable 1]"))
+    body.append(make_para("• [Responsable 2]"))
+    body.append(make_para(""))
+    
+    # 4. Definiciones
+    body.append(make_para("4. Definiciones", bold=True))
+    body.append(make_para("• [Definición 1]"))
+    body.append(make_para("• [Definición 2]"))
+    body.append(make_para(""))
+    
+    # 5.- DESARROLLO
+    body.append(make_para("5.- DESARROLLO", bold=True))
+    body.append(make_para("5. Procedimiento", bold=True))
+    
+    # 5.1
+    body.append(make_para("5.1 [NOMBRE DEL PASO]", bold=True))
+    body.append(make_para("[Descripción del paso 1]"))
+    body.append(make_para(""))
+    
+    # 5.2
+    body.append(make_para("5.2 [NOMBRE DEL PASO]", bold=True))
+    body.append(make_para("[Descripción del paso 2]"))
+    body.append(make_para(""))
+    
+    # ... más pasos según sea necesario ...
+    
+    # REGLAS DE CONTROL
+    body.append(make_para("REGLAS DE CONTROL:", bold=True))
+    body.append(make_para("1) [Regla 1]"))
+    body.append(make_para("2) [Regla 2]"))
+    body.append(make_para("3) [Regla 3]"))
+    body.append(make_para("4) [Regla 4]"))
+    body.append(make_para("5) [Regla 5]"))
+    body.append(make_para(""))
+    
+    # SLA / TIEMPOS
+    body.append(make_para("SLA / TIEMPOS:", bold=True))
+    body.append(make_para("• [Tiempo 1]"))
+    body.append(make_para("• [Tiempo 2]"))
+    body.append(make_para(""))
+    
+    # RESGUARDO
+    body.append(make_para("RESGUARDO:", bold=True))
+    body.append(make_para("• [Ruta de archivo o sistema]"))
+    
+    return body
+
+# Obtener el document.xml base y reemplazar el body
+base_doc = etree.fromstring(all_files['word/document.xml'])
+body_el = base_doc.find(qn('w:body'))
+
+# Quitar todos los hijos del body EXCEPTO el último (sectPr)
+children = list(body_el)
+for child in children[:-1]:
+    body_el.remove(child)
+
+# Guardar el sectPr (último elemento) para re-insertarlo
+sect_pr = children[-1]
+
+# Insertar el nuevo contenido del cuerpo
+new_body = make_body()
+for child in list(new_body):
+    body_el.append(child)
+
+# Re-insertar sectPr al final
+body_el.append(sect_pr)
+
+# Guardar el document.xml modificado
+all_files['word/header2.xml'] = h2.encode('utf-8')
+all_files['word/document.xml'] = etree.tostring(
+    base_doc,
+    xml_declaration=True,
+    encoding='UTF-8',
+    standalone=True
+)
+```
+
+### Paso 4 — Escribir el archivo final
+
+```python
+with zipfile.ZipFile(tmp_path, 'w', zipfile.ZIP_DEFLATED) as zout:
+    for fname, content in all_files.items():
+        zout.writestr(fname, content)
+
+os.replace(tmp_path, out_path)
+```
+
+### Paso 5 — Verificar
+
+```python
+from docx import Document
+doc = Document(out_path)
+print(f"Párrafos: {len(doc.paragraphs)}")
+# Verificar que el contenido sea el correcto (no el de PCC2)
+```
 
 ---
 
----
+## Validaciones obligatorias ANTES de entregar
 
-## Ejemplo: PCA3 — Aplicación de Saldos a Favor en CRM "PROTEG-RT"
-
-| Campo | Valor |
-|-------|-------|
-| CLAVE | **PCA3** |
-| FECHA | 26/05/2026 |
-| TÍTULO | APLICACIÓN DE SALDOS A FAVOR EN CRM "PROTEG-RT" |
-| Ubicación | `workspaces/instructivos/PCA3.docx` |
-
-### Contenido del cuerpo para PCA3:
-- **1. Objetivo:** Establecer el proceso para identificar, validar y aplicar saldos a favor de clientes a sus próximas aportaciones, evitando pagos duplicados y garantizando el uso correcto de los recursos del cliente.
-- **2. Alcance:** Aplica a todo el personal de Cobranza, Ventas y Administrativo que gestione saldos a favor provenientes de cancelaciones, ajustes, endosos o pagos en exceso.
-- **3. Responsables:** Asistente de Cobranza, Vendedor, Cobrador, Gerencia de Cobranza.
-- **4. Definiciones:** Saldo a favor, Aplicación de saldo, Cancelación, Endoso.
-- **5.1 IDENTIFICACIÓN:** Revisar en CRM PROTEG-RT, identificar si existe saldo por pago en exceso/cancelación/endoso/ajuste. Si es mayor a $500, documentar y notificar a Gerencia.
-- **5.2 VALIDACIÓN:** Verificar origen del saldo, confirmar que no exista proceso de devolución en curso. No aplicar sin evidencia y autorización si excede $500.
-- **5.3 AUTORIZACIÓN:** Si saldo > $500, requerir autorización escrita de Gerencia. Documentar: fecha, monto, origen, cliente, vendedor/cobrador, decisión.
-- **5.4 APLICACIÓN EN SISTEMA:** Aplicar saldo a favor a próxima aportación en CRM PROTEG-RT. Registrar: fecha, monto aplicado, остаток pendiente (si hay). No inventar datos.
-- **5.5 NOTIFICACIÓN AL CLIENTE:** Comunicar al cliente la aplicación (monto y fecha). Si solicita devolución en efectivo, escalar a Gerencia.
-- **5.6 CONFIRMACIÓN Y CIERRE:** Actualizar registro, archivar evidencia. Si queda остаток pendiente, informar nueva fecha de vencimiento.
-- **REGLAS DE CONTROL:** 5 reglas sobre verificación, autorización, devolución, registro y liberación de saldos.
-- **SLA/TIEMPOS:** Mismo día para identificación/validación; 24h para autorización; 48h para aplicación.
-- **RESGUARDO:** `D:\COBRANZA\COBRANZA\COBRANZA (COBRADORES) 2026\SaldosAFavor`
+- [ ] La CLAVE en header2.xml es la correcta (ej: PCE7)
+- [ ] La FECHA muestra 26/05/2026 (año completo, no truncado)
+- [ ] El TÍTULO en header2.xml = TÍTULO en body (100% match)
+- [ ] Los headers (header1, header2, header3) están vinculados en sectPr
+- [ ] El CUERPO contiene el procedimiento NUEVO (no el de PCC2)
+- [ ] El documento abre sin errores en Word/LibreOffice
 
 ---
 
-## Checklist de verificación
+## Ejemplo rápido: crear PCE7 (CONTROL DE PAGOS NO IDENTIFICADOS)
 
-- [ ] CLAVE actualizada en header2.xml
-- [ ] FECHA correcta (DD/MM/2026) en header2.xml
-- [ ] TÍTULO en header2.xml = TÍTULO en body (100% match)
-- [ ] Todos los headers vinculados en sectPr
-- [ ] Contenido completo en todas las secciones
-- [ ] Documento guarda sin errores de XML
-- [ ] Documento abre en Word/LibreOffice sin warnings
+```python
+# Datos
+NEW_TITLE = "CONTROL DE PAGOS NO IDENTIFICADOS"
+NEW_KEY = "PCE7"
+NEW_DATE = "26/05/2026"
+
+# Copiar base (Paso 1)
+shutil.copy(ref_path, out_path)
+
+# Leer archivos (Paso 1, continuación)
+with zipfile.ZipFile(ref_path, 'r') as z:
+    all_files = {name: z.read(name) for name in z.namelist()}
+
+# Modificar header2.xml (Paso 2)
+h2 = all_files['word/header2.xml'].decode('utf-8')
+h2 = h2.replace('TRATAMIENTO DE TARJETAS DE COBRO', NEW_TITLE)
+h2 = re.sub(r'>PCC2<', f'>{NEW_KEY}<', h2)
+h2 = h2.replace(': 31/08/202</w:t></w:r><w:r w:rsidR="00BF75E2"><w:t>5</w:t>',
+                ': 26/05/2026</w:t>')
+
+# Reemplazar body COMPLETAMENTE (Paso 3)
+# ... usar make_body() con el contenido específico de PCE7 ...
+
+# Escribir (Paso 4)
+with zipfile.ZipFile(tmp_path, 'w', zipfile.ZIP_DEFLATED) as zout:
+    for fname, content in all_files.items():
+        zout.writestr(fname, content)
+os.replace(tmp_path, out_path)
+
+# Verificar (Paso 5)
+doc = Document(out_path)
+assert len(doc.paragraphs) > 50, "Body parece vacío"
+```
+
+---
+
+## Checklist de verificación final
+
+- [ ] CLAVE correcta en header2.xml
+- [ ] FECHA 26/05/2026 completa
+- [ ] TÍTULO igual en encabezado y cuerpo (100%)
+- [ ] Headers vinculados (header1, header2, header3)
+- [ ] Body completo con contenido del nuevo procedimiento (NO copiar PCC2)
+- [ ] Archivo abre sin errores
+- [ ] Guardado en `workspaces/instructivos/[CLAVE].docx`
