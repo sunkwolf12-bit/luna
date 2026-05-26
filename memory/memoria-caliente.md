@@ -11,9 +11,16 @@
 - **Límites:** solo CLI `sicc` y skill `sicc-ingesta`. Sin código/DB directo. Escala a Fer/Claudio si algo falta
 - **Pendiente abierto:** regresar 27 meses a borrador (mañana/lunes), revisión con Elena mes por mes
 
+## Última actualización: 26 mayo 2026 (6 AM — latido automático)
+
 ## Interacción del día (textual)
 
-**[11:14 MX] Elena:** OPCION1, PERO NO INCLUYA NADA DE LA MOTO DE JORGE
+**[Pendientes activos — heredados del 25 mayo]**
+- GPS: Liz contactada, esperando respuesta. Agendar proveedor + citar a Jorge con la moto al confirmar.
+- Jorge / folio 23734: esperar al miércoles 27 para confrontación directa sobre qué espera el cliente del vendedor.
+- Edgar/43326, Francisco/24354, Edgar/43366: seguimiento de entregas pendientes.
+
+**[11:14 MX — 25 may] Elena:** OPCION1, PERO NO INCLUYA NADA DE LA MOTO DE JORGE
 
 **[11:15 MX] Luna:** ¡Listo! Aquí está sin Jorge: "Hola Liz, buenas tardes. ¿Podrías decirme cuándo podrías traer el carro a la oficina? Necesitamos agendar una cita con el proveedor de GPS para que vea el vehículo. Quedo atenta. Gracias!"
 
