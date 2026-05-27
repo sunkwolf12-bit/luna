@@ -76,6 +76,15 @@ def patch_header(docx_path, nombre, fecha, clave, departamento):
 
     files['word/header2.xml'] = h2
 
+    # --- ELIMINAR placeholders de SDT (forzar que Word muestre el contenido real) ---
+    for key in list(files.keys()):
+        if key.endswith('.xml'):
+            # Remove <w:placeholder>...</w:placeholder>
+            files[key] = re.sub(rb'<w:placeholder>.*?</w:placeholder>', b'', files[key])
+            # Remove showingPlcHdr flags
+            files[key] = files[key].replace(b'<w:showingPlcHdr/>', b'')
+            files[key] = files[key].replace(b'<w:showingPlcHdr />', b'')
+
     # Escribir ZIP final
     with zipfile.ZipFile(docx_path, 'w', zipfile.ZIP_DEFLATED) as zout:
         for name, data in files.items():

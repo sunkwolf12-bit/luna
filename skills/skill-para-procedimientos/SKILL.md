@@ -63,6 +63,11 @@ Si el script falla o hay que hacer ajustes manuales, seguir las reglas de abajo.
 
 ## Reglas de modificación del archivo base
 
+### ⚠️ CRÍTICO — Eliminar placeholders SDT
+El archivo base usa **Building Blocks de Word** (galería/docPart) para título y subtítulo en la portada. Si no se eliminan los `<w:placeholder>` de los SDT, Word carga el texto viejo de la galería en vez del contenido real insertado.
+
+**Fix obligatorio:** después de reemplazar textos, eliminar `<w:placeholder>.*</w:placeholder>` y `<w:showingPlcHdr/>` de todos los XML del ZIP.
+
 ### PORTADA
 - Reemplazar **"PROCEDIMIENTO EN BLANCO"** por el nombre del procedimiento.
 - Este texto está en `word/document.xml` del ZIP del .docx.
