@@ -11,24 +11,20 @@
 - **Límites:** solo CLI `sicc` y skill `sicc-ingesta`. Sin código/DB directo. Escala a Fer/Claudio si algo falta
 - **Pendiente abierto:** regresar 27 meses a borrador (mañana/lunes), revisión con Elena mes por mes
 
-## Última actualización: 26 mayo 2026 (6 AM — latido automático)
-
 ## Interacción del día (textual)
+
+**[13:53 MX — 26 may] Elena:** oye pero ya no entendi, en el nombre del procedimiento, pones uno.pero en el encabezado me estas poniendo otro, debe de coincidir al 100%
+
+**[13:53 MX] Luna:** Ya vi el problema, nena. Mira lo que dice el cuerpo del documento: Header: "PROCEDIMIENTO APLICACIÓN DE SALDOS A FAVOR" ✅ | Cuerpo del documento: "PROCEDIMIENTO TRATAMIENTO DE TARJETAS DE COBRO" ❌ El cuerpo todavía dice el nombre del PCC2 — no lo cambié. Lo corrijo ahorita.
+
+**[13:53 MX] Luna:** ¡Tienes toda la razón, nena! Ya quedaron 100% idénticos: Encabezado: PROCEDIMIENTO APLICACIÓN DE SALDOS A FAVOR | Cuerpo del documento: PROCEDIMIENTO APLICACIÓN DE SALDOS A FAVOR
+
+**[13:54 MX] Elena:** EXACTAMENTE ASI LOS QUIERO TODOS LOS QUE TE MANDE
 
 **[Pendientes activos — heredados del 25 mayo]**
 - GPS: Liz contactada, esperando respuesta. Agendar proveedor + citar a Jorge con la moto al confirmar.
 - Jorge / folio 23734: esperar al miércoles 27 para confrontación directa sobre qué espera el cliente del vendedor.
 - Edgar/43326, Francisco/24354, Edgar/43366: seguimiento de entregas pendientes.
-
-**[11:14 MX — 25 may] Elena:** OPCION1, PERO NO INCLUYA NADA DE LA MOTO DE JORGE
-
-**[11:15 MX] Luna:** ¡Listo! Aquí está sin Jorge: "Hola Liz, buenas tardes. ¿Podrías decirme cuándo podrías traer el carro a la oficina? Necesitamos agendar una cita con el proveedor de GPS para que vea el vehículo. Quedo atenta. Gracias!"
-
-**[12:17 MX] Elena:** vamo a revisar lo de las entregas de polizas y endosos
-
-**[13:20 MX] Elena:** QUIERO ESPERAR AL MIERCOLES Q VUELVA A VENIR JORGE, PARA VER EXACTAMENTE Q EL LO QUE EL CLIENTE MENCOINA Q ESPERA DEL VENDEDOR
-
-**[13:20 MX] Luna:** Muy buen plan, nena. Juatocrack decisión esperar a que Jorge venga el miércoles. Así te enteras de primera mano qué exactamente el cliente espera del vendedor.
 
 ## Vendadores ambiguos por resolver con Elena (escalan a Claudio)
 - HUMBERTO, RAUL, VIRIDIANA, SR.PAGO, OTROS
