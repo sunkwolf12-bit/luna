@@ -82,8 +82,9 @@ def patch_header(docx_path, nombre, fecha, clave, departamento):
             # Remove <w:placeholder>...</w:placeholder>
             files[key] = re.sub(rb'<w:placeholder>.*?</w:placeholder>', b'', files[key])
             # Remove <w:dataBinding .../> (evita que Word jale texto viejo de core.xml)
-            files[key] = re.sub(rb'<w:dataBinding[^/>]*/>', b'', files[key])
-            files[key] = re.sub(rb'<w:dataBinding>.*?</w:dataBinding>', b'', files[key])
+            # [^>] no excluye / — necesario porque xpath contiene slashes
+            files[key] = re.sub(rb'<w:dataBinding[^>]*/>', b'', files[key])
+            files[key] = re.sub(rb'<w:dataBinding>.*?</w:dataBinding>', b'', files[key], flags=re.DOTALL)
             # Remove showingPlcHdr flags
             files[key] = files[key].replace(b'<w:showingPlcHdr/>', b'')
             files[key] = files[key].replace(b'<w:showingPlcHdr />', b'')
