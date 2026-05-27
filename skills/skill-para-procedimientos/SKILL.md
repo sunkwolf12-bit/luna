@@ -63,10 +63,27 @@ Si el script falla o hay que hacer ajustes manuales, seguir las reglas de abajo.
 
 ## Reglas de modificación del archivo base
 
-### ⚠️ CRÍTICO — Eliminar placeholders SDT
-El archivo base usa **Building Blocks de Word** (galería/docPart) para título y subtítulo en la portada. Si no se eliminan los `<w:placeholder>` de los SDT, Word carga el texto viejo de la galería en vez del contenido real insertado.
+### ⚠️ CRÍTICO — Triple limpieza de SDT (placeholders + dataBindings + core.xml)
 
-**Fix obligatorio:** después de reemplazar textos, eliminar `<w:placeholder>.*</w:placeholder>` y `<w:showingPlcHdr/>` de todos los XML del ZIP.
+El archivo base usa **Building Blocks de Word** (galería/docPart) para título y subtítulo en portada y encabezados. Estos SDT tienen **tres** mecanismos que pueden devolver el texto "PROCEDIMIENTO EN BLANCO":
+
+| # | Mecanismo | Qué hace | Fix |
+|---|-----------|----------|-----|
+| 1 | `<w:placeholder>` | Word carga el texto desde su galería interna | Eliminar TODOS los `<w:placeholder>...</w:placeholder>` |
+| 2 | `<w:dataBinding>` | Word jala el valor desde `docProps/core.xml` → `<dc:subject>` | Eliminar TODOS los `<w:dataBinding.../>` de todos los XML |
+| 3 | `<dc:subject>` en `docProps/core.xml` | Contiene el texto viejo que alimenta al dataBinding | Reemplazar por el nombre real del procedimiento |
+
+**Fix obligatorio (en este orden):**
+1. Reemplazar `<dc:subject>PROCEDIMIENTO EN BLANCO</dc:subject>` por el nombre real en `docProps/core.xml`
+2. Eliminar `<w:dataBinding.../>` de TODOS los XML del ZIP (regex: `<w:dataBinding[^>]*/>`)
+3. Eliminar `<w:placeholder>.*</w:placeholder>` de TODOS los XML del ZIP
+4. Eliminar `<w:showingPlcHdr/>` de TODOS los XML del ZIP
+
+**⚠️ La regex de dataBinding DEBE usar `[^>]` (no `[^/>]`)** porque los atributos xpath contienen `/`:
+```
+❌ <w:dataBinding[^/>]*/>  — falla con xpath="/ns1:coreProperties[1]/ns0:subject[1]"
+✅ <w:dataBinding[^>]*/>   — correcto
+```
 
 ### PORTADA
 - Reemplazar **"PROCEDIMIENTO EN BLANCO"** por el nombre del procedimiento.
@@ -75,7 +92,7 @@ El archivo base usa **Building Blocks de Word** (galería/docPart) para título 
 ### ENCABEZADOS (páginas 1, 2, 3...)
 - Reemplazar **"PROCEDIMIENTO EN BLANCO"** por el nombre del procedimiento (**debe coincidir 100% con la portada**).
 - **FECHA:** reemplazar `31/08/2025` por la fecha que viene en el procedimiento fuente.
-- **CLAVE:** reemplazar el valor vacío por la CLAVE obtenida del Excel.
+- **CLAVE:** insertar el código justo **después de "CLAVE: " en la misma celda** del header2 (regex: capturar `(<w:t...>CLAVE:\s*)(</w:t>)` e insertar la clave entre ambos grupos). **NO insertar en la celda vMerge de la fila siguiente** — esa es la celda del título, no la de CLAVE.
 - **DEPARTAMENTO:** "Cobranza" (o el que corresponda).
 - Estos textos están en `word/header2.xml`.
 
@@ -115,12 +132,36 @@ El archivo se guarda en: `workspaces/instructivos/`
 
 ---
 
+## Verificación post-generación (OBLIGATORIA)
+
+Después de generar cada documento, ejecutar esta verificación:
+
+```python
+import zipfile
+p = 'workspaces/instructivos/<archivo>.docx'
+with zipfile.ZipFile(p) as z:
+    doc = z.read('word/document.xml')
+    h2 = z.read('word/header2.xml')
+    core = z.read('docProps/core.xml')
+
+# Checks obligatorios (todos deben ser 0)
+print(f'BLANCO en doc: {doc.count(b"PROCEDIMIENTO EN BLANCO")}')       # debe ser 0
+print(f'BLANCO en h2:  {h2.count(b"PROCEDIMIENTO EN BLANCO")}')        # debe ser 0
+print(f'BLANCO en core: {core.count(b"PROCEDIMIENTO EN BLANCO")}')     # debe ser 0
+print(f'dataBindings:  {doc.count(b"<w:dataBinding") + h2.count(b"<w:dataBinding")}')  # debe ser 0
+print(f'CLAVE en h2:   {b"CLAVE: PCE1" in h2}')  # debe ser True (con la clave correcta)
+```
+
 ## Checklist de verificación (antes de entregar)
 
 - [ ] ¿El nombre en PORTADA coincide 100% con el nombre en ENCABEZADOS?
 - [ ] ¿La CLAVE coincide con la del Excel?
+- [ ] ¿La CLAVE se insertó en la celda correcta (después de "CLAVE: " en misma celda)?
 - [ ] ¿La FECHA es la que viene en el documento fuente?
 - [ ] ¿El DESARROLLO incluye TODO el contenido del archivo fuente (sin omitir nada)?
 - [ ] ¿DOCUMENTOS DE REFERENCIA y DEFINICIONES están completos (generados si no existían)?
 - [ ] ¿El nombre del archivo sigue el formato CLAVE_NOMBRE.docx?
 - [ ] ¿No se modificó nada no autorizado del archivo base?
+- [ ] ¿0 ocurrencias de "PROCEDIMIENTO EN BLANCO" en doc.xml, header2.xml y core.xml?
+- [ ] ¿0 dataBindings residuales en todo el ZIP?
+- [ ] ¿0 placeholders residuales en todo el ZIP?
