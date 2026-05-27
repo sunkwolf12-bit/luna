@@ -76,14 +76,23 @@ def patch_header(docx_path, nombre, fecha, clave, departamento):
 
     files['word/header2.xml'] = h2
 
-    # --- ELIMINAR placeholders de SDT (forzar que Word muestre el contenido real) ---
+    # --- ELIMINAR placeholders, dataBindings y arreglar core.xml ---
     for key in list(files.keys()):
         if key.endswith('.xml'):
             # Remove <w:placeholder>...</w:placeholder>
             files[key] = re.sub(rb'<w:placeholder>.*?</w:placeholder>', b'', files[key])
+            # Remove <w:dataBinding .../> (evita que Word jale texto viejo de core.xml)
+            files[key] = re.sub(rb'<w:dataBinding[^/>]*/>', b'', files[key])
+            files[key] = re.sub(rb'<w:dataBinding>.*?</w:dataBinding>', b'', files[key])
             # Remove showingPlcHdr flags
             files[key] = files[key].replace(b'<w:showingPlcHdr/>', b'')
             files[key] = files[key].replace(b'<w:showingPlcHdr />', b'')
+
+    # Fix docProps/core.xml: dc:subject must match the procedure name
+    if 'docProps/core.xml' in files:
+        files['docProps/core.xml'] = files['docProps/core.xml'].replace(
+            b'<dc:subject>PROCEDIMIENTO EN BLANCO</dc:subject>',
+            f'<dc:subject>{nombre}</dc:subject>'.encode('utf-8'))
 
     # Escribir ZIP final
     with zipfile.ZipFile(docx_path, 'w', zipfile.ZIP_DEFLATED) as zout:
