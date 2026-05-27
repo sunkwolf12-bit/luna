@@ -52,15 +52,13 @@ def patch_header(docx_path, nombre, fecha, clave, departamento):
     h2 = h2.replace(b'31/08/202</w:t></w:r><w:r w:rsidR="00BF75E2"><w:t>5</w:t>',
                     (fecha + '</w:t>').encode())
 
-    # 3) CLAVE - insertar en parrafo vacio de la fila siguiente a CLAVE:
-    clave_pos = h2.find(b'CLAVE:')
-    next_tr = h2.find(b'<w:tr ', clave_pos)
-    row_end = h2.find(b'</w:tr>', next_tr)
-    clave_para_end = h2.find(b'</w:pPr></w:p>', next_tr)
-    if clave_para_end > 0 and clave_para_end < row_end:
-        insert = ('</w:pPr><w:r><w:rPr><w:b/><w:bCs/><w:sz w:val="24"/><w:szCs w:val="24"/></w:rPr><w:t>'
-                  + clave + '</w:t></w:r></w:p>').encode()
-        h2 = h2[:clave_para_end] + insert + h2[clave_para_end + len(b'</w:pPr></w:p>'):]
+    # 3) CLAVE - insertar DESPUES de "CLAVE: " en la MISMA celda (no en fila siguiente)
+    # El patron: <w:t xml:space="preserve">CLAVE: </w:t>  →  CLAVE: PCE1
+    h2 = re.sub(
+        rb'(<w:t[^>]*>CLAVE:\s*)(</w:t>)',
+        ('\\1' + clave + '\\2').encode(),
+        h2
+    )
 
     # 4) DEPARTAMENTO - insertar en parrafo vacio justo despues de DEPARTAMENTO:
     dep_pos = h2.find(b'DEPARTAMENTO:')
