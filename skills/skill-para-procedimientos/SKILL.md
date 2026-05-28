@@ -115,6 +115,26 @@ El documento final debe tener este orden exacto:
    - **REGLA: NO omitir NADA de información del archivo que Elena envía.**
    - TODO el contenido desde "3. Responsables" hasta el final del documento fuente va aquí.
 
+### 🖼️ REGLA — Imágenes y Tablas (28/may/2026)
+
+**Si el documento fuente contiene imágenes o tablas, se DEBEN conservar en el documento institucional final.**
+
+El script `crear_procedimiento.py` ya maneja esto automáticamente:
+- **Tablas (`<w:tbl>`):** se copian completas con todo su formato y celdas.
+- **Imágenes:** se copian los archivos de imagen del .docx fuente al .docx de salida, y se remapean los rId para que Word las muestre correctamente.
+- **SDT / controles:** se conservan si forman parte del contenido del DESARROLLO.
+
+**Qué hace el script internamente:**
+1. Copia todos los elementos `<w:p>` (párrafos), `<w:tbl>` (tablas) y `<w:sdt>` del body del documento fuente.
+2. Detecta imágenes mediante los `r:embed` en los párrafos.
+3. Copia los archivos de imagen de `word/media/` del fuente al output.
+4. Remapea los rId de las imágenes para no colisionar con los de la plantilla base.
+5. Agrega las relaciones (`_rels`) y los `Content_Types` necesarios.
+
+**Verificación post-generación con imágenes:**
+- Abrir el .docx y confirmar que las imágenes se ven.
+- Verificar que las tablas conservan su estructura.
+
 ---
 
 ## Nombre del archivo de salida
@@ -165,3 +185,4 @@ print(f'CLAVE en h2:   {b"CLAVE: PCE1" in h2}')  # debe ser True (con la clave c
 - [ ] ¿0 ocurrencias de "PROCEDIMIENTO EN BLANCO" en doc.xml, header2.xml y core.xml?
 - [ ] ¿0 dataBindings residuales en todo el ZIP?
 - [ ] ¿0 placeholders residuales en todo el ZIP?
+- [ ] ¿Las imágenes y tablas del documento fuente se conservan en el documento final?
