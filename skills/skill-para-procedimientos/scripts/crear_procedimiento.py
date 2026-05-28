@@ -15,7 +15,7 @@ from docx import Document
 from docx.oxml import OxmlElement
 from docx.text.paragraph import Paragraph
 from lxml import etree
-from copy import deepcopy
+from copy import deepcopy as dc
 
 WORKSPACE = '/home/elena/.openclaw/workspace'
 BASE_FILE = os.path.join(WORKSPACE, 'workspaces/instructivos/FORMATO_INSTITUCIONAL_PROCEDIMIENTO_2025.docx')
@@ -168,6 +168,8 @@ def inject_desarrollo_from_source(output_path, fuente_path, start_marker='3.'):
     out_xml = etree.fromstring(out_files['word/document.xml'])
     src_body = src_xml.find(f'{{{W}}}body')
     out_body = out_xml.find(f'{{{W}}}body')
+    
+
 
     # Encontrar label DESARROLLO en output
     desarrollo = None
@@ -212,24 +214,36 @@ def inject_desarrollo_from_source(output_path, fuente_path, start_marker='3.'):
         print(f"WARNING: no se encontro contenido desde '{start_marker}' en fuente")
         return
 
-    # --- Remover contenido viejo DESPUES de DESARROLLO ---
-    after = False
-    to_remove = []
-    for child in out_body:
+    # --- Reconstruir body completo: mantener todo hasta DESARROLLO, luego inyectar fuente, luego sectPr ---
+    # En vez de insertar en medio (que tiene bugs con lxml), construimos una lista nueva y reemplazamos.
+    out_body_children = list(out_body)
+    dev_idx = None
+    for i, child in enumerate(out_body_children):
         if child is desarrollo:
-            after = True
-            continue
-        if after and child.tag.split('}')[-1] if '}' in child.tag else child.tag != 'sectPr':
-            to_remove.append(child)
-
-    for child in to_remove:
+            dev_idx = i
+            break
+    
+    # Extraer sectPr (guardarlo antes de limpiar)
+    sectPr_elem = None
+    for sp in out_body.findall(f'{{{W}}}sectPr'):
+        sectPr_elem = sp
+        out_body.remove(sp)
+    
+    # Limpiar todo
+    for child in list(out_body):
         out_body.remove(child)
+    
+    # Reconstruir: elementos antes de DESARROLLO + DESARROLLO + source + sectPr
+    for child in out_body_children[:dev_idx]:
+        out_body.append(child)
+    out_body.append(desarrollo)
+    for elem in src_elements:
+        out_body.append(dc(elem))
+    if sectPr_elem is not None:
+        out_body.append(sectPr_elem)
+    
 
-    # --- Insertar elementos fuente en output ---
-    dev_idx = list(out_body).index(desarrollo)
-    for i, elem in enumerate(src_elements):
-        out_body.insert(dev_idx + 1 + i, elem)
-
+    
     # --- Gestionar imagenes: remapear rIds ---
     src_rels = {}
     src_rels_path = 'word/_rels/document.xml.rels'
