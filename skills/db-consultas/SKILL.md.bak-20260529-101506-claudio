@@ -1,20 +1,19 @@
 ---
 name: db-consultas
-description: "Consultas de solo lectura a datos de Proteg-rt via API REST. Busqueda de clientes, polizas, pagos, renovaciones, vendedores, siniestros, asignacion de cobranza, guardias de ajustadores y reportes de riesgo (promocion $200). SOLO LECTURA."
+description: "Consultas de solo lectura a datos de Proteg-rt via API REST. Busqueda de clientes, polizas, pagos, renovaciones, vendedores, siniestros, asignacion de cobranza. SOLO LECTURA."
 user-invocable: true
 ---
 
 # DB Consultas - Datos de Proteg-rt (SOLO LECTURA)
 
-Skill para consultar informacion de clientes, polizas, pagos, renovaciones, vendedores, siniestros, asignacion de cobranza, guardias y reportes de riesgo en Proteg-rt **a traves de la API REST**.
+Skill para consultar informacion de clientes, polizas, pagos, renovaciones, vendedores, siniestros y asignacion de cobranza en Proteg-rt **a traves de la API REST**.
 
 ---
 
 ## REGLA ABSOLUTA: SOLO LECTURA
 
-> **Esta skill es exclusivamente de consulta.** No hay endpoints de escritura para datos de Legacy. No los habra.
+> **Esta skill es exclusivamente de consulta.** No hay endpoints de escritura. No los habra.
 > Los datos provienen de una replica sincronizada periodicamente desde produccion.
-> (El unico POST existente, `/quiniela/verificar-pagos`, es de uso interno del sistema Quiniela y solo lee pagos para devolver un estatus; no modifica nada de Legacy.)
 
 ---
 
@@ -60,62 +59,24 @@ curl -s -H "X-API-Key: 1fxWFNyQOwOY9jeKTBvmhM-s4vLHtcx6HG0rs_YkbyI" "http://loca
 
 ### Endpoints disponibles
 
-> Lista completa al 29 may 2026. Para la fuente de verdad siempre se puede consultar `http://localhost:8000/openapi.json` o el Swagger en `/docs`.
-
-#### Estado del servicio
-| Metodo | Endpoint | Para que sirve |
+| Metodo | Endpoint | Descripcion |
 |---|---|---|
-| GET | `/api/v1/sync` | Fecha de ultima sincronizacion de la BD (que tan recientes son los datos) |
-
-#### Clientes
-| Metodo | Endpoint | Para que sirve |
-|---|---|---|
+| GET | `/api/v1/sync` | Fecha de ultima sincronizacion de la BD |
 | GET | `/api/v1/clientes/buscar?q=Lopez&limit=20` | Buscar clientes por nombre, apellido, telefono o correo |
 | GET | `/api/v1/clientes/{id_cliente}/polizas` | Todas las polizas de un cliente |
-
-#### Polizas
-| Metodo | Endpoint | Para que sirve |
-|---|---|---|
 | GET | `/api/v1/polizas/{folio}` | Detalle completo de una poliza (cliente + vehiculo + vendedor) |
 | GET | `/api/v1/polizas/{folio}/pagos` | Situacion de pagos con resumen (filtrado por rol) |
 | GET | `/api/v1/polizas/{folio}/siniestros` | Siniestros y servicios de grua (filtrado por rol) |
 | GET | `/api/v1/polizas/{folio}/asignacion` | Cobrador asignado + tarjeta + historial movimientos (filtrado por rol) |
 | GET | `/api/v1/polizas/buscar/placas?q=ABC123` | Buscar polizas por placas |
 | GET | `/api/v1/polizas/buscar/serie?q=3N1CB` | Buscar polizas por numero de serie |
-
-#### Reportes de cartera
-| Metodo | Endpoint | Para que sirve |
-|---|---|---|
 | GET | `/api/v1/reportes/por-vencer?dias=30` | Polizas por vencer (con estado RENOVADA / SIN RENOVAR) |
 | GET | `/api/v1/reportes/morosos?limit=50` | Polizas con pagos vencidos |
-| GET | `/api/v1/reportes/renovables?dias=90` | Polizas expiradas sin renovacion |
-| GET | `/api/v1/reportes/multipoliza?minimo=3` | Clientes con multiples polizas activas |
-
-#### Reportes de ventas y vendedores
-| Metodo | Endpoint | Para que sirve |
-|---|---|---|
 | GET | `/api/v1/reportes/vendedores` | Resumen de todos los vendedores (solo gerente/admin) |
 | GET | `/api/v1/reportes/ventas?mes=3&anio=2026` | Ventas por periodo |
+| GET | `/api/v1/reportes/renovables?dias=90` | Polizas expiradas sin renovacion |
+| GET | `/api/v1/reportes/multipoliza?minimo=3` | Clientes con multiples polizas activas |
 | GET | `/api/v1/vendedor/{id_empleado}` | Detalle y polizas de un vendedor |
-
-#### Reportes de riesgo (direccion)
-| Metodo | Endpoint | Para que sirve |
-|---|---|---|
-| GET | `/api/v1/reportes/promocion-200?anio=2026` | **Riesgo de la promocion de pago inicial $200.** Detecta ventas fantasma/forzadas vs conversiones reales. Semaforo por vendedor. Solo gerente/admin. (Ver seccion dedicada abajo) |
-
-#### Guardias de ajustadores (solo admin)
-| Metodo | Endpoint | Para que sirve |
-|---|---|---|
-| GET | `/api/v1/guardias/hoy` | Quien esta de guardia HOY (turnos 1, 2, 3, D) |
-| GET | `/api/v1/guardias/semana?fecha=YYYY-MM-DD` | Guardias de la semana (lun-dom) que contiene la fecha |
-| GET | `/api/v1/guardias/proxima?id_ajustador=NN&turno=1` | Proximas 5 guardias de un ajustador en un turno especifico |
-| GET | `/api/v1/guardias/ajustadores` | Lista de ajustadores activos con id, codigo, nombre, telefono |
-
-#### Quiniela Mundial 2026 (uso del sistema Quiniela)
-| Metodo | Endpoint | Para que sirve |
-|---|---|---|
-| GET | `/api/v1/reportes/elegibles-quiniela?fecha_inicio=YYYY-MM-DD&fecha_fin=YYYY-MM-DD` | Clientes elegibles para la Quiniela Mundial 2026 en un rango de fechas (filtro de pago al corriente). Lo consume el backend de la quiniela para sincronizar participantes |
-| POST | `/api/v1/quiniela/verificar-pagos` | Recibe un array de folios y devuelve por cada uno si esta al corriente / con pagos vencidos. Lo usa el panel admin de la quiniela para verificar ganadores. Solo lectura de pagos, no modifica nada |
 
 ### Campos renombrados para claridad
 
@@ -127,51 +88,6 @@ La API devuelve nombres de campo corregidos respecto a la BD Legacy:
 ### Pendientes de implementar en la API
 
 - [ ] **Endpoint de contrato preparatorio** - Servir imagen del contrato desde protegrt-files. Filtrado por rol.
-
----
-
-## Reporte de riesgo: Promocion de pago inicial $200
-
-**Endpoint:** `GET /api/v1/reportes/promocion-200?anio=2026` (param `anio` opcional, default: ano actual). Solo `admin` y `gerente_ventas`.
-
-### Que es y para que sirve
-
-Oscar lanzo una promocion donde una poliza puede arrancar con un **pago inicial de solo $200**. El riesgo: que un vendedor meta esos $200 **solo para inflar sus numeros o llegar a su meta** (venta fantasma / forzada), y que despues la poliza se cancele o nunca reciba el segundo pago. Es decir, ventas que no se convierten en un contrato real que siga su curso normal.
-
-Este reporte distingue las **ventas completas que siguen con su contrato normal** de las **posibles ventas fantasma/forzadas**, para medir el riesgo real de la promocion y por vendedor.
-
-### Como clasifica cada poliza (pago inicial = $200)
-
-| Clasificacion | Semaforo | Que significa |
-|---|---|---|
-| Activa (flujo normal) | VERDE | La poliza sigue activa y ya tiene 2+ pagos cumplidos -> conversion real |
-| Pendiente (aun en plazo) | GRIS | Segundo pago aun no vence, todavia no se puede juzgar |
-| Pago 2 atrasado | AMARILLO | Segundo pago atrasado pero recuperable |
-| Pago 2 vencido | ROJO | Segundo pago vencido/cancelado, o pendiente con fecha limite ya pasada |
-| Morosa | ROJO | Poliza vigente pero con pagos atrasados |
-| Cancelada | ROJO | La poliza se cancelo -> sospecha de venta fantasma |
-
-### Que devuelve
-
-- **Totales generales:** total de polizas con pago inicial $200, cuantas son "problematicas" (Cancelada + Morosa + Pago 2 vencido + Pago 2 atrasado) y su porcentaje, y el desglose por clasificacion con cantidades y %.
-- **Semaforo por vendedor:** clasifica a cada vendedor segun su % de polizas problematicas.
-  - **ROJO** >= 30% problematicas
-  - **AMARILLO** >= 15%
-  - **VERDE** < 15%
-- **Detalle por poliza:** folio, cliente, vendedor, fecha de venta, mes, cobertura, status, forma de pago, monto y fecha del pago 1 y pago 2, status del pago 2, pagos cumplidos vs total, clasificacion y semaforo.
-
-### Como interpretarlo
-
-- Un vendedor en **ROJO** mete muchos $200 que no convierten -> posible inflado de metas con ventas que se caen.
-- Un vendedor en **VERDE** usa la promocion como gancho legitimo: el cliente entra con $200 y sigue pagando su contrato normal.
-- Las polizas **GRIS** todavia no se pueden juzgar (el segundo pago no ha vencido).
-
-### Ejemplo
-
-```bash
-curl -s -H "X-API-Key: 1fxWFNyQOwOY9jeKTBvmhM-s4vLHtcx6HG0rs_YkbyI" \
-  "http://localhost:8000/api/v1/reportes/promocion-200?anio=2026"
-```
 
 ---
 
@@ -215,24 +131,12 @@ Cuando el usuario no sepa que buscar o como pedirlo, mostrarle esta lista como r
 - "Quien vendio mas este mes?"
 - "Dame el detalle de las polizas de Santiago"
 
-### Riesgo de la promocion $200 (direccion)
-- "Como va la promocion de los $200?"
-- "Hay ventas fantasma con la promocion de $200?"
-- "Que vendedores estan en rojo con los $200?"
-- "Cuantas de las polizas de $200 ya convirtieron a contrato normal?"
-
 ### Siniestros
 - "El folio 20148 ha tenido siniestros?"
 - "Cuantas gruas le quedan a esta poliza?"
 
 ### Clientes especiales
 - "Que clientes tienen mas de 3 polizas activas?"
-
-### Guardias de ajustadores (solo admin)
-- "Quien esta de guardia hoy?"
-- "Dame las guardias de esta semana"
-- "Cuando le toca el siguiente turno 1 a Fernando?"
-- "Lista de ajustadores activos"
 
 > **Nota:** Toda la informacion proviene de una replica de la base de datos que se sincroniza periodicamente.
 > En cada respuesta se muestra la fecha de la ultima sincronizacion para que sepas que tan recientes son los datos.
@@ -253,9 +157,6 @@ Endpoint: `/api/v1/reportes/ventas?mes=3&anio=2026` o `/api/v1/reportes/vendedor
 ### "Dame los clientes de [vendedor] que estan por vencer"
 Endpoint: `/api/v1/vendedor/{id_empleado}` muestra sus polizas ordenadas por vencimiento.
 
-### "Como va la promocion de los $200? Hay ventas fantasma?"
-Endpoint: `/api/v1/reportes/promocion-200?anio=2026`. Devuelve el % de polizas $200 problematicas (canceladas, morosas, sin segundo pago) vs las que convirtieron a contrato normal, con un semaforo por vendedor (ROJO >= 30%, AMARILLO >= 15%, VERDE < 15%). Util para detectar quien infla metas con ventas que se caen. Ver la seccion "Reporte de riesgo: Promocion de pago inicial $200".
-
 ### "Este cliente es confiable para AMPLIA SELECT?"
 Consultar el detalle de la poliza. Los campos `has_payment_issues` y `has_fraud_observation` deben ser 0.
 
@@ -267,16 +168,6 @@ Buscar por placas o serie. La cadena de renovaciones muestra todas las polizas d
 
 ### "Quien tiene la tarjeta de cobranza del folio X?"
 Endpoint: `/api/v1/polizas/{folio}/asignacion` - muestra cobrador actual + historial de movimientos.
-
-### "Quien esta de guardia hoy?"
-Endpoint: `/api/v1/guardias/hoy` - devuelve los turnos del dia (1, 2, 3, D) con codigo, nombre y telefono.
-
-### "Dame las guardias de la semana"
-Endpoint: `/api/v1/guardias/semana?fecha=YYYY-MM-DD` (omitir `fecha` para semana actual). Devuelve lun-dom agrupado por dia.
-
-### "Cuando le toca el siguiente turno 1 a [ajustador]?"
-1. Si no se el id, llamar `/api/v1/guardias/ajustadores` para obtenerlo.
-2. Llamar `/api/v1/guardias/proxima?id_ajustador=NN&turno=1` (turno: 1, 2, 3) - devuelve las proximas 5 fechas.
 
 ---
 
@@ -309,12 +200,6 @@ Endpoint: `/api/v1/guardias/semana?fecha=YYYY-MM-DD` (omitir `fecha` para semana
 - Cada poliza tiene N pagos segun `forma_pago` (mensual, trimestral, semestral, contado).
 - Un pago es **vencido** si `fecha_limite < hoy` y status no es PAGADO/APLICADO/CANCELADO.
 
-### Promocion de pago inicial $200
-- Una poliza puede arrancar con un primer pago de solo $200 (gancho comercial de Oscar).
-- **Conversion real:** el cliente sigue pagando y la poliza queda activa con su contrato normal.
-- **Venta fantasma/forzada:** se mete el $200 para inflar metas del vendedor, pero la poliza se cancela o nunca llega el segundo pago.
-- El reporte `promocion-200` mide este riesgo (ver seccion dedicada arriba).
-
 ### Coberturas (menor a mayor proteccion)
 1. RC BASICA -> RC PLUS -> RC PRO -> RC INTERMEDIA -> RC PREMIUM
 2. RC TON 3 A 5 / RC TON 6 A 10 (camiones por tonelaje)
@@ -345,7 +230,7 @@ Endpoint: `/api/v1/guardias/semana?fecha=YYYY-MM-DD` (omitir `fecha` para semana
 
 ### Gerente ventas (Gaby, id_empleado: 6)
 - Todo de sus clientes. Resumen limitado de otros (ver seccion "dueno vs ajeno").
-- Acceso a reportes globales de vendedores, ventas y riesgo (promocion-200).
+- Acceso a reportes globales de vendedores y ventas.
 
 ### Vendedor (futuro)
 - Solo sus propios clientes y polizas (`id_vendedor` = su ID).
@@ -364,7 +249,6 @@ Endpoint: `/api/v1/guardias/semana?fecha=YYYY-MM-DD` (omitir `fecha` para semana
 | SKILL.md | `skills/db-consultas/SKILL.md` | Este archivo |
 | API REST | `sunkwolf/legacy-api` (GitHub) | Microservicio FastAPI en VPS Luna |
 | Swagger UI | `http://localhost:8000/docs` | Documentacion interactiva |
-| OpenAPI JSON | `http://localhost:8000/openapi.json` | Lista completa de endpoints (fuente de verdad) |
 | Script local | `scripts/buscar_cliente.py` | Respaldo: consultas directas a MySQL si la API cae |
 
 ---
