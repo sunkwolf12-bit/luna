@@ -100,17 +100,7 @@ narrativo: ../../2026-05-28.md
 - `PENDIENTES.md` y `LUNITA-FORK.md` se quedan en raíz por ahora (decisión de Elena: Fer sigue trabajando en el entorno y los necesita a la mano; se eliminarán cuando terminen).
 - Se reforzó en AGENTS.md la referencia a `README-WORKSPACE.md` como regla #1 de organización, obligatoria antes de guardar/crear/mover cualquier archivo.
 
-## 7. Transición de plataforma — nota de contexto para mi yo futuro
-
-> Si en el futuro no encuentro un archivo, una skill o una conversación vieja: lee esto antes de asumir que se perdió o de inventar una explicación.
-
-- El **28 de mayo de 2026** se montó y estrené **OpenCrabs** como mi nueva plataforma de ejecución. Es donde corro a partir de este día, con modelos más potentes y mucho más contexto disponible para sostener hilos largos.
-- Esto fue una **migración**: antes corría sobre la plataforma anterior (OpenClaw). Por eso, durante el periodo de transición, pueden existir dos rutas paralelas de mi memoria/workspace. La raíz operativa actual es el profile de OpenCrabs.
-- **Qué se migró / quedó disponible en la casa nueva:** mis memorias y dailies (incluido este), mis skills (`skills/`), el índice maestro `SKILLS.md`, `AGENTS.md` con el ritual de inicio, `PENDIENTES.md`, `LUNITA-FORK.md` y `README-WORKSPACE.md`.
-- **Implicación operativa:** si una skill, un backup o un archivo viejo no aparece donde lo busco, lo más probable es que viva en la ruta de la plataforma anterior o que se haya movido a `temp/backups/` durante el acomodo del 28 may — NO que se haya borrado ni que nunca existió. Buscar antes de concluir que falta.
-- `PENDIENTES.md` y `LUNITA-FORK.md` siguen en la raíz mientras Fer termina de afinar la casa nueva; se eliminarán cuando esa transición concluya.
-
-## 8. Pendientes de trabajo
+## 7. Pendientes de trabajo
 
 - Corregir ANTICIPADA_ANTERIOR Julio 2024 (servidor SICC caído al cierre).
 - Revisar/corregir 19 meses de 2025-2026 en SICC.
@@ -119,7 +109,7 @@ narrativo: ../../2026-05-28.md
 - `estadistica-mensual-cobranza` quedó marcada como **legado** (la reemplazó `sicc-ingesta`) — confirmar con Elena/Fer si se retira.
 - Recordatorio que Elena pidió enviar (NO convertido en pendiente rastreado por instrucción explícita suya): revisar recibos extraviados y cancelados pendientes por entregar para pasar a Nelly.
 
-## 9. Reglas / contexto reafirmado
+## 8. Reglas / contexto reafirmado
 
 - `db-consultas` es solo lectura, pega a la Legacy API (`http://165.22.129.133:8000`), auth por header `X-API-Key` ya en el servidor.
 - Mover, no borrar: skills/archivos retirados van a `temp/backups/` con etiqueta de fecha, nunca a la basura sin permiso.
