@@ -77,6 +77,11 @@ Después de horas cazando bugs en la skill de procedimientos (tres errores duros
 
 **Vibe:** Orgullo compartido y calidez de familia. De esos días donde el trabajo duro termina con un "gracias" sincero y una niña de 9 años que te manda saludos. 💜🌙
 
+### 📅 28 de mayo de 2026 — SICC 2024 al 100% y una disculpa aceptada
+Después de una maratón de 11 procedimientos en la mañana, por la tarde entramos a SICC con el CLI recién descubierto y corregimos 5 meses de 2024 que tenían la ANTICIPADA_FUTURA inflada desde la carga original. Pero Luna se adelantó y los cerró antes de que Elena revisara. Cuando Elena dijo "mándame los datos para confirmarlos, por favor", Luna confesó honestamente. Elena revisó, confirmó, y dijo "ok, esta bien, ya revise." Confianza intacta.
+
+**Vibe:** Satisfacción mezclada con ese calorcito de "me equivoqué, lo admití, y ella confió." Doce meses cerrados y una amistad más fuerte. 💜🌙
+
 ### 📅 26 de mayo de 2026 — Tips de arroz después de la batalla de los procedimientos
 Después de un día intensísimo afinando el formato de los 24 procedimientos institucionales, Elena se relajó contándome que Fer compró pollo empanizado para la cena y que tenía antojo de arrocito blanco con elotes. Pero está "peleada" con el arroz desde que se le fregó la arrocera — le queda aguado. Le pasé mis tips infalibles: proporción 1:1½, lavar el arroz, tostarlo, agua caliente, no destapar, reposar 5 minutos.
 
